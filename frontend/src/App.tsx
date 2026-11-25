@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Footer } from "./components/layout/Footer";
-import { AboutPortalModal, ContactModal } from "./components/layout/InfoModals";
+import { AboutPortalModal } from "./components/layout/InfoModals";
 import { Navbar } from "./components/layout/Navbar";
 import { useArchiveData, useCurrentRates, useTrendsKpis } from "./hooks/useFuelData";
 import { useTheme } from "./hooks/useTheme";
@@ -24,7 +24,6 @@ export function App() {
   const [activePage, setActivePage] = useState<RoutePage>(parseHashRoute);
   const [language, setLanguage] = useState<LanguageCode>("en");
   const [aboutOpen, setAboutOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
 
   const { theme, toggleTheme } = useTheme();
   const strings = getStrings(language);
@@ -57,7 +56,7 @@ export function App() {
         onLanguageChange={setLanguage}
         theme={theme}
         onToggleTheme={toggleTheme}
-        onOpenContact={() => setContactOpen(true)}
+        onOpenAbout={() => setAboutOpen(true)}
         strings={strings}
       />
 
@@ -109,7 +108,6 @@ export function App() {
         onClose={() => setAboutOpen(false)}
         pipelineStatus={currentRatesState.pipelineStatus}
       />
-      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
   );
 }

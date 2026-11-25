@@ -11,7 +11,7 @@ interface NavbarProps {
   onLanguageChange: (lang: LanguageCode) => void;
   theme: ThemeMode;
   onToggleTheme: () => void;
-  onOpenContact: () => void;
+  onOpenAbout: () => void;
   strings: UiStrings;
 }
 
@@ -22,7 +22,7 @@ export function Navbar({
   onLanguageChange,
   theme,
   onToggleTheme,
-  onOpenContact,
+  onOpenAbout,
   strings,
 }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -122,13 +122,13 @@ export function Navbar({
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
 
-          {/* Contact Us CTA */}
+          {/* About the Portal CTA */}
           <button
             type="button"
-            onClick={onOpenContact}
+            onClick={onOpenAbout}
             className="hidden sm:inline-flex cursor-pointer items-center gap-2 rounded bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm whitespace-nowrap transition-colors duration-150 hover:bg-brand-red-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
           >
-            <span>{strings.nav.contactUs}</span>
+            <span>{strings.nav.aboutPortal}</span>
             <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
           </button>
 
@@ -184,11 +184,11 @@ export function Navbar({
               type="button"
               onClick={() => {
                 setMobileMenuOpen(false);
-                onOpenContact();
+                onOpenAbout();
               }}
               className="inline-flex items-center gap-1.5 rounded bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wider text-white whitespace-nowrap"
             >
-              <span>{strings.nav.contactUs}</span>
+              <span>{strings.nav.aboutPortal}</span>
               <ArrowRight className="h-3.5 w-3.5" />
             </button>
           </div>

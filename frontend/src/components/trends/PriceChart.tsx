@@ -1,5 +1,5 @@
 import { useId, useMemo, useState } from "react";
-import { AreaChart, Download, LineChart, Percent, Banknote } from "lucide-react";
+import { AreaChart, Banknote, Check, Download, LineChart, Percent } from "lucide-react";
 import type { ChartSeriesPoint } from "../../types/fuel";
 import { exportChartSeriesToCsv } from "../../utils/dataLoader";
 import { ALL_GRADE_CODES, getGradeVisual } from "../../utils/gradeMeta";
@@ -49,13 +49,12 @@ export function PriceChart({ series, coreRetailCodes, latestRevisionDate }: Pric
 
   const [metric, setMetric] = useState<ChartMetric>("val");
   const [view, setView] = useState<ChartView>("line");
-  const [fuelScope, setFuelScope] = useState<string>("core");
+  const [selectedCodes, setSelectedCodes] = useState<string[]>(() => [...coreRetailCodes]);
   const [rangePreset, setRangePreset] = useState<string>("12m");
   const [draftStart, setDraftStart] = useState<string>(defaultStart);
   const [draftEnd, setDraftEnd] = useState<string>(latestRevisionDate);
   const [appliedStart, setAppliedStart] = useState<string>(defaultStart);
   const [appliedEnd, setAppliedEnd] = useState<string>(latestRevisionDate);
-  const [hiddenCodes, setHiddenCodes] = useState<Record<string, boolean>>({});
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
   const availableYears = useMemo(() => {
@@ -66,15 +65,9 @@ export function PriceChart({ series, coreRetailCodes, latestRevisionDate }: Pric
     return Array.from(years).sort((a, b) => b.localeCompare(a));
   }, [series]);
 
-  const scopeCodes = useMemo(() => {
-    if (fuelScope === "core") return coreRetailCodes;
-    if (fuelScope === "all") return [...ALL_GRADE_CODES];
-    return [fuelScope];
-  }, [fuelScope, coreRetailCodes]);
-
   const visibleCodes = useMemo(
-    () => scopeCodes.filter((code) => !hiddenCodes[code]),
-    [scopeCodes, hiddenCodes]
+    () => ALL_GRADE_CODES.filter((code) => selectedCodes.includes(code)),
+    [selectedCodes]
   );
 
   const filteredPoints = useMemo(
@@ -118,24 +111,29 @@ export function PriceChart({ series, coreRetailCodes, latestRevisionDate }: Pric
   };
 
   const handleReset = () => {
-    setFuelScope("core");
+    setSelectedCodes([...coreRetailCodes]);
     setRangePreset("12m");
     setDraftStart(defaultStart);
     setDraftEnd(latestRevisionDate);
     setAppliedStart(defaultStart);
     setAppliedEnd(latestRevisionDate);
-    setHiddenCodes({});
     setHoverIdx(null);
   };
 
-  const toggleSeriesCode = (code: string) => {
-    setHiddenCodes((prev) => {
-      const next = { ...prev, [code]: !prev[code] };
-      const remaining = scopeCodes.filter((c) => !next[c]);
-      if (remaining.length === 0) return prev; // Keep at least one series visible
-      return next;
+  const toggleFuelCode = (code: string) => {
+    setSelectedCodes((prev) => {
+      if (prev.includes(code)) {
+        if (prev.length <= 1) return prev; // Always keep at least 1 fuel type active
+        return prev.filter((c) => c !== code);
+      }
+      return [...prev, code];
     });
   };
+
+  const isCorePreset =
+    selectedCodes.length === coreRetailCodes.length &&
+    coreRetailCodes.every((c) => selectedCodes.includes(c));
+  const isAllPreset = selectedCodes.length === ALL_GRADE_CODES.length;
 
   // SVG layout math
   const svgWidth = 900;
@@ -205,9 +203,7 @@ export function PriceChart({ series, coreRetailCodes, latestRevisionDate }: Pric
     const clamped = Math.max(padLeft, Math.min(padLeft + plotW, relX));
     const ratio = (clamped - padLeft) / plotW;
     const idx =
-      filteredPoints.length === 1
-        ? 0
-        : Math.round(ratio * (filteredPoints.length - 1));
+      filteredPoints.length === 1 ? 0 : Math.round(ratio * (filteredPoints.length - 1));
     setHoverIdx(Math.max(0, Math.min(filteredPoints.length - 1, idx)));
   };
 
@@ -313,135 +309,164 @@ export function PriceChart({ series, coreRetailCodes, latestRevisionDate }: Pric
         </div>
       </div>
 
-      {/* Filter Panel */}
-      <div className="grid grid-cols-1 items-end gap-4 rounded-xl border border-gray-200 bg-slate-50/80 p-4 md:grid-cols-12 dark:border-slate-800 dark:bg-slate-800/40">
-        <div className="space-y-1 md:col-span-3">
-          <label
-            htmlFor="chart-fuel-type"
-            className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
-          >
-            Fuel Type
-          </label>
-          <select
-            id="chart-fuel-type"
-            value={fuelScope}
-            onChange={(e) => {
-              setFuelScope(e.target.value);
-              setHiddenCodes({});
-            }}
-            className="w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
-          >
-            <option value="core">Core Retail (5 Grades)</option>
-            <option value="all">All Fuel Grades (9)</option>
-            {ALL_GRADE_CODES.map((code) => (
-              <option key={code} value={code}>
-                {code} — {getGradeVisual(code).shortLabel}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="space-y-1 md:col-span-3">
-          <label
-            htmlFor="chart-year-range"
-            className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
-          >
-            Timeframe / Year
-          </label>
-          <select
-            id="chart-year-range"
-            value={rangePreset}
-            onChange={(e) => handlePresetChange(e.target.value)}
-            className="tabular-nums w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
-          >
-            <option value="12m">Last 12 Months</option>
-            <option value="24m">Last 24 Months</option>
-            <option value="5y">Last 5 Years</option>
-            <option value="all">All Years (1990–Present)</option>
-            {availableYears.map((yr) => (
-              <option key={yr} value={yr}>
-                Year {yr}
-              </option>
-            ))}
-            {rangePreset === "custom" && <option value="custom">Custom Date Range</option>}
-          </select>
-        </div>
-
-        <div className="space-y-1 md:col-span-2">
-          <label
-            htmlFor="chart-start-date"
-            className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
-          >
-            Start Date
-          </label>
-          <input
-            id="chart-start-date"
-            type="date"
-            value={draftStart}
-            onChange={(e) => setDraftStart(e.target.value)}
-            className="tabular-nums w-full rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
-          />
-        </div>
-
-        <div className="space-y-1 md:col-span-2">
-          <label
-            htmlFor="chart-end-date"
-            className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
-          >
-            End Date
-          </label>
-          <input
-            id="chart-end-date"
-            type="date"
-            value={draftEnd}
-            onChange={(e) => setDraftEnd(e.target.value)}
-            className="tabular-nums w-full rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
-          />
-        </div>
-
-        <div className="flex items-center gap-2 md:col-span-2">
-          <button
-            type="button"
-            onClick={handleApplyDates}
-            className="flex-1 cursor-pointer rounded-lg bg-brand-red px-3 py-2 text-center font-heading text-xs font-bold uppercase tracking-wider text-white shadow-xs transition-colors hover:bg-brand-red-hover"
-          >
-            Apply
-          </button>
-          <button
-            type="button"
-            onClick={handleReset}
-            className="cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold uppercase tracking-wider text-slate-700 shadow-xs transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
-          >
-            Reset
-          </button>
-        </div>
-      </div>
-
-      {/* Interactive Legend Bar */}
-      <div className="flex flex-wrap items-center justify-center gap-2.5 border-y border-gray-100 py-2.5 dark:border-slate-800">
-        {scopeCodes.map((code) => {
-          const vis = getGradeVisual(code);
-          const isHidden = Boolean(hiddenCodes[code]);
-          return (
-            <button
-              key={code}
-              type="button"
-              onClick={() => toggleSeriesCode(code)}
-              aria-pressed={!isHidden}
-              className={`inline-flex cursor-pointer items-center gap-2 rounded-full px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
-                isHidden
-                  ? "bg-slate-100 text-slate-400 opacity-60 dark:bg-slate-800 dark:text-slate-500"
-                  : `${vis.badgeBgClass} ${vis.badgeTextClass}`
-              }`}
+      {/* Filter Panel: Date/Range Row + Multi-Selection Fuel Type Toggles */}
+      <div className="space-y-4 rounded-xl border border-gray-200 bg-slate-50/80 p-4 dark:border-slate-800 dark:bg-slate-800/40">
+        <div className="grid grid-cols-1 items-end gap-4 md:grid-cols-12">
+          <div className="space-y-1 md:col-span-4">
+            <label
+              htmlFor="chart-year-range"
+              className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
             >
-              <span
-                className="h-2.5 w-2.5 rounded-full"
-                style={{ backgroundColor: isHidden ? "#94a3b8" : vis.color }}
-              />
-              <span>{vis.shortLabel}</span>
+              Timeframe / Year
+            </label>
+            <select
+              id="chart-year-range"
+              value={rangePreset}
+              onChange={(e) => handlePresetChange(e.target.value)}
+              className="tabular-nums w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+            >
+              <option value="12m">Last 12 Months</option>
+              <option value="24m">Last 24 Months</option>
+              <option value="5y">Last 5 Years</option>
+              <option value="all">All Years (1990–Present)</option>
+              {availableYears.map((yr) => (
+                <option key={yr} value={yr}>
+                  Year {yr}
+                </option>
+              ))}
+              {rangePreset === "custom" && <option value="custom">Custom Date Range</option>}
+            </select>
+          </div>
+
+          <div className="space-y-1 md:col-span-3">
+            <label
+              htmlFor="chart-start-date"
+              className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
+            >
+              Start Date
+            </label>
+            <input
+              id="chart-start-date"
+              type="date"
+              value={draftStart}
+              onChange={(e) => setDraftStart(e.target.value)}
+              className="tabular-nums w-full rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+            />
+          </div>
+
+          <div className="space-y-1 md:col-span-3">
+            <label
+              htmlFor="chart-end-date"
+              className="block font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
+            >
+              End Date
+            </label>
+            <input
+              id="chart-end-date"
+              type="date"
+              value={draftEnd}
+              onChange={(e) => setDraftEnd(e.target.value)}
+              className="tabular-nums w-full rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold text-slate-800 shadow-xs focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+            />
+          </div>
+
+          <div className="flex items-center gap-2 md:col-span-2">
+            <button
+              type="button"
+              onClick={handleApplyDates}
+              className="flex-1 cursor-pointer rounded-lg bg-brand-red px-3 py-2 text-center font-heading text-xs font-bold uppercase tracking-wider text-white shadow-xs transition-colors hover:bg-brand-red-hover"
+            >
+              Apply
             </button>
-          );
-        })}
+            <button
+              type="button"
+              onClick={handleReset}
+              className="cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 font-heading text-xs font-semibold uppercase tracking-wider text-slate-700 shadow-xs transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+
+        {/* Multi-Selection Fuel Types Toggle */}
+        <div
+          id="chart-fuel-multiselect"
+          role="group"
+          aria-label="Select fuel types"
+          className="border-t border-gray-200/80 pt-3.5 dark:border-slate-700/80"
+        >
+          <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="font-heading text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                Fuel Types
+              </span>
+              <span className="tabular-nums rounded bg-white px-2 py-0.5 font-mono text-[10px] font-bold text-slate-600 border border-gray-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
+                {visibleCodes.length} of {ALL_GRADE_CODES.length} selected
+              </span>
+            </div>
+
+            <div className="inline-flex items-center gap-1.5">
+              <button
+                type="button"
+                id="preset-core-5-btn"
+                onClick={() => setSelectedCodes([...coreRetailCodes])}
+                className={`cursor-pointer rounded px-2.5 py-1 font-heading text-[11px] font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${
+                  isCorePreset
+                    ? "bg-slate-900 text-white dark:bg-brand-red"
+                    : "border border-gray-300 bg-white text-slate-600 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                }`}
+              >
+                Core 5
+              </button>
+              <button
+                type="button"
+                id="preset-all-9-btn"
+                onClick={() => setSelectedCodes([...ALL_GRADE_CODES])}
+                className={`cursor-pointer rounded px-2.5 py-1 font-heading text-[11px] font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${
+                  isAllPreset
+                    ? "bg-slate-900 text-white dark:bg-brand-red"
+                    : "border border-gray-300 bg-white text-slate-600 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                }`}
+              >
+                All 9
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {ALL_GRADE_CODES.map((code) => {
+              const vis = getGradeVisual(code);
+              const isSelected = selectedCodes.includes(code);
+              return (
+                <button
+                  key={code}
+                  type="button"
+                  data-fuel-toggle={code}
+                  aria-pressed={isSelected}
+                  onClick={() => toggleFuelCode(code)}
+                  style={
+                    isSelected
+                      ? { borderColor: vis.color }
+                      : undefined
+                  }
+                  className={`inline-flex cursor-pointer items-center gap-2 rounded-lg border px-3 py-1.5 font-heading text-xs font-bold tracking-wide whitespace-nowrap transition-all ${
+                    isSelected
+                      ? `${vis.badgeBgClass} ${vis.badgeTextClass} shadow-xs`
+                      : "border-gray-200 bg-white text-slate-500 hover:border-gray-300 hover:text-slate-800 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-200"
+                  }`}
+                >
+                  <span
+                    className="h-2.5 w-2.5 shrink-0 rounded-full"
+                    style={{ backgroundColor: isSelected ? vis.color : "#94a3b8" }}
+                  />
+                  <span>{vis.shortLabel}</span>
+                  <span className="text-[10px] font-semibold opacity-75">({code})</span>
+                  {isSelected && <Check className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       {/* Interactive SVG Chart */}
@@ -501,11 +526,16 @@ export function PriceChart({ series, coreRetailCodes, latestRevisionDate }: Pric
               role="img"
               aria-label="Sri Lanka Fuel Price Trend Chart"
               className="h-[290px] w-full min-w-[620px] select-none sm:h-[360px]"
-              onMouseMove={(e) => handleSvgPointerMove(e.clientX, e.currentTarget.getBoundingClientRect())}
+              onMouseMove={(e) =>
+                handleSvgPointerMove(e.clientX, e.currentTarget.getBoundingClientRect())
+              }
               onMouseLeave={() => setHoverIdx(null)}
               onTouchMove={(e) => {
                 if (e.touches[0]) {
-                  handleSvgPointerMove(e.touches[0].clientX, e.currentTarget.getBoundingClientRect());
+                  handleSvgPointerMove(
+                    e.touches[0].clientX,
+                    e.currentTarget.getBoundingClientRect()
+                  );
                 }
               }}
             >

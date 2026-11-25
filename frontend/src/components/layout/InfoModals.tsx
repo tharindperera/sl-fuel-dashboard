@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Clock, Database, ExternalLink, Globe, Mail, ShieldCheck, X } from "lucide-react";
+import { Clock, Database, ShieldCheck, X } from "lucide-react";
 import type { PipelineStatusData } from "../../types/fuel";
 import { formatColomboTimestamp } from "../../utils/formatters";
 
@@ -122,64 +122,6 @@ export function AboutPortalModal({
             </div>
           )}
         </div>
-
-        <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-semibold">
-          <a
-            href="https://ceypetco.gov.lk/marketing-sales/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1 text-brand-red hover:underline dark:text-red-400"
-          >
-            <span>CEYPETCO Current Rates</span>
-            <ExternalLink className="h-3.5 w-3.5" />
-          </a>
-          <span className="text-slate-300 dark:text-slate-700">|</span>
-          <a
-            href="https://ceypetco.gov.lk/marketing-sales/historical-prices"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1 text-brand-red hover:underline dark:text-red-400"
-          >
-            <span>CEYPETCO Historical Archive</span>
-            <ExternalLink className="h-3.5 w-3.5" />
-          </a>
-        </div>
-      </div>
-    </ModalShell>
-  );
-}
-
-export function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  return (
-    <ModalShell open={open} onClose={onClose} eyebrow="PORTAL INFORMATION" title="Contact & Official Sources">
-      <div className="space-y-4">
-        <p>
-          For official retail station inquiries, fuel availability, or tariff notifications, please
-          refer directly to the Ceylon Petroleum Corporation (CEYPETCO) official channels.
-        </p>
-
-        <div className="space-y-3 rounded-lg border border-gray-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/50">
-          <div className="flex items-center gap-2.5 text-xs">
-            <Globe className="h-4 w-4 shrink-0 text-brand-red" />
-            <a
-              href="https://ceypetco.gov.lk/"
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-slate-900 hover:text-brand-red dark:text-white dark:hover:text-red-400"
-            >
-              https://ceypetco.gov.lk/
-            </a>
-          </div>
-          <div className="flex items-center gap-2.5 text-xs">
-            <Mail className="h-4 w-4 shrink-0 text-brand-red" />
-            <span>Data corrections &amp; dashboard feedback can be submitted via repository issues.</span>
-          </div>
-        </div>
-
-        <p className="text-xs text-slate-500 dark:text-slate-400">
-          Note: Outstation retail prices may incorporate applicable regional transport differentials
-          as published by CEYPETCO.
-        </p>
       </div>
     </ModalShell>
   );

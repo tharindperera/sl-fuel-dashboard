@@ -6,7 +6,7 @@ export interface UiStrings {
     archive: string;
     trends: string;
     analysis: string;
-    contactUs: string;
+    aboutPortal: string;
     portalSubtitle: string;
   };
   home: {
@@ -41,7 +41,7 @@ const EN_STRINGS: UiStrings = {
     archive: "HISTORICAL PRICE ARCHIVE",
     trends: "TRENDS",
     analysis: "ANALYSIS",
-    contactUs: "CONTACT US",
+    aboutPortal: "ABOUT THE PORTAL",
     portalSubtitle: "Analytics & Pricing Portal",
   },
   home: {
@@ -83,7 +83,7 @@ const DICTIONARY: Record<LanguageCode, UiStrings> = {
       archive: "ඓතිහාසික මිල ලේඛනය",
       trends: "ප්‍රවණතා",
       analysis: "විශ්ලේෂණය",
-      contactUs: "අමතන්න",
+      aboutPortal: "පෝටලය ගැන",
     },
     home: {
       ...EN_STRINGS.home,
@@ -99,7 +99,7 @@ const DICTIONARY: Record<LanguageCode, UiStrings> = {
       archive: "வரலாற்று விலை ஆவணம்",
       trends: "போக்குகள்",
       analysis: "பகுப்பாய்வு",
-      contactUs: "தொடர்பு கொள்ள",
+      aboutPortal: "போர்டல் பற்றி",
     },
     home: {
       ...EN_STRINGS.home,
