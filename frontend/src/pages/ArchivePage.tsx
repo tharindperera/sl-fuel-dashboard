@@ -1,9 +1,15 @@
 import { useMemo, useState } from "react";
 import { AlertCircle, Download, RefreshCw } from "lucide-react";
 import type { UiStrings } from "../i18n/strings";
-import type { ArchiveMetaData, ArchiveRow } from "../types/fuel";
+import type {
+  AnnualAggregatedData,
+  ArchiveMetaData,
+  ArchiveRow,
+  MonthlyAggregatedData,
+} from "../types/fuel";
 import { exportRowsToCsv } from "../utils/dataLoader";
 import { matchesDateQuery } from "../utils/formatters";
+import { AggregatedPriceViews } from "../components/archive/AggregatedPriceViews";
 import { ArchiveFilters } from "../components/archive/ArchiveFilters";
 import { ArchiveHero } from "../components/archive/ArchiveHero";
 import { ArchiveTable, type SortDirection } from "../components/archive/ArchiveTable";
@@ -12,13 +18,24 @@ import { ArchiveSkeleton } from "../components/home/SkeletonGrid";
 interface ArchivePageProps {
   meta: ArchiveMetaData | null;
   rows: ArchiveRow[];
+  monthly: MonthlyAggregatedData | null;
+  annual: AnnualAggregatedData | null;
   loading: boolean;
   error: string | null;
   onRetry: () => void;
   strings: UiStrings;
 }
 
-export function ArchivePage({ meta, rows, loading, error, onRetry, strings }: ArchivePageProps) {
+export function ArchivePage({
+  meta,
+  rows,
+  monthly,
+  annual,
+  loading,
+  error,
+  onRetry,
+  strings,
+}: ArchivePageProps) {
   const [dateQuery, setDateQuery] = useState("");
   const [selectedYear, setSelectedYear] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState("all");
@@ -199,6 +216,8 @@ export function ArchivePage({ meta, rows, loading, error, onRetry, strings }: Ar
           }}
         />
       </section>
+
+      <AggregatedPriceViews monthly={monthly} annual={annual} />
     </div>
   );
 }

@@ -134,3 +134,49 @@ export interface TrendsKpisData {
   chart_series: ChartSeriesPoint[];
 }
 
+export interface MonthlyAggregatedRow {
+  month: string; // YYYY-MM
+  label: string; // e.g. "Nov 2026"
+  year: number;
+  month_num: number;
+  prices: Record<string, number | null>;
+  simple_avg: Record<string, number | null>;
+  mom_pct_change: Record<string, number | null>;
+  revisions_in_month: number;
+  is_partial_month: boolean;
+}
+
+export interface MonthlyAggregatedData {
+  generated_at_sl: string;
+  generated_at_utc: string;
+  latest_revision_date: string;
+  total_months: number;
+  available_years: number[];
+  products: ArchiveProductMeta[];
+  months: MonthlyAggregatedRow[];
+}
+
+export interface AnnualGradeMetrics {
+  avg_price: number | null;
+  min_price: number | null;
+  max_price: number | null;
+  yoy_pct_change: number | null;
+}
+
+export interface AnnualAggregatedRow {
+  year: number;
+  months_covered: number;
+  revisions_in_year: number;
+  is_ytd: boolean;
+  grades: Record<string, AnnualGradeMetrics>;
+}
+
+export interface AnnualAggregatedData {
+  generated_at_sl: string;
+  generated_at_utc: string;
+  latest_revision_date: string;
+  total_years: number;
+  products: ArchiveProductMeta[];
+  years: AnnualAggregatedRow[];
+}
+

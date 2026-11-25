@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Sequence
 
 from scripts.config import (
+    ANNUAL_AGGREGATED_JSON,
     ARCHIVE_META_JSON,
     CSV_DATE_COLUMN,
     CSV_HEADER,
@@ -18,6 +19,7 @@ from scripts.config import (
     DATA_DIR,
     FUEL_PRICES_API_URL,
     HISTORICAL_PRICES_API_URL,
+    MONTHLY_AGGREGATED_JSON,
     PIPELINE_STATUS_JSON,
     SL_TZ,
     TRENDS_KPIS_JSON,
@@ -77,7 +79,13 @@ def _format_diff_preview(
 def _kpis_missing(data_dir: Path) -> bool:
     return not all(
         (data_dir / p.name).exists()
-        for p in (CURRENT_RATES_JSON, ARCHIVE_META_JSON, TRENDS_KPIS_JSON)
+        for p in (
+            CURRENT_RATES_JSON,
+            ARCHIVE_META_JSON,
+            TRENDS_KPIS_JSON,
+            MONTHLY_AGGREGATED_JSON,
+            ANNUAL_AGGREGATED_JSON,
+        )
     )
 
 

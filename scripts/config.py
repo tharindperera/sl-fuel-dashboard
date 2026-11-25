@@ -13,6 +13,8 @@ DATA_DIR = ROOT_DIR / "data"
 CURRENT_RATES_JSON = DATA_DIR / "current_rates.json"
 ARCHIVE_META_JSON = DATA_DIR / "archive_meta.json"
 TRENDS_KPIS_JSON = DATA_DIR / "trends_kpis.json"
+MONTHLY_AGGREGATED_JSON = DATA_DIR / "monthly_aggregated.json"
+ANNUAL_AGGREGATED_JSON = DATA_DIR / "annual_aggregated.json"
 PIPELINE_STATUS_JSON = DATA_DIR / "pipeline_status.json"
 
 SL_TZ = ZoneInfo("Asia/Colombo")

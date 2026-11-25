@@ -89,6 +89,8 @@ export function App() {
           <ArchivePage
             meta={archiveState.meta}
             rows={archiveState.rows}
+            monthly={archiveState.monthly}
+            annual={archiveState.annual}
             loading={archiveState.loading}
             error={archiveState.error}
             onRetry={archiveState.reload}

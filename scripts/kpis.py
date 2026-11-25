@@ -10,12 +10,18 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
+from scripts.aggregators import (
+    build_annual_aggregated_payload,
+    build_monthly_aggregated_payload,
+)
 from scripts.config import (
+    ANNUAL_AGGREGATED_JSON,
     ARCHIVE_META_JSON,
     CORE_RETAIL_CODES,
     CSV_DATE_COLUMN,
     CURRENT_RATES_JSON,
     FUEL_PRODUCTS,
+    MONTHLY_AGGREGATED_JSON,
     PIPELINE_STATUS_JSON,
     SL_TZ,
     TRENDS_KPIS_JSON,
@@ -410,17 +416,28 @@ def generate_all_kpis(
     )
     archive_meta = build_archive_meta_payload(revisions)
     trends_kpis = build_trends_kpis_payload(revisions)
+    monthly_aggregated = build_monthly_aggregated_payload(
+        revisions, now_sl=sl_now, now_utc=utc_now
+    )
+    annual_aggregated = build_annual_aggregated_payload(
+        monthly_aggregated, now_sl=sl_now, now_utc=utc_now
+    )
+    monthly_aggregated.pop("_raw_revisions_by_year", None)
 
     if write_files:
         target_dir = data_dir or CURRENT_RATES_JSON.parent
         write_json_atomic(target_dir / CURRENT_RATES_JSON.name, current_rates)
         write_json_atomic(target_dir / ARCHIVE_META_JSON.name, archive_meta)
         write_json_atomic(target_dir / TRENDS_KPIS_JSON.name, trends_kpis)
+        write_json_atomic(target_dir / MONTHLY_AGGREGATED_JSON.name, monthly_aggregated)
+        write_json_atomic(target_dir / ANNUAL_AGGREGATED_JSON.name, annual_aggregated)
 
     return {
         "current_rates": current_rates,
         "archive_meta": archive_meta,
         "trends_kpis": trends_kpis,
+        "monthly_aggregated": monthly_aggregated,
+        "annual_aggregated": annual_aggregated,
     }
 
 

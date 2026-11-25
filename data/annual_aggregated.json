@@ -1,0 +1,2367 @@
+{
+  "generated_at_sl": "2026-11-25T15:04:17.070897+05:30",
+  "generated_at_utc": "2026-11-25T09:34:17.070897+00:00",
+  "latest_revision_date": "2026-11-02",
+  "total_years": 37,
+  "products": [
+    {
+      "code": "LP 95",
+      "csv_column": "LP 95",
+      "full_name": "Lanka Petrol 95 Octane Euro 4",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LP 92",
+      "csv_column": "LP 92",
+      "full_name": "Lanka Petrol 92 Octane",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LAD",
+      "csv_column": "LAD",
+      "full_name": "Lanka Auto Diesel",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LSD",
+      "csv_column": "LSD",
+      "full_name": "Lanka Super Diesel 4 Star Euro 4",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LK",
+      "csv_column": "LK",
+      "full_name": "Lanka Kerosene",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LIK",
+      "csv_column": "LIK",
+      "full_name": "Lanka Industrial Kerosene",
+      "category": "White Oil",
+      "segment": "Industrial"
+    },
+    {
+      "code": "FUR. 800",
+      "csv_column": "FUR. 800",
+      "full_name": "Furnace Oil 800",
+      "category": "Black Oil",
+      "segment": "Industrial"
+    },
+    {
+      "code": "FUR 1500 (H)",
+      "csv_column": "FUR 1500 (High)",
+      "full_name": "Furnace Oil 1500 High Sulphur",
+      "category": "Black Oil",
+      "segment": "Industrial"
+    },
+    {
+      "code": "FUR 1500 (L)",
+      "csv_column": "FUR. 1500 (Low)",
+      "full_name": "Furnace Oil 1500 Low Sulphur",
+      "category": "Black Oil",
+      "segment": "Industrial"
+    }
+  ],
+  "years": [
+    {
+      "year": 2026,
+      "months_covered": 11,
+      "revisions_in_year": 13,
+      "is_ytd": true,
+      "grades": {
+        "LP 95": {
+          "avg_price": 446.77,
+          "min_price": 339.19,
+          "max_price": 495.0,
+          "yoy_pct_change": 28.14
+        },
+        "LP 92": {
+          "avg_price": 384.37,
+          "min_price": 292.0,
+          "max_price": 434.0,
+          "yoy_pct_change": 27.84
+        },
+        "LAD": {
+          "avg_price": 363.0,
+          "min_price": 277.0,
+          "max_price": 407.0,
+          "yoy_pct_change": 28.72
+        },
+        "LSD": {
+          "avg_price": 445.71,
+          "min_price": 322.19,
+          "max_price": 542.5,
+          "yoy_pct_change": 38.28
+        },
+        "LK": {
+          "avg_price": 254.87,
+          "min_price": 181.68,
+          "max_price": 285.0,
+          "yoy_pct_change": 40.1
+        },
+        "LIK": {
+          "avg_price": 349.97,
+          "min_price": 193.0,
+          "max_price": 434.0,
+          "yoy_pct_change": 83.04
+        },
+        "FUR. 800": {
+          "avg_price": 290.84,
+          "min_price": 194.0,
+          "max_price": 332.0,
+          "yoy_pct_change": 47.78
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 290.84,
+          "min_price": 194.0,
+          "max_price": 332.0,
+          "yoy_pct_change": 47.78
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 290.84,
+          "min_price": 194.0,
+          "max_price": 332.0,
+          "yoy_pct_change": 47.78
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "months_covered": 12,
+      "revisions_in_year": 11,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 348.67,
+          "min_price": 335.0,
+          "max_price": 371.0,
+          "yoy_pct_change": -14.65
+        },
+        "LP 92": {
+          "avg_price": 300.67,
+          "min_price": 293.0,
+          "max_price": 309.0,
+          "yoy_pct_change": -13.12
+        },
+        "LAD": {
+          "avg_price": 282.0,
+          "min_price": 274.0,
+          "max_price": 289.0,
+          "yoy_pct_change": -13.01
+        },
+        "LSD": {
+          "avg_price": 322.33,
+          "min_price": 313.0,
+          "max_price": 331.0,
+          "yoy_pct_change": -14.98
+        },
+        "LK": {
+          "avg_price": 181.92,
+          "min_price": 178.0,
+          "max_price": 185.0,
+          "yoy_pct_change": -15.31
+        },
+        "LIK": {
+          "avg_price": 191.2,
+          "min_price": 186.0,
+          "max_price": 193.0,
+          "yoy_pct_change": -14.91
+        },
+        "FUR. 800": {
+          "avg_price": 196.81,
+          "min_price": 184.0,
+          "max_price": 207.0,
+          "yoy_pct_change": -1.25
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 196.81,
+          "min_price": 184.0,
+          "max_price": 207.0,
+          "yoy_pct_change": -1.25
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 196.81,
+          "min_price": 184.0,
+          "max_price": 207.0,
+          "yoy_pct_change": -1.25
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "months_covered": 12,
+      "revisions_in_year": 20,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 408.51,
+          "min_price": 371.0,
+          "max_price": 464.0,
+          "yoy_pct_change": -3.52
+        },
+        "LP 92": {
+          "avg_price": 346.08,
+          "min_price": 309.0,
+          "max_price": 371.0,
+          "yoy_pct_change": -2.63
+        },
+        "LAD": {
+          "avg_price": 324.17,
+          "min_price": 283.0,
+          "max_price": 363.0,
+          "yoy_pct_change": -6.3
+        },
+        "LSD": {
+          "avg_price": 379.11,
+          "min_price": 313.0,
+          "max_price": 475.0,
+          "yoy_pct_change": -9.23
+        },
+        "LK": {
+          "avg_price": 214.8,
+          "min_price": 183.0,
+          "max_price": 262.0,
+          "yoy_pct_change": -21.49
+        },
+        "LIK": {
+          "avg_price": 224.7,
+          "min_price": 191.0,
+          "max_price": 266.0,
+          "yoy_pct_change": -29.14
+        },
+        "FUR. 800": {
+          "avg_price": 199.31,
+          "min_price": 188.16,
+          "max_price": 211.0,
+          "yoy_pct_change": -19.53
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 199.31,
+          "min_price": 188.16,
+          "max_price": 211.0,
+          "yoy_pct_change": -19.53
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 199.31,
+          "min_price": 188.16,
+          "max_price": 211.0,
+          "yoy_pct_change": -19.53
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "months_covered": 12,
+      "revisions_in_year": 12,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 423.41,
+          "min_price": 365.0,
+          "max_price": 510.0,
+          "yoy_pct_change": 1.41
+        },
+        "LP 92": {
+          "avg_price": 355.41,
+          "min_price": 318.0,
+          "max_price": 400.0,
+          "yoy_pct_change": 2.69
+        },
+        "LAD": {
+          "avg_price": 345.97,
+          "min_price": 306.0,
+          "max_price": 405.97,
+          "yoy_pct_change": 5.58
+        },
+        "LSD": {
+          "avg_price": 417.67,
+          "min_price": 330.0,
+          "max_price": 510.0,
+          "yoy_pct_change": 6.43
+        },
+        "LK": {
+          "avg_price": 273.58,
+          "min_price": 226.0,
+          "max_price": 355.65,
+          "yoy_pct_change": 50.14
+        },
+        "LIK": {
+          "avg_price": 317.11,
+          "min_price": 231.0,
+          "max_price": 464.0,
+          "yoy_pct_change": -6.56
+        },
+        "FUR. 800": {
+          "avg_price": 247.67,
+          "min_price": 191.0,
+          "max_price": 320.0,
+          "yoy_pct_change": -19.03
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 247.67,
+          "min_price": 191.0,
+          "max_price": 320.0,
+          "yoy_pct_change": -19.03
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 247.67,
+          "min_price": 191.0,
+          "max_price": 320.0,
+          "yoy_pct_change": -19.03
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "months_covered": 12,
+      "revisions_in_year": 14,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 417.51,
+          "min_price": 207.0,
+          "max_price": 545.16,
+          "yoy_pct_change": 139.23
+        },
+        "LP 92": {
+          "avg_price": 346.11,
+          "min_price": 177.0,
+          "max_price": 460.32,
+          "yoy_pct_change": 132.66
+        },
+        "LAD": {
+          "avg_price": 327.67,
+          "min_price": 121.0,
+          "max_price": 450.32,
+          "yoy_pct_change": 202.81
+        },
+        "LSD": {
+          "avg_price": 392.45,
+          "min_price": 159.0,
+          "max_price": 515.16,
+          "yoy_pct_change": 182.03
+        },
+        "LK": {
+          "avg_price": 182.22,
+          "min_price": 87.0,
+          "max_price": 365.0,
+          "yoy_pct_change": 145.55
+        },
+        "LIK": {
+          "avg_price": 339.39,
+          "min_price": 110.0,
+          "max_price": 464.0,
+          "yoy_pct_change": 208.54
+        },
+        "FUR. 800": {
+          "avg_price": 305.89,
+          "min_price": 110.0,
+          "max_price": 419.0,
+          "yoy_pct_change": 231.62
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 305.89,
+          "min_price": 110.0,
+          "max_price": 419.0,
+          "yoy_pct_change": 218.01
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 305.89,
+          "min_price": 110.0,
+          "max_price": 419.0,
+          "yoy_pct_change": 218.01
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "months_covered": 12,
+      "revisions_in_year": 3,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 174.52,
+          "min_price": 161.0,
+          "max_price": 192.9,
+          "yoy_pct_change": 8.4
+        },
+        "LP 92": {
+          "avg_price": 148.76,
+          "min_price": 137.0,
+          "max_price": 164.74,
+          "yoy_pct_change": 8.58
+        },
+        "LAD": {
+          "avg_price": 108.21,
+          "min_price": 104.0,
+          "max_price": 114.87,
+          "yoy_pct_change": 4.05
+        },
+        "LSD": {
+          "avg_price": 139.15,
+          "min_price": 132.0,
+          "max_price": 149.81,
+          "yoy_pct_change": 5.42
+        },
+        "LK": {
+          "avg_price": 74.21,
+          "min_price": 70.0,
+          "max_price": 80.87,
+          "yoy_pct_change": 6.01
+        },
+        "LIK": {
+          "avg_price": 110.0,
+          "min_price": 110.0,
+          "max_price": 110.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 92.24,
+          "min_price": 92.0,
+          "max_price": 94.9,
+          "yoy_pct_change": 0.26
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 96.19,
+          "min_price": 96.0,
+          "max_price": 98.26,
+          "yoy_pct_change": 0.2
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 96.19,
+          "min_price": 96.0,
+          "max_price": 98.26,
+          "yoy_pct_change": 0.2
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "months_covered": 12,
+      "revisions_in_year": 0,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 161.0,
+          "min_price": 161.0,
+          "max_price": 161.0,
+          "yoy_pct_change": 1.36
+        },
+        "LP 92": {
+          "avg_price": 137.0,
+          "min_price": 137.0,
+          "max_price": 137.0,
+          "yoy_pct_change": 2.35
+        },
+        "LAD": {
+          "avg_price": 104.0,
+          "min_price": 104.0,
+          "max_price": 104.0,
+          "yoy_pct_change": 0.59
+        },
+        "LSD": {
+          "avg_price": 132.0,
+          "min_price": 132.0,
+          "max_price": 132.0,
+          "yoy_pct_change": 0.56
+        },
+        "LK": {
+          "avg_price": 70.0,
+          "min_price": 70.0,
+          "max_price": 70.0,
+          "yoy_pct_change": 0.0
+        },
+        "LIK": {
+          "avg_price": 110.0,
+          "min_price": 110.0,
+          "max_price": 110.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 92.0,
+          "min_price": 92.0,
+          "max_price": 92.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 96.0,
+          "min_price": 96.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 96.0,
+          "min_price": 96.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "months_covered": 12,
+      "revisions_in_year": 8,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 158.84,
+          "min_price": 147.65,
+          "max_price": 164.0,
+          "yoy_pct_change": 8.36
+        },
+        "LP 92": {
+          "avg_price": 133.86,
+          "min_price": 123.65,
+          "max_price": 137.3,
+          "yoy_pct_change": 0.5
+        },
+        "LAD": {
+          "avg_price": 103.39,
+          "min_price": 99.65,
+          "max_price": 104.0,
+          "yoy_pct_change": -3.75
+        },
+        "LSD": {
+          "avg_price": 131.26,
+          "min_price": 118.97,
+          "max_price": 136.0,
+          "yoy_pct_change": 7.35
+        },
+        "LK": {
+          "avg_price": 70.0,
+          "min_price": 70.0,
+          "max_price": 70.0,
+          "yoy_pct_change": 10.38
+        },
+        "LIK": {
+          "avg_price": 110.0,
+          "min_price": 110.0,
+          "max_price": 110.0,
+          "yoy_pct_change": 7.76
+        },
+        "FUR. 800": {
+          "avg_price": 92.0,
+          "min_price": 92.0,
+          "max_price": 92.0,
+          "yoy_pct_change": 7.74
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 96.0,
+          "min_price": 96.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 12.68
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 96.0,
+          "min_price": 96.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 4.4
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "months_covered": 12,
+      "revisions_in_year": 11,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 146.58,
+          "min_price": 128.0,
+          "max_price": 166.5,
+          "yoy_pct_change": 14.52
+        },
+        "LP 92": {
+          "avg_price": 133.19,
+          "min_price": 117.0,
+          "max_price": 153.06,
+          "yoy_pct_change": 13.84
+        },
+        "LAD": {
+          "avg_price": 107.42,
+          "min_price": 95.0,
+          "max_price": 123.0,
+          "yoy_pct_change": 13.07
+        },
+        "LSD": {
+          "avg_price": 122.27,
+          "min_price": 110.0,
+          "max_price": 138.5,
+          "yoy_pct_change": 11.15
+        },
+        "LK": {
+          "avg_price": 63.42,
+          "min_price": 44.0,
+          "max_price": 82.61,
+          "yoy_pct_change": 43.71
+        },
+        "LIK": {
+          "avg_price": 102.08,
+          "min_price": 88.0,
+          "max_price": 110.0,
+          "yoy_pct_change": 16.0
+        },
+        "FUR. 800": {
+          "avg_price": 85.39,
+          "min_price": 82.2,
+          "max_price": 92.0,
+          "yoy_pct_change": 3.88
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 85.2,
+          "min_price": 80.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 6.5
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 91.95,
+          "min_price": 90.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 2.17
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "months_covered": 12,
+      "revisions_in_year": 1,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 128.0,
+          "min_price": 128.0,
+          "max_price": 128.0,
+          "yoy_pct_change": 0.0
+        },
+        "LP 92": {
+          "avg_price": 117.0,
+          "min_price": 117.0,
+          "max_price": 117.0,
+          "yoy_pct_change": 0.0
+        },
+        "LAD": {
+          "avg_price": 95.0,
+          "min_price": 95.0,
+          "max_price": 95.0,
+          "yoy_pct_change": 0.0
+        },
+        "LSD": {
+          "avg_price": 110.0,
+          "min_price": 110.0,
+          "max_price": 110.0,
+          "yoy_pct_change": 0.0
+        },
+        "LK": {
+          "avg_price": 44.13,
+          "min_price": 44.0,
+          "max_price": 45.61,
+          "yoy_pct_change": -9.94
+        },
+        "LIK": {
+          "avg_price": 88.0,
+          "min_price": 88.0,
+          "max_price": 88.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 82.2,
+          "min_price": 82.2,
+          "max_price": 82.2,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 80.0,
+          "min_price": 80.0,
+          "max_price": 80.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 90.0,
+          "min_price": 90.0,
+          "max_price": 90.0,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "months_covered": 12,
+      "revisions_in_year": 0,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 128.0,
+          "min_price": 128.0,
+          "max_price": 128.0,
+          "yoy_pct_change": -1.3
+        },
+        "LP 92": {
+          "avg_price": 117.0,
+          "min_price": 117.0,
+          "max_price": 117.0,
+          "yoy_pct_change": -1.56
+        },
+        "LAD": {
+          "avg_price": 95.0,
+          "min_price": 95.0,
+          "max_price": 95.0,
+          "yoy_pct_change": -0.94
+        },
+        "LSD": {
+          "avg_price": 110.0,
+          "min_price": 110.0,
+          "max_price": 110.0,
+          "yoy_pct_change": -1.17
+        },
+        "LK": {
+          "avg_price": 49.0,
+          "min_price": 49.0,
+          "max_price": 49.0,
+          "yoy_pct_change": -17.56
+        },
+        "LIK": {
+          "avg_price": 88.0,
+          "min_price": 88.0,
+          "max_price": 88.0,
+          "yoy_pct_change": -1.52
+        },
+        "FUR. 800": {
+          "avg_price": 82.2,
+          "min_price": 82.2,
+          "max_price": 82.2,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 80.0,
+          "min_price": 80.0,
+          "max_price": 80.0,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 90.0,
+          "min_price": 90.0,
+          "max_price": 90.0,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "months_covered": 12,
+      "revisions_in_year": 4,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 129.69,
+          "min_price": 128.0,
+          "max_price": 148.32,
+          "yoy_pct_change": -22.83
+        },
+        "LP 92": {
+          "avg_price": 118.86,
+          "min_price": 117.0,
+          "max_price": 139.35,
+          "yoy_pct_change": -25.74
+        },
+        "LAD": {
+          "avg_price": 95.9,
+          "min_price": 95.0,
+          "max_price": 105.84,
+          "yoy_pct_change": -19.83
+        },
+        "LSD": {
+          "avg_price": 111.3,
+          "min_price": 110.0,
+          "max_price": 125.58,
+          "yoy_pct_change": -22.2
+        },
+        "LK": {
+          "avg_price": 59.44,
+          "min_price": 49.0,
+          "max_price": 75.26,
+          "yoy_pct_change": -40.48
+        },
+        "LIK": {
+          "avg_price": 89.36,
+          "min_price": 88.0,
+          "max_price": 104.26,
+          "yoy_pct_change": -22.05
+        },
+        "FUR. 800": {
+          "avg_price": 82.2,
+          "min_price": 82.2,
+          "max_price": 82.2,
+          "yoy_pct_change": -10.85
+        },
+        "FUR 1500 (H)": {
+          "avg_price": 80.0,
+          "min_price": 80.0,
+          "max_price": 80.0,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 90.0,
+          "min_price": 90.0,
+          "max_price": 90.0,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "months_covered": 12,
+      "revisions_in_year": 2,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 168.05,
+          "min_price": 158.9,
+          "max_price": 170.0,
+          "yoy_pct_change": -0.88
+        },
+        "LP 92": {
+          "avg_price": 160.05,
+          "min_price": 150.9,
+          "max_price": 162.0,
+          "yoy_pct_change": -0.93
+        },
+        "LAD": {
+          "avg_price": 119.62,
+          "min_price": 111.9,
+          "max_price": 121.0,
+          "yoy_pct_change": -0.41
+        },
+        "LSD": {
+          "avg_price": 143.05,
+          "min_price": 133.9,
+          "max_price": 145.0,
+          "yoy_pct_change": -1.04
+        },
+        "LK": {
+          "avg_price": 99.86,
+          "min_price": 81.65,
+          "max_price": 106.0,
+          "yoy_pct_change": -5.79
+        },
+        "LIK": {
+          "avg_price": 114.64,
+          "min_price": 110.65,
+          "max_price": 115.0,
+          "yoy_pct_change": 0.21
+        },
+        "FUR. 800": {
+          "avg_price": 92.2,
+          "min_price": 92.2,
+          "max_price": 92.2,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 90.0,
+          "min_price": 90.0,
+          "max_price": 90.0,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "months_covered": 12,
+      "revisions_in_year": 1,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 169.55,
+          "min_price": 167.0,
+          "max_price": 170.0,
+          "yoy_pct_change": 2.37
+        },
+        "LP 92": {
+          "avg_price": 161.55,
+          "min_price": 159.0,
+          "max_price": 162.0,
+          "yoy_pct_change": 9.08
+        },
+        "LAD": {
+          "avg_price": 120.11,
+          "min_price": 115.0,
+          "max_price": 121.0,
+          "yoy_pct_change": 7.78
+        },
+        "LSD": {
+          "avg_price": 144.55,
+          "min_price": 142.0,
+          "max_price": 145.0,
+          "yoy_pct_change": 4.82
+        },
+        "LK": {
+          "avg_price": 106.0,
+          "min_price": 106.0,
+          "max_price": 106.0,
+          "yoy_pct_change": 3.94
+        },
+        "LIK": {
+          "avg_price": 114.4,
+          "min_price": 111.0,
+          "max_price": 115.0,
+          "yoy_pct_change": 6.94
+        },
+        "FUR. 800": {
+          "avg_price": 92.2,
+          "min_price": 92.2,
+          "max_price": 92.2,
+          "yoy_pct_change": 5.25
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 90.0,
+          "min_price": 90.0,
+          "max_price": 90.0,
+          "yoy_pct_change": 5.39
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "months_covered": 12,
+      "revisions_in_year": 2,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 165.62,
+          "min_price": 155.0,
+          "max_price": 167.0,
+          "yoy_pct_change": 16.22
+        },
+        "LP 92": {
+          "avg_price": 148.1,
+          "min_price": 137.0,
+          "max_price": 154.81,
+          "yoy_pct_change": 18.96
+        },
+        "LAD": {
+          "avg_price": 111.44,
+          "min_price": 84.0,
+          "max_price": 115.0,
+          "yoy_pct_change": 45.52
+        },
+        "LSD": {
+          "avg_price": 137.9,
+          "min_price": 106.3,
+          "max_price": 142.0,
+          "yoy_pct_change": 41.97
+        },
+        "LK": {
+          "avg_price": 101.98,
+          "min_price": 71.0,
+          "max_price": 106.0,
+          "yoy_pct_change": 69.49
+        },
+        "LIK": {
+          "avg_price": 106.98,
+          "min_price": 76.0,
+          "max_price": 111.0,
+          "yoy_pct_change": 64.16
+        },
+        "FUR. 800": {
+          "avg_price": 87.6,
+          "min_price": 52.2,
+          "max_price": 92.2,
+          "yoy_pct_change": 76.26
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 85.4,
+          "min_price": 50.0,
+          "max_price": 90.0,
+          "yoy_pct_change": 79.79
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "months_covered": 12,
+      "revisions_in_year": 2,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 142.5,
+          "min_price": 133.0,
+          "max_price": 155.0,
+          "yoy_pct_change": 7.14
+        },
+        "LP 92": {
+          "avg_price": 124.5,
+          "min_price": 115.0,
+          "max_price": 137.0,
+          "yoy_pct_change": 8.26
+        },
+        "LAD": {
+          "avg_price": 76.58,
+          "min_price": 73.0,
+          "max_price": 84.0,
+          "yoy_pct_change": 4.9
+        },
+        "LSD": {
+          "avg_price": 97.13,
+          "min_price": 88.3,
+          "max_price": 106.3,
+          "yoy_pct_change": 10.0
+        },
+        "LK": {
+          "avg_price": 60.17,
+          "min_price": 51.0,
+          "max_price": 71.0,
+          "yoy_pct_change": 17.98
+        },
+        "LIK": {
+          "avg_price": 65.17,
+          "min_price": 56.0,
+          "max_price": 76.0,
+          "yoy_pct_change": 16.38
+        },
+        "FUR. 800": {
+          "avg_price": 49.7,
+          "min_price": 42.2,
+          "max_price": 52.2,
+          "yoy_pct_change": 38.06
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 47.5,
+          "min_price": 40.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 35.21
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "months_covered": 12,
+      "revisions_in_year": 1,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 133.0,
+          "min_price": 133.0,
+          "max_price": 133.0,
+          "yoy_pct_change": -5.23
+        },
+        "LP 92": {
+          "avg_price": 115.0,
+          "min_price": 115.0,
+          "max_price": 115.0,
+          "yoy_pct_change": -7.89
+        },
+        "LAD": {
+          "avg_price": 73.0,
+          "min_price": 73.0,
+          "max_price": 73.0,
+          "yoy_pct_change": 2.11
+        },
+        "LSD": {
+          "avg_price": 88.3,
+          "min_price": 88.3,
+          "max_price": 88.3,
+          "yoy_pct_change": 1.74
+        },
+        "LK": {
+          "avg_price": 51.0,
+          "min_price": 51.0,
+          "max_price": 51.0,
+          "yoy_pct_change": 0.99
+        },
+        "LIK": {
+          "avg_price": 56.0,
+          "min_price": 56.0,
+          "max_price": 56.0,
+          "yoy_pct_change": 0.9
+        },
+        "FUR. 800": {
+          "avg_price": 36.0,
+          "min_price": 32.9,
+          "max_price": 42.2,
+          "yoy_pct_change": 4.71
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 35.13,
+          "min_price": 32.7,
+          "max_price": 40.0,
+          "yoy_pct_change": 21.85
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "months_covered": 12,
+      "revisions_in_year": 2,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 140.34,
+          "min_price": 133.0,
+          "max_price": 148.0,
+          "yoy_pct_change": -6.5
+        },
+        "LP 92": {
+          "avg_price": 124.85,
+          "min_price": 120.0,
+          "max_price": 130.0,
+          "yoy_pct_change": -11.5
+        },
+        "LAD": {
+          "avg_price": 71.49,
+          "min_price": 70.0,
+          "max_price": 73.0,
+          "yoy_pct_change": -23.45
+        },
+        "LSD": {
+          "avg_price": 86.79,
+          "min_price": 85.3,
+          "max_price": 88.3,
+          "yoy_pct_change": -17.11
+        },
+        "LK": {
+          "avg_price": 50.5,
+          "min_price": 50.0,
+          "max_price": 51.0,
+          "yoy_pct_change": -30.77
+        },
+        "LIK": {
+          "avg_price": 55.5,
+          "min_price": 55.0,
+          "max_price": 56.0,
+          "yoy_pct_change": -28.67
+        },
+        "FUR. 800": {
+          "avg_price": 34.38,
+          "min_price": 33.9,
+          "max_price": 34.9,
+          "yoy_pct_change": -44.59
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 28.83,
+          "min_price": 25.0,
+          "max_price": 32.7,
+          "yoy_pct_change": -51.83
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "months_covered": 12,
+      "revisions_in_year": 5,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 150.09,
+          "min_price": 125.81,
+          "max_price": 170.0,
+          "yoy_pct_change": 36.03
+        },
+        "LP 92": {
+          "avg_price": 141.07,
+          "min_price": 122.81,
+          "max_price": 157.0,
+          "yoy_pct_change": 29.33
+        },
+        "LAD": {
+          "avg_price": 93.39,
+          "min_price": 77.9,
+          "max_price": 110.0,
+          "yoy_pct_change": 36.5
+        },
+        "LSD": {
+          "avg_price": 104.71,
+          "min_price": 83.2,
+          "max_price": 125.3,
+          "yoy_pct_change": 42.04
+        },
+        "LK": {
+          "avg_price": 72.95,
+          "min_price": 60.0,
+          "max_price": 80.0,
+          "yoy_pct_change": 24.89
+        },
+        "LIK": {
+          "avg_price": 77.81,
+          "min_price": 65.0,
+          "max_price": 85.0,
+          "yoy_pct_change": 21.37
+        },
+        "FUR. 800": {
+          "avg_price": 62.05,
+          "min_price": 53.9,
+          "max_price": 63.9,
+          "yoy_pct_change": 26.14
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 59.85,
+          "min_price": 51.7,
+          "max_price": 61.7,
+          "yoy_pct_change": 32.41
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "months_covered": 12,
+      "revisions_in_year": 7,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 110.34,
+          "min_price": 96.74,
+          "max_price": 120.0,
+          "yoy_pct_change": 20.0
+        },
+        "LP 92": {
+          "avg_price": 109.08,
+          "min_price": 98.97,
+          "max_price": 117.0,
+          "yoy_pct_change": 22.63
+        },
+        "LAD": {
+          "avg_price": 68.42,
+          "min_price": 60.0,
+          "max_price": 75.0,
+          "yoy_pct_change": 18.29
+        },
+        "LSD": {
+          "avg_price": 73.72,
+          "min_price": 65.3,
+          "max_price": 80.3,
+          "yoy_pct_change": 16.22
+        },
+        "LK": {
+          "avg_price": 58.41,
+          "min_price": 48.0,
+          "max_price": 68.0,
+          "yoy_pct_change": 45.19
+        },
+        "LIK": {
+          "avg_price": 64.11,
+          "min_price": 58.3,
+          "max_price": 69.0,
+          "yoy_pct_change": 50.35
+        },
+        "FUR. 800": {
+          "avg_price": 49.19,
+          "min_price": 43.44,
+          "max_price": 53.9,
+          "yoy_pct_change": 17.93
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 45.2,
+          "min_price": 37.54,
+          "max_price": 51.7,
+          "yoy_pct_change": 15.28
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "months_covered": 12,
+      "revisions_in_year": 6,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 91.95,
+          "min_price": 83.0,
+          "max_price": 99.0,
+          "yoy_pct_change": 16.33
+        },
+        "LP 92": {
+          "avg_price": 88.95,
+          "min_price": 80.0,
+          "max_price": 96.0,
+          "yoy_pct_change": 16.98
+        },
+        "LAD": {
+          "avg_price": 57.84,
+          "min_price": 50.0,
+          "max_price": 64.0,
+          "yoy_pct_change": 21.54
+        },
+        "LSD": {
+          "avg_price": 63.43,
+          "min_price": 55.3,
+          "max_price": 69.3,
+          "yoy_pct_change": 19.93
+        },
+        "LK": {
+          "avg_price": 40.23,
+          "min_price": 30.5,
+          "max_price": 48.0,
+          "yoy_pct_change": 40.62
+        },
+        "LIK": {
+          "avg_price": 42.64,
+          "min_price": 32.8,
+          "max_price": 51.59,
+          "yoy_pct_change": 37.95
+        },
+        "FUR. 800": {
+          "avg_price": 41.71,
+          "min_price": 32.8,
+          "max_price": 47.8,
+          "yoy_pct_change": 39.17
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 39.21,
+          "min_price": 30.3,
+          "max_price": 45.3,
+          "yoy_pct_change": 39.74
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "months_covered": 12,
+      "revisions_in_year": 2,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 79.04,
+          "min_price": 73.0,
+          "max_price": 83.0,
+          "yoy_pct_change": 21.88
+        },
+        "LP 92": {
+          "avg_price": 76.04,
+          "min_price": 70.0,
+          "max_price": 80.0,
+          "yoy_pct_change": 22.94
+        },
+        "LAD": {
+          "avg_price": 47.59,
+          "min_price": 44.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 33.42
+        },
+        "LSD": {
+          "avg_price": 52.89,
+          "min_price": 49.3,
+          "max_price": 55.3,
+          "yoy_pct_change": 28.75
+        },
+        "LK": {
+          "avg_price": 28.61,
+          "min_price": 25.5,
+          "max_price": 30.5,
+          "yoy_pct_change": 12.2
+        },
+        "LIK": {
+          "avg_price": 30.91,
+          "min_price": 27.8,
+          "max_price": 32.8,
+          "yoy_pct_change": 11.19
+        },
+        "FUR. 800": {
+          "avg_price": 29.97,
+          "min_price": 25.2,
+          "max_price": 32.8,
+          "yoy_pct_change": 20.94
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 28.06,
+          "min_price": 24.3,
+          "max_price": 30.3,
+          "yoy_pct_change": 19.05
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "months_covered": 12,
+      "revisions_in_year": 5,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 64.85,
+          "min_price": 56.45,
+          "max_price": 73.0,
+          "yoy_pct_change": 17.8
+        },
+        "LP 92": {
+          "avg_price": 61.85,
+          "min_price": 53.45,
+          "max_price": 70.0,
+          "yoy_pct_change": 18.83
+        },
+        "LAD": {
+          "avg_price": 35.67,
+          "min_price": 32.0,
+          "max_price": 44.0,
+          "yoy_pct_change": 17.37
+        },
+        "LSD": {
+          "avg_price": 41.08,
+          "min_price": 37.35,
+          "max_price": 49.3,
+          "yoy_pct_change": 15.1
+        },
+        "LK": {
+          "avg_price": 25.5,
+          "min_price": 25.5,
+          "max_price": 25.5,
+          "yoy_pct_change": 5.94
+        },
+        "LIK": {
+          "avg_price": 27.8,
+          "min_price": 27.8,
+          "max_price": 27.8,
+          "yoy_pct_change": 5.42
+        },
+        "FUR. 800": {
+          "avg_price": 24.78,
+          "min_price": 23.7,
+          "max_price": 25.2,
+          "yoy_pct_change": 0.65
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 23.57,
+          "min_price": 22.3,
+          "max_price": 24.3,
+          "yoy_pct_change": -0.08
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "months_covered": 12,
+      "revisions_in_year": 11,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 55.05,
+          "min_price": 52.0,
+          "max_price": 56.8,
+          "yoy_pct_change": 4.08
+        },
+        "LP 92": {
+          "avg_price": 52.05,
+          "min_price": 49.0,
+          "max_price": 53.8,
+          "yoy_pct_change": 4.33
+        },
+        "LAD": {
+          "avg_price": 30.39,
+          "min_price": 30.0,
+          "max_price": 31.9,
+          "yoy_pct_change": 13.95
+        },
+        "LSD": {
+          "avg_price": 35.69,
+          "min_price": 35.3,
+          "max_price": 37.2,
+          "yoy_pct_change": 6.6
+        },
+        "LK": {
+          "avg_price": 24.07,
+          "min_price": 23.26,
+          "max_price": 25.31,
+          "yoy_pct_change": 17.87
+        },
+        "LIK": {
+          "avg_price": 26.37,
+          "min_price": 25.56,
+          "max_price": 27.61,
+          "yoy_pct_change": 16.07
+        },
+        "FUR. 800": {
+          "avg_price": 24.62,
+          "min_price": 22.83,
+          "max_price": 26.6,
+          "yoy_pct_change": 19.92
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 23.59,
+          "min_price": 21.73,
+          "max_price": 25.7,
+          "yoy_pct_change": 21.47
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "months_covered": 12,
+      "revisions_in_year": 11,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 52.89,
+          "min_price": 50.5,
+          "max_price": 57.17,
+          "yoy_pct_change": -0.21
+        },
+        "LP 92": {
+          "avg_price": 49.89,
+          "min_price": 47.5,
+          "max_price": 54.17,
+          "yoy_pct_change": -0.22
+        },
+        "LAD": {
+          "avg_price": 26.67,
+          "min_price": 16.5,
+          "max_price": 30.17,
+          "yoy_pct_change": 0.57
+        },
+        "LSD": {
+          "avg_price": 33.48,
+          "min_price": 31.3,
+          "max_price": 35.3,
+          "yoy_pct_change": 4.89
+        },
+        "LK": {
+          "avg_price": 20.42,
+          "min_price": 17.4,
+          "max_price": 24.0,
+          "yoy_pct_change": 8.27
+        },
+        "LIK": {
+          "avg_price": 22.72,
+          "min_price": 19.7,
+          "max_price": 26.3,
+          "yoy_pct_change": 7.42
+        },
+        "FUR. 800": {
+          "avg_price": 20.53,
+          "min_price": 17.0,
+          "max_price": 24.1,
+          "yoy_pct_change": 24.8
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 19.42,
+          "min_price": 15.66,
+          "max_price": 23.0,
+          "yoy_pct_change": 27.09
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "months_covered": 12,
+      "revisions_in_year": 3,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 53.0,
+          "min_price": 53.0,
+          "max_price": 53.0,
+          "yoy_pct_change": 0.0
+        },
+        "LP 92": {
+          "avg_price": 50.0,
+          "min_price": 50.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 0.0
+        },
+        "LAD": {
+          "avg_price": 26.52,
+          "min_price": 24.5,
+          "max_price": 27.5,
+          "yoy_pct_change": 47.25
+        },
+        "LSD": {
+          "avg_price": 31.92,
+          "min_price": 29.8,
+          "max_price": 32.8,
+          "yoy_pct_change": 36.94
+        },
+        "LK": {
+          "avg_price": 18.86,
+          "min_price": 17.4,
+          "max_price": 19.4,
+          "yoy_pct_change": 24.41
+        },
+        "LIK": {
+          "avg_price": 21.15,
+          "min_price": 19.7,
+          "max_price": 21.7,
+          "yoy_pct_change": 21.13
+        },
+        "FUR. 800": {
+          "avg_price": 16.45,
+          "min_price": 15.1,
+          "max_price": 17.0,
+          "yoy_pct_change": 71.71
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 15.28,
+          "min_price": 14.0,
+          "max_price": 15.8,
+          "yoy_pct_change": 72.85
+        }
+      }
+    },
+    {
+      "year": 2000,
+      "months_covered": 12,
+      "revisions_in_year": 4,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 53.0,
+          "min_price": 53.0,
+          "max_price": 53.0,
+          "yoy_pct_change": -1.49
+        },
+        "LP 92": {
+          "avg_price": 50.0,
+          "min_price": 50.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 0.0
+        },
+        "LAD": {
+          "avg_price": 18.01,
+          "min_price": 13.2,
+          "max_price": 21.98,
+          "yoy_pct_change": 36.44
+        },
+        "LSD": {
+          "avg_price": 23.31,
+          "min_price": 18.5,
+          "max_price": 27.28,
+          "yoy_pct_change": 26.0
+        },
+        "LK": {
+          "avg_price": 15.16,
+          "min_price": 10.4,
+          "max_price": 17.56,
+          "yoy_pct_change": 45.77
+        },
+        "LIK": {
+          "avg_price": 17.46,
+          "min_price": 12.7,
+          "max_price": 19.86,
+          "yoy_pct_change": 37.48
+        },
+        "FUR. 800": {
+          "avg_price": 9.58,
+          "min_price": 7.5,
+          "max_price": 13.93,
+          "yoy_pct_change": 27.73
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 8.84,
+          "min_price": 6.8,
+          "max_price": 12.91,
+          "yoy_pct_change": 30.0
+        }
+      }
+    },
+    {
+      "year": 1999,
+      "months_covered": 12,
+      "revisions_in_year": 1,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 53.8,
+          "min_price": 53.0,
+          "max_price": 55.0,
+          "yoy_pct_change": -2.18
+        },
+        "LP 92": {
+          "avg_price": 50.0,
+          "min_price": 50.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 0.0
+        },
+        "LAD": {
+          "avg_price": 13.2,
+          "min_price": 13.2,
+          "max_price": 13.2,
+          "yoy_pct_change": 0.0
+        },
+        "LSD": {
+          "avg_price": 18.5,
+          "min_price": 18.5,
+          "max_price": 18.5,
+          "yoy_pct_change": 0.0
+        },
+        "LK": {
+          "avg_price": 10.4,
+          "min_price": 10.4,
+          "max_price": 10.4,
+          "yoy_pct_change": 0.0
+        },
+        "LIK": {
+          "avg_price": 12.7,
+          "min_price": 12.7,
+          "max_price": 12.7,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 7.5,
+          "min_price": 7.5,
+          "max_price": 7.5,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 6.8,
+          "min_price": 6.8,
+          "max_price": 6.8,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 1998,
+      "months_covered": 12,
+      "revisions_in_year": 0,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 55.0,
+          "min_price": 55.0,
+          "max_price": 55.0,
+          "yoy_pct_change": 0.0
+        },
+        "LP 92": {
+          "avg_price": 50.0,
+          "min_price": 50.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 0.0
+        },
+        "LAD": {
+          "avg_price": 13.2,
+          "min_price": 13.2,
+          "max_price": 13.2,
+          "yoy_pct_change": 0.0
+        },
+        "LSD": {
+          "avg_price": 18.5,
+          "min_price": 18.5,
+          "max_price": 18.5,
+          "yoy_pct_change": 0.0
+        },
+        "LK": {
+          "avg_price": 10.4,
+          "min_price": 10.4,
+          "max_price": 10.4,
+          "yoy_pct_change": 0.0
+        },
+        "LIK": {
+          "avg_price": 12.7,
+          "min_price": 12.7,
+          "max_price": 12.7,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 7.5,
+          "min_price": 7.5,
+          "max_price": 7.5,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 6.8,
+          "min_price": 6.8,
+          "max_price": 6.8,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 1997,
+      "months_covered": 12,
+      "revisions_in_year": 0,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 55.0,
+          "min_price": 55.0,
+          "max_price": 55.0,
+          "yoy_pct_change": 20.27
+        },
+        "LP 92": {
+          "avg_price": 50.0,
+          "min_price": 50.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 17.43
+        },
+        "LAD": {
+          "avg_price": 13.2,
+          "min_price": 13.2,
+          "max_price": 13.2,
+          "yoy_pct_change": 4.68
+        },
+        "LSD": {
+          "avg_price": 18.5,
+          "min_price": 18.5,
+          "max_price": 18.5,
+          "yoy_pct_change": 15.26
+        },
+        "LK": {
+          "avg_price": 10.4,
+          "min_price": 10.4,
+          "max_price": 10.4,
+          "yoy_pct_change": 6.89
+        },
+        "LIK": {
+          "avg_price": 12.7,
+          "min_price": 12.7,
+          "max_price": 12.7,
+          "yoy_pct_change": 5.57
+        },
+        "FUR. 800": {
+          "avg_price": 7.5,
+          "min_price": 7.5,
+          "max_price": 7.5,
+          "yoy_pct_change": 14.16
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 6.8,
+          "min_price": 6.8,
+          "max_price": 6.8,
+          "yoy_pct_change": 15.84
+        }
+      }
+    },
+    {
+      "year": 1996,
+      "months_covered": 12,
+      "revisions_in_year": 1,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 45.73,
+          "min_price": 42.5,
+          "max_price": 55.0,
+          "yoy_pct_change": 8.47
+        },
+        "LP 92": {
+          "avg_price": 42.58,
+          "min_price": 40.0,
+          "max_price": 50.0,
+          "yoy_pct_change": 7.36
+        },
+        "LAD": {
+          "avg_price": 12.61,
+          "min_price": 12.4,
+          "max_price": 13.2,
+          "yoy_pct_change": 2.6
+        },
+        "LSD": {
+          "avg_price": 16.05,
+          "min_price": 15.2,
+          "max_price": 18.5,
+          "yoy_pct_change": 6.36
+        },
+        "LK": {
+          "avg_price": 9.73,
+          "min_price": 9.5,
+          "max_price": 10.4,
+          "yoy_pct_change": 2.42
+        },
+        "LIK": {
+          "avg_price": 12.03,
+          "min_price": 11.8,
+          "max_price": 12.7,
+          "yoy_pct_change": 1.95
+        },
+        "FUR. 800": {
+          "avg_price": 6.57,
+          "min_price": 6.25,
+          "max_price": 7.5,
+          "yoy_pct_change": 5.12
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 5.87,
+          "min_price": 5.55,
+          "max_price": 6.8,
+          "yoy_pct_change": 5.77
+        }
+      }
+    },
+    {
+      "year": 1995,
+      "months_covered": 12,
+      "revisions_in_year": 2,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 42.16,
+          "min_price": 38.47,
+          "max_price": 42.5,
+          "yoy_pct_change": 12.43
+        },
+        "LP 92": {
+          "avg_price": 39.66,
+          "min_price": 35.97,
+          "max_price": 40.0,
+          "yoy_pct_change": 13.31
+        },
+        "LAD": {
+          "avg_price": 12.29,
+          "min_price": 11.4,
+          "max_price": 12.4,
+          "yoy_pct_change": 3.71
+        },
+        "LSD": {
+          "avg_price": 15.09,
+          "min_price": 14.2,
+          "max_price": 15.2,
+          "yoy_pct_change": 8.56
+        },
+        "LK": {
+          "avg_price": 9.5,
+          "min_price": 9.5,
+          "max_price": 9.5,
+          "yoy_pct_change": -10.63
+        },
+        "LIK": {
+          "avg_price": 11.8,
+          "min_price": 11.8,
+          "max_price": 11.8,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 6.25,
+          "min_price": 6.25,
+          "max_price": 6.25,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 5.55,
+          "min_price": 5.55,
+          "max_price": 5.55,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 1994,
+      "months_covered": 12,
+      "revisions_in_year": 3,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 37.5,
+          "min_price": 37.5,
+          "max_price": 37.5,
+          "yoy_pct_change": 4.37
+        },
+        "LP 92": {
+          "avg_price": 35.0,
+          "min_price": 35.0,
+          "max_price": 35.0,
+          "yoy_pct_change": 4.7
+        },
+        "LAD": {
+          "avg_price": 11.85,
+          "min_price": 11.4,
+          "max_price": 12.4,
+          "yoy_pct_change": 0.51
+        },
+        "LSD": {
+          "avg_price": 13.9,
+          "min_price": 12.2,
+          "max_price": 15.04,
+          "yoy_pct_change": -4.86
+        },
+        "LK": {
+          "avg_price": 10.63,
+          "min_price": 9.5,
+          "max_price": 11.8,
+          "yoy_pct_change": 1.53
+        },
+        "LIK": {
+          "avg_price": 11.8,
+          "min_price": 11.8,
+          "max_price": 11.8,
+          "yoy_pct_change": 7.96
+        },
+        "FUR. 800": {
+          "avg_price": 6.25,
+          "min_price": 6.25,
+          "max_price": 6.25,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 5.55,
+          "min_price": 5.55,
+          "max_price": 5.55,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 1993,
+      "months_covered": 12,
+      "revisions_in_year": 6,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 35.93,
+          "min_price": 35.5,
+          "max_price": 37.5,
+          "yoy_pct_change": 6.97
+        },
+        "LP 92": {
+          "avg_price": 33.43,
+          "min_price": 33.0,
+          "max_price": 35.0,
+          "yoy_pct_change": 7.53
+        },
+        "LAD": {
+          "avg_price": 11.79,
+          "min_price": 11.65,
+          "max_price": 12.1,
+          "yoy_pct_change": 3.88
+        },
+        "LSD": {
+          "avg_price": 14.61,
+          "min_price": 14.5,
+          "max_price": 14.9,
+          "yoy_pct_change": 5.64
+        },
+        "LK": {
+          "avg_price": 10.47,
+          "min_price": 8.8,
+          "max_price": 11.8,
+          "yoy_pct_change": 18.98
+        },
+        "LIK": {
+          "avg_price": 10.93,
+          "min_price": 9.85,
+          "max_price": 11.8,
+          "yoy_pct_change": 10.96
+        },
+        "FUR. 800": {
+          "avg_price": 6.25,
+          "min_price": 6.25,
+          "max_price": 6.25,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 5.55,
+          "min_price": 5.55,
+          "max_price": 5.55,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 1992,
+      "months_covered": 12,
+      "revisions_in_year": 6,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 33.59,
+          "min_price": 32.5,
+          "max_price": 35.5,
+          "yoy_pct_change": 3.35
+        },
+        "LP 92": {
+          "avg_price": 31.09,
+          "min_price": 30.0,
+          "max_price": 33.0,
+          "yoy_pct_change": 3.63
+        },
+        "LAD": {
+          "avg_price": 11.35,
+          "min_price": 11.0,
+          "max_price": 11.62,
+          "yoy_pct_change": 3.18
+        },
+        "LSD": {
+          "avg_price": 13.83,
+          "min_price": 13.0,
+          "max_price": 14.5,
+          "yoy_pct_change": 6.38
+        },
+        "LK": {
+          "avg_price": 8.8,
+          "min_price": 8.8,
+          "max_price": 8.8,
+          "yoy_pct_change": 0.0
+        },
+        "LIK": {
+          "avg_price": 9.85,
+          "min_price": 9.85,
+          "max_price": 9.85,
+          "yoy_pct_change": 0.0
+        },
+        "FUR. 800": {
+          "avg_price": 6.25,
+          "min_price": 6.25,
+          "max_price": 6.25,
+          "yoy_pct_change": 0.0
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 5.55,
+          "min_price": 5.55,
+          "max_price": 5.55,
+          "yoy_pct_change": 0.0
+        }
+      }
+    },
+    {
+      "year": 1991,
+      "months_covered": 12,
+      "revisions_in_year": 1,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 32.5,
+          "min_price": 32.5,
+          "max_price": 32.5,
+          "yoy_pct_change": 23.86
+        },
+        "LP 92": {
+          "avg_price": 30.0,
+          "min_price": 30.0,
+          "max_price": 30.0,
+          "yoy_pct_change": 24.69
+        },
+        "LAD": {
+          "avg_price": 11.0,
+          "min_price": 11.0,
+          "max_price": 11.0,
+          "yoy_pct_change": 4.07
+        },
+        "LSD": {
+          "avg_price": 13.0,
+          "min_price": 13.0,
+          "max_price": 13.0,
+          "yoy_pct_change": 7.79
+        },
+        "LK": {
+          "avg_price": 8.8,
+          "min_price": 8.8,
+          "max_price": 8.8,
+          "yoy_pct_change": 19.24
+        },
+        "LIK": {
+          "avg_price": 9.85,
+          "min_price": 9.85,
+          "max_price": 9.85,
+          "yoy_pct_change": 0.51
+        },
+        "FUR. 800": {
+          "avg_price": 6.25,
+          "min_price": 6.25,
+          "max_price": 6.25,
+          "yoy_pct_change": 20.42
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 5.55,
+          "min_price": 5.55,
+          "max_price": 5.55,
+          "yoy_pct_change": 18.09
+        }
+      }
+    },
+    {
+      "year": 1990,
+      "months_covered": 10,
+      "revisions_in_year": 4,
+      "is_ytd": false,
+      "grades": {
+        "LP 95": {
+          "avg_price": 26.24,
+          "min_price": 22.0,
+          "max_price": 36.94,
+          "yoy_pct_change": null
+        },
+        "LP 92": {
+          "avg_price": 24.06,
+          "min_price": 20.0,
+          "max_price": 34.03,
+          "yoy_pct_change": null
+        },
+        "LAD": {
+          "avg_price": 10.57,
+          "min_price": 9.6,
+          "max_price": 12.73,
+          "yoy_pct_change": null
+        },
+        "LSD": {
+          "avg_price": 12.06,
+          "min_price": 10.9,
+          "max_price": 14.67,
+          "yoy_pct_change": null
+        },
+        "LK": {
+          "avg_price": 7.38,
+          "min_price": 6.58,
+          "max_price": 8.8,
+          "yoy_pct_change": null
+        },
+        "LIK": {
+          "avg_price": 9.8,
+          "min_price": 9.62,
+          "max_price": 9.85,
+          "yoy_pct_change": null
+        },
+        "FUR. 800": {
+          "avg_price": 5.19,
+          "min_price": 4.7,
+          "max_price": 6.3,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (H)": {
+          "avg_price": null,
+          "min_price": null,
+          "max_price": null,
+          "yoy_pct_change": null
+        },
+        "FUR 1500 (L)": {
+          "avg_price": 4.7,
+          "min_price": 4.29,
+          "max_price": 5.6,
+          "yoy_pct_change": null
+        }
+      }
+    }
+  ]
+}

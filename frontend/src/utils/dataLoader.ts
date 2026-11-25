@@ -1,8 +1,10 @@
 import type {
+  AnnualAggregatedData,
   ArchiveMetaData,
   ArchiveRow,
   ChartSeriesPoint,
   CurrentRatesData,
+  MonthlyAggregatedData,
   PipelineStatusData,
   TrendsKpisData,
 } from "../types/fuel";
@@ -95,6 +97,39 @@ export async function fetchPipelineStatus(): Promise<PipelineStatusData> {
 
 export async function fetchTrendsKpis(): Promise<TrendsKpisData> {
   return fetchJson<TrendsKpisData>("data/trends_kpis.json");
+}
+
+export async function fetchAggregatedArchives(): Promise<{
+  monthly: MonthlyAggregatedData;
+  annual: AnnualAggregatedData;
+}> {
+  const [monthly, annual] = await Promise.all([
+    fetchJson<MonthlyAggregatedData>("data/monthly_aggregated.json"),
+    fetchJson<AnnualAggregatedData>("data/annual_aggregated.json"),
+  ]);
+  return { monthly, annual };
+}
+
+export function exportTabularCsv(
+  headers: string[],
+  rows: string[][],
+  filename: string
+): void {
+  const escapeCell = (val: string) => `"${val.replace(/"/g, '""')}"`;
+  const lines = [
+    headers.map(escapeCell).join(","),
+    ...rows.map((r) => r.map(escapeCell).join(",")),
+  ];
+  const content = lines.join("\r\n") + "\r\n";
+  const blob = new Blob([content], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+  URL.revokeObjectURL(url);
 }
 
 export async function fetchGlobalOilBundle(): Promise<{

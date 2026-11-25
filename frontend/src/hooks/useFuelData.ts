@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import type {
+  AnnualAggregatedData,
   ArchiveMetaData,
   ArchiveRow,
   CurrentRatesData,
+  MonthlyAggregatedData,
   PipelineStatusData,
   TrendsKpisData,
 } from "../types/fuel";
@@ -13,6 +15,7 @@ import type {
   OilAiSummaryData,
 } from "../types/oil";
 import {
+  fetchAggregatedArchives,
   fetchArchiveBundle,
   fetchCurrentRates,
   fetchGlobalOilBundle,
@@ -53,6 +56,8 @@ export function useCurrentRates() {
 export function useArchiveData() {
   const [meta, setMeta] = useState<ArchiveMetaData | null>(null);
   const [rows, setRows] = useState<ArchiveRow[]>([]);
+  const [monthly, setMonthly] = useState<MonthlyAggregatedData | null>(null);
+  const [annual, setAnnual] = useState<AnnualAggregatedData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,9 +65,16 @@ export function useArchiveData() {
     setLoading(true);
     setError(null);
     try {
-      const bundle = await fetchArchiveBundle();
+      const [bundle, aggregated] = await Promise.all([
+        fetchArchiveBundle(),
+        fetchAggregatedArchives().catch(() => null),
+      ]);
       setMeta(bundle.meta);
       setRows(bundle.rows);
+      if (aggregated) {
+        setMonthly(aggregated.monthly);
+        setAnnual(aggregated.annual);
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unable to load historical price archive.");
     } finally {
@@ -74,7 +86,7 @@ export function useArchiveData() {
     void load();
   }, [load]);
 
-  return { meta, rows, loading, error, reload: load };
+  return { meta, rows, monthly, annual, loading, error, reload: load };
 }
 
 export function useTrendsKpis() {
