@@ -123,7 +123,7 @@ sl-fuel-dashboard/
 │   └── oil_ai_summary.json         # AI-generated steep-move intelligence summary
 │
 ├── cpc_petroleum_prices_original.csv   # Master historical CSV (185 rows, 9 fuel grades, 1990–2026)
-├── requirements.txt                    # Python dependencies (requests, pytest)
+├── requirements.txt                    # Python dependencies (requests, beautifulsoup4, tzdata, pytest)
 │
 ├── frontend/                       # React + Vite + Tailwind CSS v4 frontend
 │   ├── package.json
@@ -374,7 +374,7 @@ python -m pytest -v
 | **Frontend** | React 19, TypeScript 5.8, Vite 6, Tailwind CSS v4 |
 | **Charts** | TradingView Lightweight Charts (global oil), Custom SVG (domestic trends/aggregators) |
 | **Icons** | Lucide React |
-| **Data Pipeline** | Python 3.12, `requests` |
+| **Data Pipeline** | Python 3.12, `requests`, `beautifulsoup4` |
 | **Testing** | `unittest` / `pytest` |
 | **CI/CD** | GitHub Actions |
 | **Hosting** | GitHub Pages (static) |

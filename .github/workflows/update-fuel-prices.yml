@@ -51,16 +51,18 @@ jobs:
 
       - name: Commit and push updated fuel data
         if: steps.changes.outputs.changed == 'true'
-        env:
-          SL_DATE: ${{ github.run_id }}
         run: |
           UPDATE_DATE=$(TZ="Asia/Colombo" date +%Y-%m-%d)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cpc_petroleum_prices_original.csv data/
+          git add cpc_petroleum_prices_original.csv data/current_rates.json data/archive_meta.json data/trends_kpis.json data/monthly_aggregated.json data/annual_aggregated.json data/pipeline_status.json
           if git diff --cached --quiet; then
             echo "Nothing staged to commit."
             exit 0
           fi
           git commit -m "chore(data): update fuel prices for ${UPDATE_DATE}"
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 2
+          done
+          exit 1
