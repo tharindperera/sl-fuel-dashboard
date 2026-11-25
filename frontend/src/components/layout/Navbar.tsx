@@ -49,10 +49,12 @@ export function Navbar({
           onClick={() => handleSelectPage("home")}
           className="flex cursor-pointer items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary rounded-md py-1"
         >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-primary text-white shadow-sm ring-4 ring-sky-50 dark:ring-sky-950/60">
-            <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-            </svg>
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-sky-200/80 bg-white shadow-sm ring-2 ring-sky-50 dark:border-slate-700 dark:bg-slate-100 dark:ring-sky-950/60">
+            <img
+              src="./logo.png"
+              alt="CeylonOctane Analytics logo"
+              className="h-9 w-9 object-contain object-bottom"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-heading text-base sm:text-xl font-bold leading-none tracking-tight text-slate-900 dark:text-white whitespace-nowrap">

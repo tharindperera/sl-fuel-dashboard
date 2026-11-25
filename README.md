@@ -130,7 +130,7 @@ sl-fuel-dashboard/
 │   ├── vite.config.ts              # Custom plugin syncs repo-root data/ into dev server & dist/
 │   ├── tsconfig.json
 │   ├── index.html
-│   ├── public/favicon.svg
+│   ├── public/logo.png & favicon.png
 │   └── src/
 │       ├── main.tsx                # React DOM entry
 │       ├── App.tsx                 # Router, page switching, global state orchestration
