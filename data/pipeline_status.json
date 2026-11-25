@@ -1,6 +1,6 @@
 {
-  "last_run_sl": "2026-11-25T13:19:25.681725+05:30",
-  "last_run_utc": "2026-11-25T07:49:25.681725+00:00",
+  "last_run_sl": "2026-11-25T21:57:18.811947+05:30",
+  "last_run_utc": "2026-11-25T16:27:18.811947+00:00",
   "mode": "update",
   "sources": {
     "fuel_prices_api": {
@@ -19,10 +19,8 @@
       "error": null
     }
   },
-  "update_applied": true,
-  "new_revisions_added": [
-    "02.11.2026"
-  ],
+  "update_applied": false,
+  "new_revisions_added": [],
   "total_csv_rows": 185,
   "latest_revision_date": "2026-11-02",
   "warnings": [
