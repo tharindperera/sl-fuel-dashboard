@@ -19,9 +19,9 @@
   "frequency": "DAILY",
   "benchmark_label": "ICE BRENT / EIA SPOT",
   "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
-  "last_updated_utc": "2026-11-25T09:59:04.454006+00:00",
-  "last_updated_sl": "2026-11-25T15:29:04.454006+05:30",
-  "index_sync_label": "INDEX SYNC: 25 NOV 2026 09:59 UTC",
+  "last_updated_utc": "2026-11-25T16:10:28.083340+00:00",
+  "last_updated_sl": "2026-11-25T21:40:28.083340+05:30",
+  "index_sync_label": "INDEX SYNC: 25 NOV 2026 16:10 UTC",
   "trend_outlook": {
     "projected_price": 101.46,
     "ema_20": 102.94,
@@ -59,7 +59,7 @@
       "first_date": "1986-01-02",
       "latest_date": "2026-11-17",
       "historical_range": "1986 - 2026",
-      "updated_label": "09:59"
+      "updated_label": "16:10"
     },
     {
       "id": "brent",
@@ -86,7 +86,7 @@
       "first_date": "1987-05-20",
       "latest_date": "2026-11-17",
       "historical_range": "1987 - 2026",
-      "updated_label": "09:59"
+      "updated_label": "16:10"
     },
     {
       "id": "natgas",
@@ -113,7 +113,7 @@
       "first_date": "1997-01-07",
       "latest_date": "2026-11-17",
       "historical_range": "1997 - 2026",
-      "updated_label": "09:59"
+      "updated_label": "16:10"
     },
     {
       "id": "gasoline",
@@ -140,7 +140,7 @@
       "first_date": "1986-06-02",
       "latest_date": "2026-11-17",
       "historical_range": "1986 - 2026",
-      "updated_label": "09:59"
+      "updated_label": "16:10"
     },
     {
       "id": "heating_oil",
@@ -167,7 +167,7 @@
       "first_date": "1986-06-02",
       "latest_date": "2026-11-17",
       "historical_range": "1986 - 2026",
-      "updated_label": "09:59"
+      "updated_label": "16:10"
     }
   ]
 }
