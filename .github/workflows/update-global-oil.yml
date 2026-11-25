@@ -2,8 +2,8 @@ name: Update Global Crude Oil Data
 
 on:
   schedule:
-    # Every 6 hours UTC (00:00, 06:00, 12:00, and 18:00 UTC = 11:30 PM SLST)
-    - cron: "0 */6 * * *"
+    # Every 6 hours UTC at :20 past (00:20, 06:20, 12:20, and 18:20 UTC = 11:50 PM SLST)
+    - cron: "20 */6 * * *"
   workflow_dispatch:
 
 permissions:

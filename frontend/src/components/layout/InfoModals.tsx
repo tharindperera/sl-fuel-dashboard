@@ -91,7 +91,7 @@ export function AboutPortalModal({
                 Automated Daily Sync
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-300">
-                GitHub Actions scrapes CEYPETCO daily at <strong>11:30 PM Sri Lanka Time (UTC+05:30)</strong>,
+                GitHub Actions scrapes CEYPETCO daily at <strong>11:50 PM Sri Lanka Time (UTC+05:30)</strong>,
                 reconciles new revisions, carries forward unchanged grades, and republishes KPI files.
               </p>
             </div>

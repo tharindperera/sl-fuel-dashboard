@@ -2,8 +2,8 @@ name: Update CEYPETCO Fuel Prices
 
 on:
   schedule:
-    # Daily at 11:30 PM Sri Lanka Time (UTC+05:30) = 18:00 UTC
-    - cron: "0 18 * * *"
+    # Daily at 11:50 PM Sri Lanka Time (UTC+05:30) = 18:20 UTC
+    - cron: "20 18 * * *"
   workflow_dispatch:
 
 permissions:

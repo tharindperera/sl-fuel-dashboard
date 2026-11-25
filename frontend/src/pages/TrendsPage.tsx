@@ -317,7 +317,7 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
           </div>
           <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
             All tariffs and benchmarks are computed directly from verified CEYPETCO statistical
-            registries updated daily at 11:30 PM SLST.
+            registries updated daily at 11:50 PM SLST.
           </p>
         </div>
       </section>

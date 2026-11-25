@@ -189,7 +189,7 @@ sl-fuel-dashboard/
 
 ### Domestic Fuel Price Pipeline
 
-**Schedule:** Daily at 11:30 PM Sri Lanka time (18:00 UTC) via `update-fuel-prices.yml`.
+**Schedule:** Daily at 11:50 PM Sri Lanka time (18:20 UTC) via `update-fuel-prices.yml`.
 
 **Pipeline flow:**
 1. **Scrape** CEYPETCO's JSON API (`/marketing-sales/`) and HTML historical archive (`/marketing-sales/historical-prices/`) with exponential-backoff retries.
@@ -220,7 +220,7 @@ sl-fuel-dashboard/
 
 ### Global Crude Oil Pipeline
 
-**Schedule:** Every 6 hours + daily at 11:30 PM SL time via `update-global-oil.yml`.
+**Schedule:** Every 6 hours (:20 past the hour, including 11:50 PM SL time) via `update-global-oil.yml`.
 
 **Pipeline flow:**
 1. **Fetch** historical daily CSV series from [FRED](https://fred.stlouisfed.org) for 5 commodities:
@@ -281,8 +281,8 @@ Built with **React 19**, **TypeScript 5.8**, **Vite 6**, and **Tailwind CSS v4**
 
 | Workflow | File | Trigger | Purpose |
 |----------|------|---------|---------|
-| **Update CEYPETCO Fuel Prices** | `update-fuel-prices.yml` | Daily 18:00 UTC + manual | Scrape, reconcile, generate KPIs, commit data. |
-| **Update Global Crude Oil Data** | `update-global-oil.yml` | Every 6h + daily 18:00 UTC + manual | Fetch FRED/EIA series, compute metrics, commit data. |
+| **Update CEYPETCO Fuel Prices** | `update-fuel-prices.yml` | Daily 18:20 UTC + manual | Scrape, reconcile, generate KPIs, commit data. |
+| **Update Global Crude Oil Data** | `update-global-oil.yml` | Every 6h (:20 past) + manual | Fetch FRED/EIA series, compute metrics, commit data. |
 | **Deploy Dashboard** | `deploy-pages.yml` | On push to `main` (frontend/data paths) + after either data workflow completes | Build Vite bundle, upload to GitHub Pages. |
 
 All workflows include concurrency guards to prevent parallel runs, and only commit when data has actually changed.
