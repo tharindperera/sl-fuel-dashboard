@@ -68,3 +68,69 @@ export interface ArchiveRow {
   rawValues: Record<string, string>; // keyed by csv_column
   numericValues: Record<string, number | null>; // keyed by csv_column
 }
+
+export type TariffStatus = "increased" | "decreased" | "no_change";
+
+export interface LatestTariffEntry {
+  code: string;
+  full_name: string;
+  category: FuelCategory;
+  is_core_retail: boolean;
+  price_lkr: number;
+  previous_price_lkr: number;
+  delta_lkr: number;
+  delta_pct: number;
+  status: TariffStatus;
+  last_changed_date: string;
+  days_since_last_change: number;
+}
+
+export interface AllTimeHighEntry {
+  price_lkr: number;
+  dates: string[];
+  latest_date: string;
+}
+
+export interface AllTimeLowEntry {
+  price_lkr: number;
+  date: string;
+  dates: string[];
+}
+
+export interface GradeSummaryStats {
+  price_changes_last_12_months: number;
+  ytd_change_lkr: number;
+  ytd_change_pct: number;
+  ytd_baseline_date: string;
+  ytd_baseline_price_lkr: number;
+  yoy_change_lkr: number;
+  yoy_change_pct: number;
+  yoy_baseline_date: string;
+  yoy_baseline_price_lkr: number;
+  min_12m_lkr: number;
+  max_12m_lkr: number;
+  avg_12m_lkr: number;
+}
+
+export interface ChartSeriesPoint {
+  date: string; // YYYY-MM-DD
+  date_label: string;
+  prices: Record<string, number | null>;
+  pct_change: Record<string, number | null>;
+}
+
+export interface TrendsKpisData {
+  active_tracking_count: number;
+  core_retail_codes: string[];
+  all_grades_count: number;
+  latest_revision_date: string;
+  latest_tariffs: Record<string, LatestTariffEntry>;
+  all_time_high: Record<string, AllTimeHighEntry>;
+  all_time_low: Record<string, AllTimeLowEntry>;
+  summary_stats: {
+    revisions_last_12_months: number;
+    grades: Record<string, GradeSummaryStats>;
+  };
+  chart_series: ChartSeriesPoint[];
+}
+

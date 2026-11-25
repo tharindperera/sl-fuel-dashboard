@@ -1,8 +1,10 @@
 import type {
   ArchiveMetaData,
   ArchiveRow,
+  ChartSeriesPoint,
   CurrentRatesData,
   PipelineStatusData,
+  TrendsKpisData,
 } from "../types/fuel";
 import { parseCsvDateInfo, parseHistoricalCell } from "./formatters";
 
@@ -82,6 +84,48 @@ export async function fetchCurrentRates(): Promise<CurrentRatesData> {
 
 export async function fetchPipelineStatus(): Promise<PipelineStatusData> {
   return fetchJson<PipelineStatusData>("data/pipeline_status.json");
+}
+
+export async function fetchTrendsKpis(): Promise<TrendsKpisData> {
+  return fetchJson<TrendsKpisData>("data/trends_kpis.json");
+}
+
+export function exportChartSeriesToCsv(
+  points: ChartSeriesPoint[],
+  codes: string[],
+  metric: "val" | "pct",
+  filename: string
+): void {
+  const escapeCell = (val: string) => `"${val.replace(/"/g, '""')}"`;
+  const suffix = metric === "val" ? "(LKR)" : "(% Change)";
+  const header = [
+    escapeCell("Date"),
+    escapeCell("Revision Label"),
+    ...codes.map((c) => escapeCell(`${c} ${suffix}`)),
+  ].join(",");
+
+  const lines = points.map((pt) => {
+    const source = metric === "val" ? pt.prices : pt.pct_change;
+    return [
+      escapeCell(pt.date),
+      escapeCell(pt.date_label),
+      ...codes.map((c) => {
+        const val = source[c];
+        return escapeCell(val === null || val === undefined ? "" : String(val));
+      }),
+    ].join(",");
+  });
+
+  const content = [header, ...lines].join("\r\n") + "\r\n";
+  const blob = new Blob([content], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+  URL.revokeObjectURL(url);
 }
 
 export async function fetchArchiveBundle(): Promise<{

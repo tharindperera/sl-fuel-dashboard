@@ -1,6 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
-import type { ArchiveMetaData, ArchiveRow, CurrentRatesData, PipelineStatusData } from "../types/fuel";
-import { fetchArchiveBundle, fetchCurrentRates, fetchPipelineStatus } from "../utils/dataLoader";
+import type {
+  ArchiveMetaData,
+  ArchiveRow,
+  CurrentRatesData,
+  PipelineStatusData,
+  TrendsKpisData,
+} from "../types/fuel";
+import {
+  fetchArchiveBundle,
+  fetchCurrentRates,
+  fetchPipelineStatus,
+  fetchTrendsKpis,
+} from "../utils/dataLoader";
 
 export function useCurrentRates() {
   const [data, setData] = useState<CurrentRatesData | null>(null);
@@ -57,4 +68,29 @@ export function useArchiveData() {
   }, [load]);
 
   return { meta, rows, loading, error, reload: load };
+}
+
+export function useTrendsKpis() {
+  const [data, setData] = useState<TrendsKpisData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const kpis = await fetchTrendsKpis();
+      setData(kpis);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unable to load trends & KPI analytics.");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void load();
+  }, [load]);
+
+  return { data, loading, error, reload: load };
 }

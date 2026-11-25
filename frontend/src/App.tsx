@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Footer } from "./components/layout/Footer";
 import { AboutPortalModal, ContactModal } from "./components/layout/InfoModals";
 import { Navbar } from "./components/layout/Navbar";
-import { useArchiveData, useCurrentRates } from "./hooks/useFuelData";
+import { useArchiveData, useCurrentRates, useTrendsKpis } from "./hooks/useFuelData";
 import { useTheme } from "./hooks/useTheme";
 import { getStrings } from "./i18n/strings";
+import { AnalysisPage } from "./pages/AnalysisPage";
 import { ArchivePage } from "./pages/ArchivePage";
-import { ComingSoonPage } from "./pages/ComingSoonPage";
 import { HomePage } from "./pages/HomePage";
+import { TrendsPage } from "./pages/TrendsPage";
 import type { LanguageCode, RoutePage } from "./types/fuel";
 
 function parseHashRoute(): RoutePage {
@@ -30,6 +31,7 @@ export function App() {
 
   const currentRatesState = useCurrentRates();
   const archiveState = useArchiveData();
+  const trendsState = useTrendsKpis();
 
   useEffect(() => {
     const onHashChange = () => setActivePage(parseHashRoute());
@@ -81,8 +83,22 @@ export function App() {
           />
         )}
 
-        {(activePage === "trends" || activePage === "analysis") && (
-          <ComingSoonPage page={activePage} onNavigate={handleNavigate} />
+        {activePage === "trends" && (
+          <TrendsPage
+            data={trendsState.data}
+            loading={trendsState.loading}
+            error={trendsState.error}
+            onRetry={trendsState.reload}
+          />
+        )}
+
+        {activePage === "analysis" && (
+          <AnalysisPage
+            data={trendsState.data}
+            loading={trendsState.loading}
+            error={trendsState.error}
+            onRetry={trendsState.reload}
+          />
         )}
       </main>
 
