@@ -1,0 +1,106 @@
+{
+  "first_record_year": 1990,
+  "first_record_date": "1990-03-01",
+  "latest_record_date": "2026-11-02",
+  "total_records": 185,
+  "available_years": [
+    2026,
+    2025,
+    2024,
+    2023,
+    2022,
+    2021,
+    2019,
+    2018,
+    2017,
+    2015,
+    2014,
+    2013,
+    2012,
+    2011,
+    2010,
+    2009,
+    2008,
+    2007,
+    2006,
+    2005,
+    2004,
+    2003,
+    2002,
+    2001,
+    2000,
+    1999,
+    1996,
+    1995,
+    1994,
+    1993,
+    1992,
+    1991,
+    1990
+  ],
+  "products": [
+    {
+      "code": "LP 95",
+      "csv_column": "LP 95",
+      "full_name": "Lanka Petrol 95 Octane Euro 4",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LP 92",
+      "csv_column": "LP 92",
+      "full_name": "Lanka Petrol 92 Octane",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LAD",
+      "csv_column": "LAD",
+      "full_name": "Lanka Auto Diesel",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LSD",
+      "csv_column": "LSD",
+      "full_name": "Lanka Super Diesel 4 Star Euro 4",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LK",
+      "csv_column": "LK",
+      "full_name": "Lanka Kerosene",
+      "category": "White Oil",
+      "segment": "Retail"
+    },
+    {
+      "code": "LIK",
+      "csv_column": "LIK",
+      "full_name": "Lanka Industrial Kerosene",
+      "category": "White Oil",
+      "segment": "Industrial"
+    },
+    {
+      "code": "FUR. 800",
+      "csv_column": "FUR. 800",
+      "full_name": "Furnace Oil 800",
+      "category": "Black Oil",
+      "segment": "Industrial"
+    },
+    {
+      "code": "FUR 1500 (H)",
+      "csv_column": "FUR 1500 (High)",
+      "full_name": "Furnace Oil 1500 High Sulphur",
+      "category": "Black Oil",
+      "segment": "Industrial"
+    },
+    {
+      "code": "FUR 1500 (L)",
+      "csv_column": "FUR. 1500 (Low)",
+      "full_name": "Furnace Oil 1500 Low Sulphur",
+      "category": "Black Oil",
+      "segment": "Industrial"
+    }
+  ]
+}

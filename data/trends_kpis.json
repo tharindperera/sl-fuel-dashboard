@@ -1,0 +1,5240 @@
+{
+  "active_tracking_count": 5,
+  "core_retail_codes": [
+    "LP 92",
+    "LP 95",
+    "LAD",
+    "LSD",
+    "LK"
+  ],
+  "all_grades_count": 9,
+  "latest_revision_date": "2026-11-02",
+  "latest_tariffs": {
+    "LP 95": {
+      "code": "LP 95",
+      "full_name": "Lanka Petrol 95 Octane Euro 4",
+      "category": "White Oil",
+      "is_core_retail": true,
+      "price_lkr": 490.0,
+      "previous_price_lkr": 475.0,
+      "delta_lkr": 15.0,
+      "delta_pct": 3.16,
+      "status": "increased",
+      "last_changed_date": "2026-11-02",
+      "days_since_last_change": 0
+    },
+    "LP 92": {
+      "code": "LP 92",
+      "full_name": "Lanka Petrol 92 Octane",
+      "category": "White Oil",
+      "is_core_retail": true,
+      "price_lkr": 424.0,
+      "previous_price_lkr": 414.0,
+      "delta_lkr": 10.0,
+      "delta_pct": 2.42,
+      "status": "increased",
+      "last_changed_date": "2026-11-02",
+      "days_since_last_change": 0
+    },
+    "LAD": {
+      "code": "LAD",
+      "full_name": "Lanka Auto Diesel",
+      "category": "White Oil",
+      "is_core_retail": true,
+      "price_lkr": 397.0,
+      "previous_price_lkr": 392.0,
+      "delta_lkr": 5.0,
+      "delta_pct": 1.28,
+      "status": "increased",
+      "last_changed_date": "2026-11-02",
+      "days_since_last_change": 0
+    },
+    "LSD": {
+      "code": "LSD",
+      "full_name": "Lanka Super Diesel 4 Star Euro 4",
+      "category": "White Oil",
+      "is_core_retail": true,
+      "price_lkr": 543.0,
+      "previous_price_lkr": 528.0,
+      "delta_lkr": 15.0,
+      "delta_pct": 2.84,
+      "status": "increased",
+      "last_changed_date": "2026-11-02",
+      "days_since_last_change": 0
+    },
+    "LK": {
+      "code": "LK",
+      "full_name": "Lanka Kerosene",
+      "category": "White Oil",
+      "is_core_retail": true,
+      "price_lkr": 285.0,
+      "previous_price_lkr": 285.0,
+      "delta_lkr": 0.0,
+      "delta_pct": 0.0,
+      "status": "no_change",
+      "last_changed_date": "2026-05-31",
+      "days_since_last_change": 155
+    },
+    "LIK": {
+      "code": "LIK",
+      "full_name": "Lanka Industrial Kerosene",
+      "category": "White Oil",
+      "is_core_retail": false,
+      "price_lkr": 382.0,
+      "previous_price_lkr": 382.0,
+      "delta_lkr": 0.0,
+      "delta_pct": 0.0,
+      "status": "no_change",
+      "last_changed_date": "2026-08-05",
+      "days_since_last_change": 89
+    },
+    "FUR. 800": {
+      "code": "FUR. 800",
+      "full_name": "Furnace Oil 800",
+      "category": "Black Oil",
+      "is_core_retail": false,
+      "price_lkr": 322.0,
+      "previous_price_lkr": 322.0,
+      "delta_lkr": 0.0,
+      "delta_pct": 0.0,
+      "status": "no_change",
+      "last_changed_date": "2026-08-05",
+      "days_since_last_change": 89
+    },
+    "FUR 1500 (H)": {
+      "code": "FUR 1500 (H)",
+      "full_name": "Furnace Oil 1500 High Sulphur",
+      "category": "Black Oil",
+      "is_core_retail": false,
+      "price_lkr": 322.0,
+      "previous_price_lkr": 322.0,
+      "delta_lkr": 0.0,
+      "delta_pct": 0.0,
+      "status": "no_change",
+      "last_changed_date": "2026-08-05",
+      "days_since_last_change": 89
+    },
+    "FUR 1500 (L)": {
+      "code": "FUR 1500 (L)",
+      "full_name": "Furnace Oil 1500 Low Sulphur",
+      "category": "Black Oil",
+      "is_core_retail": false,
+      "price_lkr": 322.0,
+      "previous_price_lkr": 322.0,
+      "delta_lkr": 0.0,
+      "delta_pct": 0.0,
+      "status": "no_change",
+      "last_changed_date": "2026-08-05",
+      "days_since_last_change": 89
+    }
+  },
+  "all_time_high": {
+    "LP 95": {
+      "price_lkr": 550.0,
+      "dates": [
+        "2022-06-26"
+      ],
+      "latest_date": "2022-06-26"
+    },
+    "LP 92": {
+      "price_lkr": 470.0,
+      "dates": [
+        "2022-06-26"
+      ],
+      "latest_date": "2022-06-26"
+    },
+    "LAD": {
+      "price_lkr": 460.0,
+      "dates": [
+        "2022-06-26"
+      ],
+      "latest_date": "2022-06-26"
+    },
+    "LSD": {
+      "price_lkr": 543.0,
+      "dates": [
+        "2026-11-02"
+      ],
+      "latest_date": "2026-11-02"
+    },
+    "LK": {
+      "price_lkr": 365.0,
+      "dates": [
+        "2022-11-12",
+        "2022-12-06"
+      ],
+      "latest_date": "2022-12-06"
+    },
+    "LIK": {
+      "price_lkr": 464.0,
+      "dates": [
+        "2022-06-26",
+        "2022-07-17",
+        "2022-08-01",
+        "2022-08-21",
+        "2022-10-02",
+        "2022-10-17",
+        "2022-11-12",
+        "2022-12-06",
+        "2023-01-03",
+        "2023-02-01"
+      ],
+      "latest_date": "2023-02-01"
+    },
+    "FUR. 800": {
+      "price_lkr": 419.0,
+      "dates": [
+        "2022-06-26",
+        "2022-07-17",
+        "2022-08-01",
+        "2022-08-21",
+        "2022-10-02",
+        "2022-10-17",
+        "2022-11-12"
+      ],
+      "latest_date": "2022-11-12"
+    },
+    "FUR 1500 (H)": {
+      "price_lkr": 419.0,
+      "dates": [
+        "2022-06-26",
+        "2022-07-17",
+        "2022-08-01",
+        "2022-08-21",
+        "2022-10-02",
+        "2022-10-17",
+        "2022-11-12"
+      ],
+      "latest_date": "2022-11-12"
+    },
+    "FUR 1500 (L)": {
+      "price_lkr": 419.0,
+      "dates": [
+        "2022-06-26",
+        "2022-07-17",
+        "2022-08-01",
+        "2022-08-21",
+        "2022-10-02",
+        "2022-10-17",
+        "2022-11-12"
+      ],
+      "latest_date": "2022-11-12"
+    }
+  },
+  "all_time_low": {
+    "LP 95": {
+      "price_lkr": 22.0,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    },
+    "LP 92": {
+      "price_lkr": 20.0,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    },
+    "LAD": {
+      "price_lkr": 9.6,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    },
+    "LSD": {
+      "price_lkr": 10.9,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    },
+    "LK": {
+      "price_lkr": 6.58,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    },
+    "LIK": {
+      "price_lkr": 9.58,
+      "date": "1990-11-05",
+      "dates": [
+        "1990-11-05"
+      ]
+    },
+    "FUR. 800": {
+      "price_lkr": 4.7,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    },
+    "FUR 1500 (H)": {
+      "price_lkr": 80.0,
+      "date": "2015-01-01",
+      "dates": [
+        "2015-01-01",
+        "2015-01-22",
+        "2015-01-29",
+        "2015-11-28",
+        "2017-01-11",
+        "2018-05-11",
+        "2018-06-13",
+        "2018-07-11",
+        "2018-08-11"
+      ]
+    },
+    "FUR 1500 (L)": {
+      "price_lkr": 4.29,
+      "date": "1990-03-01",
+      "dates": [
+        "1990-03-01"
+      ]
+    }
+  },
+  "summary_stats": {
+    "revisions_last_12_months": 13,
+    "grades": {
+      "LP 95": {
+        "price_changes_last_12_months": 7,
+        "ytd_change_lkr": 155.0,
+        "ytd_change_pct": 46.27,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 335.0,
+        "yoy_change_lkr": 155.0,
+        "yoy_change_pct": 46.27,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 335.0,
+        "min_12m_lkr": 340.0,
+        "max_12m_lkr": 495.0,
+        "avg_12m_lkr": 437.69
+      },
+      "LP 92": {
+        "price_changes_last_12_months": 10,
+        "ytd_change_lkr": 130.0,
+        "ytd_change_pct": 44.22,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 294.0,
+        "yoy_change_lkr": 130.0,
+        "yoy_change_pct": 44.22,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 294.0,
+        "min_12m_lkr": 292.0,
+        "max_12m_lkr": 434.0,
+        "avg_12m_lkr": 377.0
+      },
+      "LAD": {
+        "price_changes_last_12_months": 10,
+        "ytd_change_lkr": 120.0,
+        "ytd_change_pct": 43.32,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 277.0,
+        "yoy_change_lkr": 120.0,
+        "yoy_change_pct": 43.32,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 277.0,
+        "min_12m_lkr": 277.0,
+        "max_12m_lkr": 407.0,
+        "avg_12m_lkr": 356.77
+      },
+      "LSD": {
+        "price_changes_last_12_months": 8,
+        "ytd_change_lkr": 225.0,
+        "ytd_change_pct": 70.75,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 318.0,
+        "yoy_change_lkr": 225.0,
+        "yoy_change_pct": 70.75,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 318.0,
+        "min_12m_lkr": 323.0,
+        "max_12m_lkr": 543.0,
+        "avg_12m_lkr": 435.0
+      },
+      "LK": {
+        "price_changes_last_12_months": 5,
+        "ytd_change_lkr": 105.0,
+        "ytd_change_pct": 58.33,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 180.0,
+        "yoy_change_lkr": 105.0,
+        "yoy_change_pct": 58.33,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 180.0,
+        "min_12m_lkr": 182.0,
+        "max_12m_lkr": 285.0,
+        "avg_12m_lkr": 248.15
+      },
+      "LIK": {
+        "price_changes_last_12_months": 2,
+        "ytd_change_lkr": 189.0,
+        "ytd_change_pct": 97.93,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 193.0,
+        "yoy_change_lkr": 189.0,
+        "yoy_change_pct": 97.93,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 193.0,
+        "min_12m_lkr": 193.0,
+        "max_12m_lkr": 434.0,
+        "avg_12m_lkr": 325.31
+      },
+      "FUR. 800": {
+        "price_changes_last_12_months": 2,
+        "ytd_change_lkr": 128.0,
+        "ytd_change_pct": 65.98,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 194.0,
+        "yoy_change_lkr": 128.0,
+        "yoy_change_pct": 65.98,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 194.0,
+        "min_12m_lkr": 194.0,
+        "max_12m_lkr": 332.0,
+        "avg_12m_lkr": 275.85
+      },
+      "FUR 1500 (H)": {
+        "price_changes_last_12_months": 2,
+        "ytd_change_lkr": 128.0,
+        "ytd_change_pct": 65.98,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 194.0,
+        "yoy_change_lkr": 128.0,
+        "yoy_change_pct": 65.98,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 194.0,
+        "min_12m_lkr": 194.0,
+        "max_12m_lkr": 332.0,
+        "avg_12m_lkr": 275.85
+      },
+      "FUR 1500 (L)": {
+        "price_changes_last_12_months": 2,
+        "ytd_change_lkr": 128.0,
+        "ytd_change_pct": 65.98,
+        "ytd_baseline_date": "2025-11-01",
+        "ytd_baseline_price_lkr": 194.0,
+        "yoy_change_lkr": 128.0,
+        "yoy_change_pct": 65.98,
+        "yoy_baseline_date": "2025-11-01",
+        "yoy_baseline_price_lkr": 194.0,
+        "min_12m_lkr": 194.0,
+        "max_12m_lkr": 332.0,
+        "avg_12m_lkr": 275.85
+      }
+    }
+  },
+  "chart_series": [
+    {
+      "date": "1990-03-01",
+      "date_label": "01.03.1990",
+      "prices": {
+        "LP 95": 22.0,
+        "LP 92": 20.0,
+        "LAD": 9.6,
+        "LSD": 10.9,
+        "LK": 6.58,
+        "LIK": 9.85,
+        "FUR. 800": 4.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.29
+      },
+      "pct_change": {
+        "LP 95": null,
+        "LP 92": null,
+        "LAD": null,
+        "LSD": null,
+        "LK": null,
+        "LIK": null,
+        "FUR. 800": null,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": null
+      }
+    },
+    {
+      "date": "1990-08-14",
+      "date_label": "14.08.1990",
+      "prices": {
+        "LP 95": 27.0,
+        "LP 92": 25.0,
+        "LAD": 11.0,
+        "LSD": 12.5,
+        "LK": 8.0,
+        "LIK": 9.85,
+        "FUR. 800": 5.4,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.9
+      },
+      "pct_change": {
+        "LP 95": 22.73,
+        "LP 92": 25.0,
+        "LAD": 14.58,
+        "LSD": 14.68,
+        "LK": 21.58,
+        "LIK": 0.0,
+        "FUR. 800": 14.89,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 14.22
+      }
+    },
+    {
+      "date": "1990-11-05",
+      "date_label": "05.11.1990",
+      "prices": {
+        "LP 95": 38.0,
+        "LP 92": 35.0,
+        "LAD": 13.0,
+        "LSD": 15.0,
+        "LK": 8.8,
+        "LIK": 9.58,
+        "FUR. 800": 6.3,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.6
+      },
+      "pct_change": {
+        "LP 95": 40.74,
+        "LP 92": 40.0,
+        "LAD": 18.18,
+        "LSD": 20.0,
+        "LK": 10.0,
+        "LIK": -2.74,
+        "FUR. 800": 16.67,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 14.29
+      }
+    },
+    {
+      "date": "1990-12-26",
+      "date_label": "26.12.1990",
+      "prices": {
+        "LP 95": 32.5,
+        "LP 92": 30.0,
+        "LAD": 11.0,
+        "LSD": 13.0,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.3,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.6
+      },
+      "pct_change": {
+        "LP 95": -14.47,
+        "LP 92": -14.29,
+        "LAD": -15.38,
+        "LSD": -13.33,
+        "LK": 0.0,
+        "LIK": 2.82,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1991-01-01",
+      "date_label": "01.01.1991",
+      "prices": {
+        "LP 95": 32.5,
+        "LP 92": 30.0,
+        "LAD": 11.0,
+        "LSD": 13.0,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -0.79,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -0.89
+      }
+    },
+    {
+      "date": "1992-05-13",
+      "date_label": "13.05.1992",
+      "prices": {
+        "LP 95": 32.5,
+        "LP 92": 30.0,
+        "LAD": 11.5,
+        "LSD": 13.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 4.55,
+        "LSD": 3.85,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1992-06-28",
+      "date_label": "28.06.1992",
+      "prices": {
+        "LP 95": 32.5,
+        "LP 92": 30.0,
+        "LAD": 11.5,
+        "LSD": 14.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 7.41,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1992-07-14",
+      "date_label": "14.07.1992",
+      "prices": {
+        "LP 95": 32.5,
+        "LP 92": 30.0,
+        "LAD": 11.55,
+        "LSD": 14.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.43,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1992-08-21",
+      "date_label": "21.08.1992",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.55,
+        "LSD": 14.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 9.23,
+        "LP 92": 10.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1992-10-03",
+      "date_label": "03.10.1992",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.6,
+        "LSD": 14.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.43,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1992-12-21",
+      "date_label": "21.12.1992",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.65,
+        "LSD": 14.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.43,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1993-06-07",
+      "date_label": "07.06.1993",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.7,
+        "LSD": 14.5,
+        "LK": 8.8,
+        "LIK": 9.85,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.43,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1993-06-11",
+      "date_label": "11.06.1993",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.7,
+        "LSD": 14.5,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 34.09,
+        "LIK": 19.8,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1993-07-12",
+      "date_label": "12.07.1993",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.8,
+        "LSD": 14.6,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.85,
+        "LSD": 0.69,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1993-08-30",
+      "date_label": "30.08.1993",
+      "prices": {
+        "LP 95": 35.5,
+        "LP 92": 33.0,
+        "LAD": 11.9,
+        "LSD": 14.7,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.85,
+        "LSD": 0.68,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1993-10-14",
+      "date_label": "14.10.1993",
+      "prices": {
+        "LP 95": 37.5,
+        "LP 92": 35.0,
+        "LAD": 12.0,
+        "LSD": 14.8,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 5.63,
+        "LP 92": 6.06,
+        "LAD": 0.84,
+        "LSD": 0.68,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1993-12-17",
+      "date_label": "17.12.1993",
+      "prices": {
+        "LP 95": 37.5,
+        "LP 92": 35.0,
+        "LAD": 12.2,
+        "LSD": 15.0,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 1.67,
+        "LSD": 1.35,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1994-02-17",
+      "date_label": "17.02.1994",
+      "prices": {
+        "LP 95": 37.5,
+        "LP 92": 35.0,
+        "LAD": 12.3,
+        "LSD": 15.1,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.82,
+        "LSD": 0.67,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1994-03-28",
+      "date_label": "28.03.1994",
+      "prices": {
+        "LP 95": 37.5,
+        "LP 92": 35.0,
+        "LAD": 12.4,
+        "LSD": 12.2,
+        "LK": 11.8,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.81,
+        "LSD": -19.21,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1994-06-28",
+      "date_label": "28.06.1994",
+      "prices": {
+        "LP 95": 37.5,
+        "LP 92": 35.0,
+        "LAD": 11.4,
+        "LSD": 14.2,
+        "LK": 9.5,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": -8.06,
+        "LSD": 16.39,
+        "LK": -19.49,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1995-01-26",
+      "date_label": "26.01.1995",
+      "prices": {
+        "LP 95": 42.5,
+        "LP 92": 40.0,
+        "LAD": 11.4,
+        "LSD": 14.2,
+        "LK": 9.5,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 13.33,
+        "LP 92": 14.29,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1995-02-09",
+      "date_label": "09.02.1995",
+      "prices": {
+        "LP 95": 42.5,
+        "LP 92": 40.0,
+        "LAD": 12.4,
+        "LSD": 15.2,
+        "LK": 9.5,
+        "LIK": 11.8,
+        "FUR. 800": 6.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.55
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 8.77,
+        "LSD": 7.04,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "1996-09-28",
+      "date_label": "28.09.1996",
+      "prices": {
+        "LP 95": 55.0,
+        "LP 92": 50.0,
+        "LAD": 13.2,
+        "LSD": 18.5,
+        "LK": 10.4,
+        "LIK": 12.7,
+        "FUR. 800": 7.5,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 6.8
+      },
+      "pct_change": {
+        "LP 95": 29.41,
+        "LP 92": 25.0,
+        "LAD": 6.45,
+        "LSD": 21.71,
+        "LK": 9.47,
+        "LIK": 7.63,
+        "FUR. 800": 20.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.52
+      }
+    },
+    {
+      "date": "1999-05-26",
+      "date_label": "26.05.1999",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 13.2,
+        "LSD": 18.5,
+        "LK": 10.4,
+        "LIK": 12.7,
+        "FUR. 800": 7.5,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 6.8
+      },
+      "pct_change": {
+        "LP 95": -3.64,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2000-02-07",
+      "date_label": "07.02.2000",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 16.2,
+        "LSD": 21.5,
+        "LK": 15.4,
+        "LIK": 17.7,
+        "FUR. 800": 7.5,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 6.8
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 22.73,
+        "LSD": 16.22,
+        "LK": 48.08,
+        "LIK": 39.37,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2000-06-12",
+      "date_label": "12.06.2000",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 19.5,
+        "LSD": 24.8,
+        "LK": 15.4,
+        "LIK": 17.7,
+        "FUR. 800": 10.5,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 9.8
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 20.37,
+        "LSD": 15.35,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 40.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 44.12
+      }
+    },
+    {
+      "date": "2000-11-16",
+      "date_label": "16.11.2000",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 21.5,
+        "LSD": 26.8,
+        "LK": 17.4,
+        "LIK": 19.7,
+        "FUR. 800": 13.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 12.7
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 10.26,
+        "LSD": 8.06,
+        "LK": 12.99,
+        "LIK": 11.3,
+        "FUR. 800": 30.48,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 29.59
+      }
+    },
+    {
+      "date": "2000-12-27",
+      "date_label": "27.12.2000",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 24.5,
+        "LSD": 29.8,
+        "LK": 18.4,
+        "LIK": 20.7,
+        "FUR. 800": 15.1,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 14.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 13.95,
+        "LSD": 11.19,
+        "LK": 5.75,
+        "LIK": 5.08,
+        "FUR. 800": 10.22,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 10.24
+      }
+    },
+    {
+      "date": "2001-04-15",
+      "date_label": "15.04.2001",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 27.5,
+        "LSD": 32.8,
+        "LK": 19.4,
+        "LIK": 21.7,
+        "FUR. 800": 17.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 15.8
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 12.24,
+        "LSD": 10.07,
+        "LK": 5.43,
+        "LIK": 4.83,
+        "FUR. 800": 12.58,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 12.86
+      }
+    },
+    {
+      "date": "2001-11-15",
+      "date_label": "15.11.2001",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 27.5,
+        "LSD": 32.8,
+        "LK": 17.4,
+        "LIK": 19.7,
+        "FUR. 800": 17.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 15.8
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -10.31,
+        "LIK": -9.22,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2001-12-28",
+      "date_label": "28.12.2001",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 16.5,
+        "LSD": 31.8,
+        "LK": 17.4,
+        "LIK": 19.7,
+        "FUR. 800": 17.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 15.8
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": -40.0,
+        "LSD": -3.05,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2002-02-25",
+      "date_label": "25.02.2002",
+      "prices": {
+        "LP 95": 52.0,
+        "LP 92": 49.0,
+        "LAD": 26.0,
+        "LSD": 31.3,
+        "LK": 17.4,
+        "LIK": 19.7,
+        "FUR. 800": 17.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 15.5
+      },
+      "pct_change": {
+        "LP 95": -1.89,
+        "LP 92": -2.0,
+        "LAD": 57.58,
+        "LSD": -1.57,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -1.9
+      }
+    },
+    {
+      "date": "2002-03-22",
+      "date_label": "22.03.2002",
+      "prices": {
+        "LP 95": 53.0,
+        "LP 92": 50.0,
+        "LAD": 26.0,
+        "LSD": 31.3,
+        "LK": 17.4,
+        "LIK": 19.7,
+        "FUR. 800": 17.4,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 16.0
+      },
+      "pct_change": {
+        "LP 95": 1.92,
+        "LP 92": 2.04,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 2.35,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 3.23
+      }
+    },
+    {
+      "date": "2002-04-22",
+      "date_label": "22.04.2002",
+      "prices": {
+        "LP 95": 55.0,
+        "LP 92": 52.0,
+        "LAD": 28.0,
+        "LSD": 33.3,
+        "LK": 19.4,
+        "LIK": 21.7,
+        "FUR. 800": 19.4,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 18.0
+      },
+      "pct_change": {
+        "LP 95": 3.77,
+        "LP 92": 4.0,
+        "LAD": 7.69,
+        "LSD": 6.39,
+        "LK": 11.49,
+        "LIK": 10.15,
+        "FUR. 800": 11.49,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 12.5
+      }
+    },
+    {
+      "date": "2002-05-21",
+      "date_label": "21.05.2002",
+      "prices": {
+        "LP 95": 57.0,
+        "LP 92": 54.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 20.9,
+        "LIK": 23.2,
+        "FUR. 800": 21.4,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 20.0
+      },
+      "pct_change": {
+        "LP 95": 3.64,
+        "LP 92": 3.85,
+        "LAD": 7.14,
+        "LSD": 6.01,
+        "LK": 7.73,
+        "LIK": 6.91,
+        "FUR. 800": 10.31,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 11.11
+      }
+    },
+    {
+      "date": "2002-06-21",
+      "date_label": "21.06.2002",
+      "prices": {
+        "LP 95": 57.5,
+        "LP 92": 54.5,
+        "LAD": 30.5,
+        "LSD": 35.3,
+        "LK": 20.9,
+        "LIK": 23.2,
+        "FUR. 800": 21.4,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 21.0
+      },
+      "pct_change": {
+        "LP 95": 0.88,
+        "LP 92": 0.93,
+        "LAD": 1.67,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.0
+      }
+    },
+    {
+      "date": "2002-07-15",
+      "date_label": "15.07.2002",
+      "prices": {
+        "LP 95": 50.5,
+        "LP 92": 47.5,
+        "LAD": 27.5,
+        "LSD": 32.8,
+        "LK": 20.5,
+        "LIK": 22.8,
+        "FUR. 800": 20.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 20.2
+      },
+      "pct_change": {
+        "LP 95": -12.17,
+        "LP 92": -12.84,
+        "LAD": -9.84,
+        "LSD": -7.08,
+        "LK": -1.91,
+        "LIK": -1.72,
+        "FUR. 800": -2.34,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -3.81
+      }
+    },
+    {
+      "date": "2002-07-29",
+      "date_label": "29.07.2002",
+      "prices": {
+        "LP 95": 50.5,
+        "LP 92": 47.5,
+        "LAD": 27.5,
+        "LSD": 32.8,
+        "LK": 20.4,
+        "LIK": 22.7,
+        "FUR. 800": 20.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 20.2
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -0.49,
+        "LIK": -0.44,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2002-08-15",
+      "date_label": "15.08.2002",
+      "prices": {
+        "LP 95": 50.5,
+        "LP 92": 47.5,
+        "LAD": 28.0,
+        "LSD": 33.3,
+        "LK": 21.0,
+        "LIK": 23.3,
+        "FUR. 800": 21.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 21.2
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 1.82,
+        "LSD": 1.52,
+        "LK": 2.94,
+        "LIK": 2.64,
+        "FUR. 800": 4.78,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.95
+      }
+    },
+    {
+      "date": "2002-09-16",
+      "date_label": "16.09.2002",
+      "prices": {
+        "LP 95": 50.5,
+        "LP 92": 47.5,
+        "LAD": 28.5,
+        "LSD": 33.8,
+        "LK": 22.0,
+        "LIK": 24.3,
+        "FUR. 800": 23.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 21.9
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 1.79,
+        "LSD": 1.5,
+        "LK": 4.76,
+        "LIK": 4.29,
+        "FUR. 800": 5.02,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 3.3
+      }
+    },
+    {
+      "date": "2002-10-15",
+      "date_label": "15.10.2002",
+      "prices": {
+        "LP 95": 52.0,
+        "LP 92": 49.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 24.1,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 23.0
+      },
+      "pct_change": {
+        "LP 95": 2.97,
+        "LP 92": 3.16,
+        "LAD": 5.26,
+        "LSD": 4.44,
+        "LK": 9.09,
+        "LIK": 8.23,
+        "FUR. 800": 4.78,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 5.02
+      }
+    },
+    {
+      "date": "2002-12-16",
+      "date_label": "16.12.2002",
+      "prices": {
+        "LP 95": 52.0,
+        "LP 92": 49.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 21.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 20.7
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -9.13,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -10.0
+      }
+    },
+    {
+      "date": "2003-01-16",
+      "date_label": "16.01.2003",
+      "prices": {
+        "LP 95": 52.0,
+        "LP 92": 49.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 23.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.7
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 8.22,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 9.66
+      }
+    },
+    {
+      "date": "2003-02-14",
+      "date_label": "14.02.2003",
+      "prices": {
+        "LP 95": 54.0,
+        "LP 92": 51.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 25.6,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 24.7
+      },
+      "pct_change": {
+        "LP 95": 3.85,
+        "LP 92": 4.08,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 8.02,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 8.81
+      }
+    },
+    {
+      "date": "2003-03-26",
+      "date_label": "26.03.2003",
+      "prices": {
+        "LP 95": 56.0,
+        "LP 92": 53.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 26.6,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 25.7
+      },
+      "pct_change": {
+        "LP 95": 3.7,
+        "LP 92": 3.92,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 3.91,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.05
+      }
+    },
+    {
+      "date": "2003-04-25",
+      "date_label": "25.04.2003",
+      "prices": {
+        "LP 95": 57.0,
+        "LP 92": 54.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 26.6,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 25.7
+      },
+      "pct_change": {
+        "LP 95": 1.79,
+        "LP 92": 1.89,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2003-05-20",
+      "date_label": "20.05.2003",
+      "prices": {
+        "LP 95": 55.0,
+        "LP 92": 52.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 26.6,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 25.7
+      },
+      "pct_change": {
+        "LP 95": -3.51,
+        "LP 92": -3.7,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2003-06-30",
+      "date_label": "30.06.2003",
+      "prices": {
+        "LP 95": 55.0,
+        "LP 92": 52.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 23.1,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.2
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -13.16,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -13.62
+      }
+    },
+    {
+      "date": "2003-08-07",
+      "date_label": "07.08.2003",
+      "prices": {
+        "LP 95": 55.0,
+        "LP 92": 52.0,
+        "LAD": 30.0,
+        "LSD": 35.3,
+        "LK": 24.0,
+        "LIK": 26.3,
+        "FUR. 800": 24.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 24.2
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 7.79,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 9.01
+      }
+    },
+    {
+      "date": "2003-09-04",
+      "date_label": "04.09.2003",
+      "prices": {
+        "LP 95": 57.0,
+        "LP 92": 54.0,
+        "LAD": 31.5,
+        "LSD": 36.8,
+        "LK": 25.0,
+        "LIK": 27.3,
+        "FUR. 800": 24.3,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 23.1
+      },
+      "pct_change": {
+        "LP 95": 3.64,
+        "LP 92": 3.85,
+        "LAD": 5.0,
+        "LSD": 4.25,
+        "LK": 4.17,
+        "LIK": 3.8,
+        "FUR. 800": -2.41,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -4.55
+      }
+    },
+    {
+      "date": "2003-10-05",
+      "date_label": "05.10.2003",
+      "prices": {
+        "LP 95": 55.0,
+        "LP 92": 52.0,
+        "LAD": 30.5,
+        "LSD": 35.8,
+        "LK": 23.0,
+        "LIK": 25.3,
+        "FUR. 800": 23.1,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 21.8
+      },
+      "pct_change": {
+        "LP 95": -3.51,
+        "LP 92": -3.7,
+        "LAD": -3.17,
+        "LSD": -2.72,
+        "LK": -8.0,
+        "LIK": -7.33,
+        "FUR. 800": -4.94,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -5.63
+      }
+    },
+    {
+      "date": "2003-11-11",
+      "date_label": "11.11.2003",
+      "prices": {
+        "LP 95": 56.0,
+        "LP 92": 53.0,
+        "LAD": 31.0,
+        "LSD": 36.3,
+        "LK": 23.5,
+        "LIK": 25.8,
+        "FUR. 800": 23.5,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.2
+      },
+      "pct_change": {
+        "LP 95": 1.82,
+        "LP 92": 1.92,
+        "LAD": 1.64,
+        "LSD": 1.4,
+        "LK": 2.17,
+        "LIK": 1.98,
+        "FUR. 800": 1.73,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 1.83
+      }
+    },
+    {
+      "date": "2003-12-04",
+      "date_label": "04.12.2003",
+      "prices": {
+        "LP 95": 56.0,
+        "LP 92": 53.0,
+        "LAD": 32.0,
+        "LSD": 37.3,
+        "LK": 25.5,
+        "LIK": 27.8,
+        "FUR. 800": 23.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.3
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 3.23,
+        "LSD": 2.75,
+        "LK": 8.51,
+        "LIK": 7.75,
+        "FUR. 800": 0.85,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.45
+      }
+    },
+    {
+      "date": "2004-01-25",
+      "date_label": "25.01.2004",
+      "prices": {
+        "LP 95": 58.0,
+        "LP 92": 55.0,
+        "LAD": 32.0,
+        "LSD": 37.5,
+        "LK": 25.5,
+        "LIK": 27.8,
+        "FUR. 800": 23.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.3
+      },
+      "pct_change": {
+        "LP 95": 3.57,
+        "LP 92": 3.77,
+        "LAD": 0.0,
+        "LSD": 0.54,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2004-02-12",
+      "date_label": "12.02.2004",
+      "prices": {
+        "LP 95": 60.0,
+        "LP 92": 57.0,
+        "LAD": 32.0,
+        "LSD": 37.5,
+        "LK": 25.5,
+        "LIK": 27.8,
+        "FUR. 800": 24.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 23.3
+      },
+      "pct_change": {
+        "LP 95": 3.45,
+        "LP 92": 3.64,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 4.22,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.48
+      }
+    },
+    {
+      "date": "2004-07-23",
+      "date_label": "23.07.2004",
+      "prices": {
+        "LP 95": 68.0,
+        "LP 92": 65.0,
+        "LAD": 32.0,
+        "LSD": 37.5,
+        "LK": 25.5,
+        "LIK": 27.8,
+        "FUR. 800": 24.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 23.3
+      },
+      "pct_change": {
+        "LP 95": 13.33,
+        "LP 92": 14.04,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2004-08-13",
+      "date_label": "13.08.2004",
+      "prices": {
+        "LP 95": 71.0,
+        "LP 92": 68.0,
+        "LAD": 36.0,
+        "LSD": 41.3,
+        "LK": 25.5,
+        "LIK": 27.8,
+        "FUR. 800": 25.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 24.3
+      },
+      "pct_change": {
+        "LP 95": 4.41,
+        "LP 92": 4.62,
+        "LAD": 12.5,
+        "LSD": 10.13,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 2.02,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.29
+      }
+    },
+    {
+      "date": "2004-09-25",
+      "date_label": "25.09.2004",
+      "prices": {
+        "LP 95": 73.0,
+        "LP 92": 70.0,
+        "LAD": 44.0,
+        "LSD": 49.3,
+        "LK": 25.5,
+        "LIK": 27.8,
+        "FUR. 800": 25.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 24.3
+      },
+      "pct_change": {
+        "LP 95": 2.82,
+        "LP 92": 2.94,
+        "LAD": 22.22,
+        "LSD": 19.37,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2005-05-05",
+      "date_label": "05.05.2005",
+      "prices": {
+        "LP 95": 77.0,
+        "LP 92": 74.0,
+        "LAD": 46.0,
+        "LSD": 51.3,
+        "LK": 28.5,
+        "LIK": 30.8,
+        "FUR. 800": 30.3,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 28.3
+      },
+      "pct_change": {
+        "LP 95": 5.48,
+        "LP 92": 5.71,
+        "LAD": 4.55,
+        "LSD": 4.06,
+        "LK": 11.76,
+        "LIK": 10.79,
+        "FUR. 800": 20.24,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 16.46
+      }
+    },
+    {
+      "date": "2005-06-06",
+      "date_label": "06.06.2005",
+      "prices": {
+        "LP 95": 83.0,
+        "LP 92": 80.0,
+        "LAD": 50.0,
+        "LSD": 55.3,
+        "LK": 30.5,
+        "LIK": 32.8,
+        "FUR. 800": 32.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 30.3
+      },
+      "pct_change": {
+        "LP 95": 7.79,
+        "LP 92": 8.11,
+        "LAD": 8.7,
+        "LSD": 7.8,
+        "LK": 7.02,
+        "LIK": 6.49,
+        "FUR. 800": 8.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 7.07
+      }
+    },
+    {
+      "date": "2006-04-16",
+      "date_label": "16.04.2006",
+      "prices": {
+        "LP 95": 91.0,
+        "LP 92": 88.0,
+        "LAD": 58.0,
+        "LSD": 63.3,
+        "LK": 38.5,
+        "LIK": 40.8,
+        "FUR. 800": 40.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 38.3
+      },
+      "pct_change": {
+        "LP 95": 9.64,
+        "LP 92": 10.0,
+        "LAD": 16.0,
+        "LSD": 14.47,
+        "LK": 26.23,
+        "LIK": 24.39,
+        "FUR. 800": 24.39,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 26.4
+      }
+    },
+    {
+      "date": "2006-04-16",
+      "date_label": "16.04.2006",
+      "prices": {
+        "LP 95": 91.0,
+        "LP 92": 88.0,
+        "LAD": 58.0,
+        "LSD": 63.3,
+        "LK": 38.5,
+        "LIK": 40.8,
+        "FUR. 800": 40.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 38.3
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2006-06-11",
+      "date_label": "11.06.2006",
+      "prices": {
+        "LP 95": 96.0,
+        "LP 92": 93.0,
+        "LAD": 61.0,
+        "LSD": 68.3,
+        "LK": 43.5,
+        "LIK": 45.8,
+        "FUR. 800": 45.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 43.3
+      },
+      "pct_change": {
+        "LP 95": 5.49,
+        "LP 92": 5.68,
+        "LAD": 5.17,
+        "LSD": 7.9,
+        "LK": 12.99,
+        "LIK": 12.25,
+        "FUR. 800": 12.25,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 13.05
+      }
+    },
+    {
+      "date": "2006-08-02",
+      "date_label": "02.08.2006",
+      "prices": {
+        "LP 95": 99.0,
+        "LP 92": 96.0,
+        "LAD": 64.0,
+        "LSD": 69.3,
+        "LK": 45.5,
+        "LIK": 47.8,
+        "FUR. 800": 47.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 45.3
+      },
+      "pct_change": {
+        "LP 95": 3.12,
+        "LP 92": 3.23,
+        "LAD": 4.92,
+        "LSD": 1.46,
+        "LK": 4.6,
+        "LIK": 4.37,
+        "FUR. 800": 4.37,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 4.62
+      }
+    },
+    {
+      "date": "2006-10-26",
+      "date_label": "26.10.2006",
+      "prices": {
+        "LP 95": 95.0,
+        "LP 92": 92.0,
+        "LAD": 60.0,
+        "LSD": 65.3,
+        "LK": 48.0,
+        "LIK": 50.3,
+        "FUR. 800": 45.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 43.3
+      },
+      "pct_change": {
+        "LP 95": -4.04,
+        "LP 92": -4.17,
+        "LAD": -6.25,
+        "LSD": -5.77,
+        "LK": 5.49,
+        "LIK": 5.23,
+        "FUR. 800": -4.18,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -4.42
+      }
+    },
+    {
+      "date": "2006-12-27",
+      "date_label": "27.12.2006",
+      "prices": {
+        "LP 95": 95.0,
+        "LP 92": 92.0,
+        "LAD": 60.0,
+        "LSD": 65.3,
+        "LK": 48.0,
+        "LIK": 58.3,
+        "FUR. 800": 45.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 43.3
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 15.9,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2007-01-01",
+      "date_label": "01.01.2007",
+      "prices": {
+        "LP 95": 95.0,
+        "LP 92": 92.0,
+        "LAD": 60.0,
+        "LSD": 65.3,
+        "LK": 48.0,
+        "LIK": 58.3,
+        "FUR. 800": 45.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 37.7
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -12.93
+      }
+    },
+    {
+      "date": "2007-01-05",
+      "date_label": "05.01.2007",
+      "prices": {
+        "LP 95": 97.0,
+        "LP 92": 100.0,
+        "LAD": 60.0,
+        "LSD": 65.3,
+        "LK": 48.0,
+        "LIK": 58.3,
+        "FUR. 800": 45.8,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 37.7
+      },
+      "pct_change": {
+        "LP 95": 2.11,
+        "LP 92": 8.7,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2007-04-19",
+      "date_label": "19.04.2007",
+      "prices": {
+        "LP 95": 107.0,
+        "LP 92": 104.0,
+        "LAD": 63.0,
+        "LSD": 68.3,
+        "LK": 48.0,
+        "LIK": 60.3,
+        "FUR. 800": 39.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 37.3
+      },
+      "pct_change": {
+        "LP 95": 10.31,
+        "LP 92": 4.0,
+        "LAD": 5.0,
+        "LSD": 4.59,
+        "LK": 0.0,
+        "LIK": 3.43,
+        "FUR. 800": -12.88,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -1.06
+      }
+    },
+    {
+      "date": "2007-04-28",
+      "date_label": "28.04.2007",
+      "prices": {
+        "LP 95": 108.0,
+        "LP 92": 105.0,
+        "LAD": 65.0,
+        "LSD": 70.3,
+        "LK": 50.0,
+        "LIK": 60.3,
+        "FUR. 800": 39.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 37.3
+      },
+      "pct_change": {
+        "LP 95": 0.93,
+        "LP 92": 0.96,
+        "LAD": 3.17,
+        "LSD": 2.93,
+        "LK": 4.17,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2007-05-12",
+      "date_label": "12.05.2007",
+      "prices": {
+        "LP 95": 109.0,
+        "LP 92": 106.0,
+        "LAD": 67.0,
+        "LSD": 72.3,
+        "LK": 51.0,
+        "LIK": 61.3,
+        "FUR. 800": 45.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 43.7
+      },
+      "pct_change": {
+        "LP 95": 0.93,
+        "LP 92": 0.95,
+        "LAD": 3.08,
+        "LSD": 2.84,
+        "LK": 2.0,
+        "LIK": 1.66,
+        "FUR. 800": 15.04,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 17.16
+      }
+    },
+    {
+      "date": "2007-06-30",
+      "date_label": "30.06.2007",
+      "prices": {
+        "LP 95": 114.0,
+        "LP 92": 111.0,
+        "LAD": 71.0,
+        "LSD": 76.3,
+        "LK": 67.0,
+        "LIK": 68.0,
+        "FUR. 800": 49.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 47.7
+      },
+      "pct_change": {
+        "LP 95": 4.59,
+        "LP 92": 4.72,
+        "LAD": 5.97,
+        "LSD": 5.53,
+        "LK": 31.37,
+        "LIK": 10.93,
+        "FUR. 800": 8.71,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 9.15
+      }
+    },
+    {
+      "date": "2007-07-29",
+      "date_label": "29.07.2007",
+      "prices": {
+        "LP 95": 120.0,
+        "LP 92": 117.0,
+        "LAD": 75.0,
+        "LSD": 80.3,
+        "LK": 68.0,
+        "LIK": 69.0,
+        "FUR. 800": 53.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 51.7
+      },
+      "pct_change": {
+        "LP 95": 5.26,
+        "LP 92": 5.41,
+        "LAD": 5.63,
+        "LSD": 5.24,
+        "LK": 1.49,
+        "LIK": 1.47,
+        "FUR. 800": 8.02,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 8.39
+      }
+    },
+    {
+      "date": "2008-01-14",
+      "date_label": "14.01.2008",
+      "prices": {
+        "LP 95": 130.0,
+        "LP 92": 127.0,
+        "LAD": 80.0,
+        "LSD": 85.3,
+        "LK": 70.0,
+        "LIK": 75.0,
+        "FUR. 800": 63.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 61.7
+      },
+      "pct_change": {
+        "LP 95": 8.33,
+        "LP 92": 8.55,
+        "LAD": 6.67,
+        "LSD": 6.23,
+        "LK": 2.94,
+        "LIK": 8.7,
+        "FUR. 800": 18.55,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 19.34
+      }
+    },
+    {
+      "date": "2008-05-25",
+      "date_label": "25.05.2008",
+      "prices": {
+        "LP 95": 170.0,
+        "LP 92": 157.0,
+        "LAD": 110.0,
+        "LSD": 125.3,
+        "LK": 80.0,
+        "LIK": 85.0,
+        "FUR. 800": 63.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 61.7
+      },
+      "pct_change": {
+        "LP 95": 30.77,
+        "LP 92": 23.62,
+        "LAD": 37.5,
+        "LSD": 46.89,
+        "LK": 14.29,
+        "LIK": 13.33,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2008-11-07",
+      "date_label": "07.11.2008",
+      "prices": {
+        "LP 95": 155.0,
+        "LP 92": 142.0,
+        "LAD": 80.0,
+        "LSD": 95.3,
+        "LK": 60.0,
+        "LIK": 65.0,
+        "FUR. 800": 53.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 51.7
+      },
+      "pct_change": {
+        "LP 95": -8.82,
+        "LP 92": -9.55,
+        "LAD": -27.27,
+        "LSD": -23.94,
+        "LK": -25.0,
+        "LIK": -23.53,
+        "FUR. 800": -15.65,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -16.21
+      }
+    },
+    {
+      "date": "2008-12-06",
+      "date_label": "06.12.2008",
+      "prices": {
+        "LP 95": 135.0,
+        "LP 92": 122.0,
+        "LAD": 80.0,
+        "LSD": 95.3,
+        "LK": 60.0,
+        "LIK": 65.0,
+        "FUR. 800": 53.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 51.7
+      },
+      "pct_change": {
+        "LP 95": -12.9,
+        "LP 92": -14.08,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2008-12-30",
+      "date_label": "30.12.2008",
+      "prices": {
+        "LP 95": 133.0,
+        "LP 92": 120.0,
+        "LAD": 70.0,
+        "LSD": 85.3,
+        "LK": 50.0,
+        "LIK": 55.0,
+        "FUR. 800": 33.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 25.0
+      },
+      "pct_change": {
+        "LP 95": -1.48,
+        "LP 92": -1.64,
+        "LAD": -12.5,
+        "LSD": -10.49,
+        "LK": -16.67,
+        "LIK": -15.38,
+        "FUR. 800": -37.11,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": -51.64
+      }
+    },
+    {
+      "date": "2009-07-02",
+      "date_label": "02.07.2009",
+      "prices": {
+        "LP 95": 148.0,
+        "LP 92": 130.0,
+        "LAD": 73.0,
+        "LSD": 88.3,
+        "LK": 51.0,
+        "LIK": 56.0,
+        "FUR. 800": 34.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 32.7
+      },
+      "pct_change": {
+        "LP 95": 11.28,
+        "LP 92": 8.33,
+        "LAD": 4.29,
+        "LSD": 3.52,
+        "LK": 2.0,
+        "LIK": 1.82,
+        "FUR. 800": 2.95,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 30.8
+      }
+    },
+    {
+      "date": "2009-12-29",
+      "date_label": "29.12.2009",
+      "prices": {
+        "LP 95": 133.0,
+        "LP 92": 115.0,
+        "LAD": 73.0,
+        "LSD": 88.3,
+        "LK": 51.0,
+        "LIK": 56.0,
+        "FUR. 800": 32.9,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 32.7
+      },
+      "pct_change": {
+        "LP 95": -10.14,
+        "LP 92": -11.54,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -5.73,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2010-09-01",
+      "date_label": "01.09.2010",
+      "prices": {
+        "LP 95": 133.0,
+        "LP 92": 115.0,
+        "LAD": 73.0,
+        "LSD": 88.3,
+        "LK": 51.0,
+        "LIK": 56.0,
+        "FUR. 800": 42.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 40.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 28.27,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 22.32
+      }
+    },
+    {
+      "date": "2011-04-01",
+      "date_label": "01.04.2011",
+      "prices": {
+        "LP 95": 143.0,
+        "LP 92": 125.0,
+        "LAD": 76.0,
+        "LSD": 98.3,
+        "LK": 61.0,
+        "LIK": 66.0,
+        "FUR. 800": 52.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 50.0
+      },
+      "pct_change": {
+        "LP 95": 7.52,
+        "LP 92": 8.7,
+        "LAD": 4.11,
+        "LSD": 11.33,
+        "LK": 19.61,
+        "LIK": 17.86,
+        "FUR. 800": 23.7,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 25.0
+      }
+    },
+    {
+      "date": "2011-10-30",
+      "date_label": "30.10.2011",
+      "prices": {
+        "LP 95": 155.0,
+        "LP 92": 137.0,
+        "LAD": 84.0,
+        "LSD": 106.3,
+        "LK": 71.0,
+        "LIK": 76.0,
+        "FUR. 800": 52.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 50.0
+      },
+      "pct_change": {
+        "LP 95": 8.39,
+        "LP 92": 9.6,
+        "LAD": 10.53,
+        "LSD": 8.14,
+        "LK": 16.39,
+        "LIK": 15.15,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2012-02-12",
+      "date_label": "12.02.2012",
+      "prices": {
+        "LP 95": 167.0,
+        "LP 92": 149.0,
+        "LAD": 115.0,
+        "LSD": 142.0,
+        "LK": 106.0,
+        "LIK": 111.0,
+        "FUR. 800": 92.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 7.74,
+        "LP 92": 8.76,
+        "LAD": 36.9,
+        "LSD": 33.58,
+        "LK": 49.3,
+        "LIK": 46.05,
+        "FUR. 800": 76.63,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 80.0
+      }
+    },
+    {
+      "date": "2012-12-14",
+      "date_label": "14.12.2012",
+      "prices": {
+        "LP 95": 167.0,
+        "LP 92": 159.0,
+        "LAD": 115.0,
+        "LSD": 142.0,
+        "LK": 106.0,
+        "LIK": 111.0,
+        "FUR. 800": 92.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 6.71,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2013-02-23",
+      "date_label": "23.02.2013",
+      "prices": {
+        "LP 95": 170.0,
+        "LP 92": 162.0,
+        "LAD": 121.0,
+        "LSD": 145.0,
+        "LK": 106.0,
+        "LIK": 115.0,
+        "FUR. 800": 92.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 1.8,
+        "LP 92": 1.89,
+        "LAD": 5.22,
+        "LSD": 2.11,
+        "LK": 0.0,
+        "LIK": 3.6,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2014-09-17",
+      "date_label": "17.09.2014",
+      "prices": {
+        "LP 95": 165.0,
+        "LP 92": 157.0,
+        "LAD": 118.0,
+        "LSD": 140.0,
+        "LK": 86.0,
+        "LIK": 115.0,
+        "FUR. 800": 92.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": -2.94,
+        "LP 92": -3.09,
+        "LAD": -2.48,
+        "LSD": -3.45,
+        "LK": -18.87,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2014-12-05",
+      "date_label": "05.12.2014",
+      "prices": {
+        "LP 95": 158.0,
+        "LP 92": 150.0,
+        "LAD": 111.0,
+        "LSD": 133.0,
+        "LK": 81.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.2,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": -4.24,
+        "LP 92": -4.46,
+        "LAD": -5.93,
+        "LSD": -5.0,
+        "LK": -5.81,
+        "LIK": -4.35,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2015-01-01",
+      "date_label": "01.01.2015",
+      "prices": {
+        "LP 95": 158.0,
+        "LP 92": 150.0,
+        "LAD": 111.0,
+        "LSD": 133.0,
+        "LK": 81.0,
+        "LIK": 110.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -10.85,
+        "FUR 1500 (H)": null,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2015-01-22",
+      "date_label": "22.01.2015",
+      "prices": {
+        "LP 95": 128.0,
+        "LP 92": 117.0,
+        "LAD": 95.0,
+        "LSD": 110.0,
+        "LK": 65.0,
+        "LIK": 94.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": -18.99,
+        "LP 92": -22.0,
+        "LAD": -14.41,
+        "LSD": -17.29,
+        "LK": -19.75,
+        "LIK": -14.55,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2015-01-29",
+      "date_label": "29.01.2015",
+      "prices": {
+        "LP 95": 128.0,
+        "LP 92": 117.0,
+        "LAD": 95.0,
+        "LSD": 110.0,
+        "LK": 59.0,
+        "LIK": 88.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -9.23,
+        "LIK": -6.38,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2015-11-28",
+      "date_label": "28.11.2015",
+      "prices": {
+        "LP 95": 128.0,
+        "LP 92": 117.0,
+        "LAD": 95.0,
+        "LSD": 110.0,
+        "LK": 49.0,
+        "LIK": 88.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -16.95,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2017-01-11",
+      "date_label": "11.01.2017",
+      "prices": {
+        "LP 95": 128.0,
+        "LP 92": 117.0,
+        "LAD": 95.0,
+        "LSD": 110.0,
+        "LK": 44.0,
+        "LIK": 88.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -10.2,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-05-11",
+      "date_label": "11.05.2018",
+      "prices": {
+        "LP 95": 148.0,
+        "LP 92": 137.0,
+        "LAD": 109.0,
+        "LSD": 119.0,
+        "LK": 101.0,
+        "LIK": 110.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 15.62,
+        "LP 92": 17.09,
+        "LAD": 14.74,
+        "LSD": 8.18,
+        "LK": 129.55,
+        "LIK": 25.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-06-13",
+      "date_label": "13.06.2018",
+      "prices": {
+        "LP 95": 148.0,
+        "LP 92": 137.0,
+        "LAD": 109.0,
+        "LSD": 119.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -30.69,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-07-11",
+      "date_label": "11.07.2018",
+      "prices": {
+        "LP 95": 155.0,
+        "LP 92": 145.0,
+        "LAD": 118.0,
+        "LSD": 129.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 4.73,
+        "LP 92": 5.84,
+        "LAD": 8.26,
+        "LSD": 8.4,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-08-11",
+      "date_label": "11.08.2018",
+      "prices": {
+        "LP 95": 157.0,
+        "LP 92": 145.0,
+        "LAD": 118.0,
+        "LSD": 130.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 82.2,
+        "FUR 1500 (H)": 80.0,
+        "FUR 1500 (L)": 90.0
+      },
+      "pct_change": {
+        "LP 95": 1.29,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.78,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-09-04",
+      "date_label": "04.09.2018",
+      "prices": {
+        "LP 95": 157.0,
+        "LP 92": 145.0,
+        "LAD": 118.0,
+        "LSD": 130.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 11.92,
+        "FUR 1500 (H)": 20.0,
+        "FUR 1500 (L)": 6.67
+      }
+    },
+    {
+      "date": "2018-09-11",
+      "date_label": "11.09.2018",
+      "prices": {
+        "LP 95": 161.0,
+        "LP 92": 149.0,
+        "LAD": 123.0,
+        "LSD": 133.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 2.55,
+        "LP 92": 2.76,
+        "LAD": 4.24,
+        "LSD": 2.31,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-10-11",
+      "date_label": "11.10.2018",
+      "prices": {
+        "LP 95": 169.0,
+        "LP 92": 155.0,
+        "LAD": 123.0,
+        "LSD": 141.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 4.97,
+        "LP 92": 4.03,
+        "LAD": 0.0,
+        "LSD": 6.02,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-11-02",
+      "date_label": "02.11.2018",
+      "prices": {
+        "LP 95": 169.0,
+        "LP 92": 145.0,
+        "LAD": 116.0,
+        "LSD": 141.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -6.45,
+        "LAD": -5.69,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-11-16",
+      "date_label": "16.11.2018",
+      "prices": {
+        "LP 95": 164.0,
+        "LP 92": 140.0,
+        "LAD": 111.0,
+        "LSD": 136.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": -2.96,
+        "LP 92": -3.45,
+        "LAD": -4.31,
+        "LSD": -3.55,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-12-01",
+      "date_label": "01.12.2018",
+      "prices": {
+        "LP 95": 159.0,
+        "LP 92": 135.0,
+        "LAD": 106.0,
+        "LSD": 131.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": -3.05,
+        "LP 92": -3.57,
+        "LAD": -4.5,
+        "LSD": -3.68,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2018-12-22",
+      "date_label": "22.12.2018",
+      "prices": {
+        "LP 95": 149.0,
+        "LP 92": 125.0,
+        "LAD": 101.0,
+        "LSD": 121.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": -6.29,
+        "LP 92": -7.41,
+        "LAD": -4.72,
+        "LSD": -7.63,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-01-11",
+      "date_label": "11.01.2019",
+      "prices": {
+        "LP 95": 147.0,
+        "LP 92": 123.0,
+        "LAD": 99.0,
+        "LSD": 118.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": -1.34,
+        "LP 92": -1.6,
+        "LAD": -1.98,
+        "LSD": -2.48,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-02-12",
+      "date_label": "12.02.2019",
+      "prices": {
+        "LP 95": 152.0,
+        "LP 92": 129.0,
+        "LAD": 103.0,
+        "LSD": 129.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 3.4,
+        "LP 92": 4.88,
+        "LAD": 4.04,
+        "LSD": 9.32,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-03-13",
+      "date_label": "13.03.2019",
+      "prices": {
+        "LP 95": 159.0,
+        "LP 92": 132.0,
+        "LAD": 104.0,
+        "LSD": 134.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 4.61,
+        "LP 92": 2.33,
+        "LAD": 0.97,
+        "LSD": 3.88,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-05-11",
+      "date_label": "11.05.2019",
+      "prices": {
+        "LP 95": 164.0,
+        "LP 92": 135.0,
+        "LAD": 104.0,
+        "LSD": 136.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 3.14,
+        "LP 92": 2.27,
+        "LAD": 0.0,
+        "LSD": 1.49,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-06-11",
+      "date_label": "11.06.2019",
+      "prices": {
+        "LP 95": 164.0,
+        "LP 92": 138.0,
+        "LAD": 104.0,
+        "LSD": 136.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 2.22,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-07-11",
+      "date_label": "11.07.2019",
+      "prices": {
+        "LP 95": 159.0,
+        "LP 92": 136.0,
+        "LAD": 104.0,
+        "LSD": 131.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": -3.05,
+        "LP 92": -1.45,
+        "LAD": 0.0,
+        "LSD": -3.68,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-08-13",
+      "date_label": "13.08.2019",
+      "prices": {
+        "LP 95": 163.0,
+        "LP 92": 138.0,
+        "LAD": 104.0,
+        "LSD": 134.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 2.52,
+        "LP 92": 1.47,
+        "LAD": 0.0,
+        "LSD": 2.29,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2019-09-10",
+      "date_label": "10.09.2019",
+      "prices": {
+        "LP 95": 161.0,
+        "LP 92": 137.0,
+        "LAD": 104.0,
+        "LSD": 132.0,
+        "LK": 70.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": -1.23,
+        "LP 92": -0.72,
+        "LAD": 0.0,
+        "LSD": -1.49,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2021-06-11",
+      "date_label": "11.06.2021",
+      "prices": {
+        "LP 95": 184.0,
+        "LP 92": 157.0,
+        "LAD": 111.0,
+        "LSD": 144.0,
+        "LK": 77.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 14.29,
+        "LP 92": 14.6,
+        "LAD": 6.73,
+        "LSD": 9.09,
+        "LK": 10.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2021-12-20",
+      "date_label": "20.12.2021",
+      "prices": {
+        "LP 95": 207.0,
+        "LP 92": 177.0,
+        "LAD": 121.0,
+        "LSD": 159.0,
+        "LK": 87.0,
+        "LIK": 110.0,
+        "FUR. 800": 92.0,
+        "FUR 1500 (H)": 96.0,
+        "FUR 1500 (L)": 96.0
+      },
+      "pct_change": {
+        "LP 95": 12.5,
+        "LP 92": 12.74,
+        "LAD": 9.01,
+        "LSD": 10.42,
+        "LK": 12.99,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2021-12-27",
+      "date_label": "27.12.2021",
+      "prices": {
+        "LP 95": 207.0,
+        "LP 92": 177.0,
+        "LAD": 121.0,
+        "LSD": 159.0,
+        "LK": 87.0,
+        "LIK": 110.0,
+        "FUR. 800": 110.0,
+        "FUR 1500 (H)": 110.0,
+        "FUR 1500 (L)": 110.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 19.57,
+        "FUR 1500 (H)": 14.58,
+        "FUR 1500 (L)": 14.58
+      }
+    },
+    {
+      "date": "2022-03-11",
+      "date_label": "11.03.2022",
+      "prices": {
+        "LP 95": 283.0,
+        "LP 92": 254.0,
+        "LAD": 176.0,
+        "LSD": 254.0,
+        "LK": 87.0,
+        "LIK": 110.0,
+        "FUR. 800": 214.0,
+        "FUR 1500 (H)": 214.0,
+        "FUR 1500 (L)": 214.0
+      },
+      "pct_change": {
+        "LP 95": 36.71,
+        "LP 92": 43.5,
+        "LAD": 45.45,
+        "LSD": 59.75,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 94.55,
+        "FUR 1500 (H)": 94.55,
+        "FUR 1500 (L)": 94.55
+      }
+    },
+    {
+      "date": "2022-03-22",
+      "date_label": "22.03.2022",
+      "prices": {
+        "LP 95": 283.0,
+        "LP 92": 254.0,
+        "LAD": 176.0,
+        "LSD": 254.0,
+        "LK": 87.0,
+        "LIK": 160.0,
+        "FUR. 800": 214.0,
+        "FUR 1500 (H)": 214.0,
+        "FUR 1500 (L)": 214.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 45.45,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-04-18",
+      "date_label": "18.04.2022",
+      "prices": {
+        "LP 95": 373.0,
+        "LP 92": 338.0,
+        "LAD": 289.0,
+        "LSD": 329.0,
+        "LK": 87.0,
+        "LIK": 160.0,
+        "FUR. 800": 214.0,
+        "FUR 1500 (H)": 214.0,
+        "FUR 1500 (L)": 214.0
+      },
+      "pct_change": {
+        "LP 95": 31.8,
+        "LP 92": 33.07,
+        "LAD": 64.2,
+        "LSD": 29.53,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-04-22",
+      "date_label": "22.04.2022",
+      "prices": {
+        "LP 95": 373.0,
+        "LP 92": 338.0,
+        "LAD": 289.0,
+        "LSD": 329.0,
+        "LK": 87.0,
+        "LIK": 305.0,
+        "FUR. 800": 289.0,
+        "FUR 1500 (H)": 289.0,
+        "FUR 1500 (L)": 289.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 90.62,
+        "FUR. 800": 35.05,
+        "FUR 1500 (H)": 35.05,
+        "FUR 1500 (L)": 35.05
+      }
+    },
+    {
+      "date": "2022-05-24",
+      "date_label": "24.05.2022",
+      "prices": {
+        "LP 95": 450.0,
+        "LP 92": 420.0,
+        "LAD": 400.0,
+        "LSD": 445.0,
+        "LK": 87.0,
+        "LIK": 399.0,
+        "FUR. 800": 369.0,
+        "FUR 1500 (H)": 369.0,
+        "FUR 1500 (L)": 369.0
+      },
+      "pct_change": {
+        "LP 95": 20.64,
+        "LP 92": 24.26,
+        "LAD": 38.41,
+        "LSD": 35.26,
+        "LK": 0.0,
+        "LIK": 30.82,
+        "FUR. 800": 27.68,
+        "FUR 1500 (H)": 27.68,
+        "FUR 1500 (L)": 27.68
+      }
+    },
+    {
+      "date": "2022-06-26",
+      "date_label": "26.06.2022",
+      "prices": {
+        "LP 95": 550.0,
+        "LP 92": 470.0,
+        "LAD": 460.0,
+        "LSD": 520.0,
+        "LK": 87.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": 22.22,
+        "LP 92": 11.9,
+        "LAD": 15.0,
+        "LSD": 16.85,
+        "LK": 0.0,
+        "LIK": 16.29,
+        "FUR. 800": 13.55,
+        "FUR 1500 (H)": 13.55,
+        "FUR 1500 (L)": 13.55
+      }
+    },
+    {
+      "date": "2022-07-17",
+      "date_label": "17.07.2022",
+      "prices": {
+        "LP 95": 540.0,
+        "LP 92": 450.0,
+        "LAD": 440.0,
+        "LSD": 510.0,
+        "LK": 87.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": -1.82,
+        "LP 92": -4.26,
+        "LAD": -4.35,
+        "LSD": -1.92,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-08-01",
+      "date_label": "01.08.2022",
+      "prices": {
+        "LP 95": 540.0,
+        "LP 92": 450.0,
+        "LAD": 430.0,
+        "LSD": 510.0,
+        "LK": 87.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": -2.27,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-08-21",
+      "date_label": "21.08.2022",
+      "prices": {
+        "LP 95": 540.0,
+        "LP 92": 450.0,
+        "LAD": 430.0,
+        "LSD": 510.0,
+        "LK": 340.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 290.8,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-10-02",
+      "date_label": "02.10.2022",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 410.0,
+        "LAD": 430.0,
+        "LSD": 510.0,
+        "LK": 340.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": -5.56,
+        "LP 92": -8.89,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-10-17",
+      "date_label": "17.10.2022 (9.00 PM)",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 370.0,
+        "LAD": 415.0,
+        "LSD": 510.0,
+        "LK": 340.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -9.76,
+        "LAD": -3.49,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2022-10-17",
+      "date_label": "17.10.2022",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 370.0,
+        "LAD": 415.0,
+        "LSD": 510.0,
+        "LK": 340.0,
+        "LIK": 464.0,
+        "FUR. 800": 320.0,
+        "FUR 1500 (H)": 320.0,
+        "FUR 1500 (L)": 320.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -23.63,
+        "FUR 1500 (H)": -23.63,
+        "FUR 1500 (L)": -23.63
+      }
+    },
+    {
+      "date": "2022-11-12",
+      "date_label": "12.11.2022",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 370.0,
+        "LAD": 430.0,
+        "LSD": 510.0,
+        "LK": 365.0,
+        "LIK": 464.0,
+        "FUR. 800": 419.0,
+        "FUR 1500 (H)": 419.0,
+        "FUR 1500 (L)": 419.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 3.61,
+        "LSD": 0.0,
+        "LK": 7.35,
+        "LIK": 0.0,
+        "FUR. 800": 30.94,
+        "FUR 1500 (H)": 30.94,
+        "FUR 1500 (L)": 30.94
+      }
+    },
+    {
+      "date": "2022-12-06",
+      "date_label": "06.12.2022",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 370.0,
+        "LAD": 420.0,
+        "LSD": 510.0,
+        "LK": 365.0,
+        "LIK": 464.0,
+        "FUR. 800": 320.0,
+        "FUR 1500 (H)": 320.0,
+        "FUR 1500 (L)": 320.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": -2.33,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -23.63,
+        "FUR 1500 (H)": -23.63,
+        "FUR 1500 (L)": -23.63
+      }
+    },
+    {
+      "date": "2023-01-03",
+      "date_label": "03.01.2023",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 370.0,
+        "LAD": 405.0,
+        "LSD": 510.0,
+        "LK": 355.0,
+        "LIK": 464.0,
+        "FUR. 800": 320.0,
+        "FUR 1500 (H)": 320.0,
+        "FUR 1500 (L)": 320.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": -3.57,
+        "LSD": 0.0,
+        "LK": -2.74,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2023-02-01",
+      "date_label": "01.02.2023",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 400.0,
+        "LAD": 405.0,
+        "LSD": 510.0,
+        "LK": 355.0,
+        "LIK": 464.0,
+        "FUR. 800": 320.0,
+        "FUR 1500 (H)": 320.0,
+        "FUR 1500 (L)": 320.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 8.11,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2023-03-02",
+      "date_label": "02.03.2023",
+      "prices": {
+        "LP 95": 510.0,
+        "LP 92": 400.0,
+        "LAD": 405.0,
+        "LSD": 510.0,
+        "LK": 305.0,
+        "LIK": 330.0,
+        "FUR. 800": 320.0,
+        "FUR 1500 (H)": 320.0,
+        "FUR 1500 (L)": 320.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -14.08,
+        "LIK": -28.88,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2023-03-30",
+      "date_label": "30.03.2023",
+      "prices": {
+        "LP 95": 375.0,
+        "LP 92": 340.0,
+        "LAD": 325.0,
+        "LSD": 465.0,
+        "LK": 295.0,
+        "LIK": 330.0,
+        "FUR. 800": 320.0,
+        "FUR 1500 (H)": 320.0,
+        "FUR 1500 (L)": 320.0
+      },
+      "pct_change": {
+        "LP 95": -26.47,
+        "LP 92": -15.0,
+        "LAD": -19.75,
+        "LSD": -8.82,
+        "LK": -3.28,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2023-05-01",
+      "date_label": "01.05.2023",
+      "prices": {
+        "LP 95": 365.0,
+        "LP 92": 333.0,
+        "LAD": 310.0,
+        "LSD": 330.0,
+        "LK": 295.0,
+        "LIK": 330.0,
+        "FUR. 800": 261.0,
+        "FUR 1500 (H)": 261.0,
+        "FUR 1500 (L)": 261.0
+      },
+      "pct_change": {
+        "LP 95": -2.67,
+        "LP 92": -2.06,
+        "LAD": -4.62,
+        "LSD": -29.03,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -18.44,
+        "FUR 1500 (H)": -18.44,
+        "FUR 1500 (L)": -18.44
+      }
+    },
+    {
+      "date": "2023-06-01",
+      "date_label": "01.06.2023",
+      "prices": {
+        "LP 95": 385.0,
+        "LP 92": 318.0,
+        "LAD": 310.0,
+        "LSD": 340.0,
+        "LK": 245.0,
+        "LIK": 270.0,
+        "FUR. 800": 216.0,
+        "FUR 1500 (H)": 216.0,
+        "FUR 1500 (L)": 216.0
+      },
+      "pct_change": {
+        "LP 95": 5.48,
+        "LP 92": -4.5,
+        "LAD": 0.0,
+        "LSD": 3.03,
+        "LK": -16.95,
+        "LIK": -18.18,
+        "FUR. 800": -17.24,
+        "FUR 1500 (H)": -17.24,
+        "FUR 1500 (L)": -17.24
+      }
+    },
+    {
+      "date": "2023-07-01",
+      "date_label": "01.07.2023",
+      "prices": {
+        "LP 95": 365.0,
+        "LP 92": 328.0,
+        "LAD": 308.0,
+        "LSD": 346.0,
+        "LK": 236.0,
+        "LIK": 270.0,
+        "FUR. 800": 216.0,
+        "FUR 1500 (H)": 216.0,
+        "FUR 1500 (L)": 216.0
+      },
+      "pct_change": {
+        "LP 95": -5.19,
+        "LP 92": 3.14,
+        "LAD": -0.65,
+        "LSD": 1.76,
+        "LK": -3.67,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2023-08-01",
+      "date_label": "01.08.2023",
+      "prices": {
+        "LP 95": 375.0,
+        "LP 92": 348.0,
+        "LAD": 306.0,
+        "LSD": 358.0,
+        "LK": 226.0,
+        "LIK": 231.0,
+        "FUR. 800": 203.0,
+        "FUR 1500 (H)": 203.0,
+        "FUR 1500 (L)": 203.0
+      },
+      "pct_change": {
+        "LP 95": 2.74,
+        "LP 92": 6.1,
+        "LAD": -0.65,
+        "LSD": 3.47,
+        "LK": -4.24,
+        "LIK": -14.44,
+        "FUR. 800": -6.02,
+        "FUR 1500 (H)": -6.02,
+        "FUR 1500 (L)": -6.02
+      }
+    },
+    {
+      "date": "2023-09-01",
+      "date_label": "01.09.2023",
+      "prices": {
+        "LP 95": 417.0,
+        "LP 92": 361.0,
+        "LAD": 341.0,
+        "LSD": 359.0,
+        "LK": 231.0,
+        "LIK": 238.0,
+        "FUR. 800": 191.0,
+        "FUR 1500 (H)": 191.0,
+        "FUR 1500 (L)": 191.0
+      },
+      "pct_change": {
+        "LP 95": 11.2,
+        "LP 92": 3.74,
+        "LAD": 11.44,
+        "LSD": 0.28,
+        "LK": 2.21,
+        "LIK": 3.03,
+        "FUR. 800": -5.91,
+        "FUR 1500 (H)": -5.91,
+        "FUR 1500 (L)": -5.91
+      }
+    },
+    {
+      "date": "2023-10-02",
+      "date_label": "02.10.2023",
+      "prices": {
+        "LP 95": 420.0,
+        "LP 92": 365.0,
+        "LAD": 351.0,
+        "LSD": 421.0,
+        "LK": 242.0,
+        "LIK": 300.0,
+        "FUR. 800": 191.0,
+        "FUR 1500 (H)": 191.0,
+        "FUR 1500 (L)": 191.0
+      },
+      "pct_change": {
+        "LP 95": 0.72,
+        "LP 92": 1.11,
+        "LAD": 2.93,
+        "LSD": 17.27,
+        "LK": 4.76,
+        "LIK": 26.05,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2023-11-01",
+      "date_label": "01.11.2023",
+      "prices": {
+        "LP 95": 423.0,
+        "LP 92": 356.0,
+        "LAD": 356.0,
+        "LSD": 431.0,
+        "LK": 249.0,
+        "LIK": 288.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.71,
+        "LP 92": -2.47,
+        "LAD": 1.42,
+        "LSD": 2.38,
+        "LK": 2.89,
+        "LIK": -4.0,
+        "FUR. 800": 8.38,
+        "FUR 1500 (H)": 8.38,
+        "FUR 1500 (L)": 8.38
+      }
+    },
+    {
+      "date": "2023-12-01",
+      "date_label": "01.12.2023",
+      "prices": {
+        "LP 95": 426.0,
+        "LP 92": 346.0,
+        "LAD": 329.0,
+        "LSD": 434.0,
+        "LK": 247.0,
+        "LIK": 288.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.71,
+        "LP 92": -2.81,
+        "LAD": -7.58,
+        "LSD": 0.7,
+        "LK": -0.8,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-01-01",
+      "date_label": "01.01.2024",
+      "prices": {
+        "LP 95": 464.0,
+        "LP 92": 366.0,
+        "LAD": 358.0,
+        "LSD": 475.0,
+        "LK": 236.0,
+        "LIK": 251.0,
+        "FUR. 800": 211.0,
+        "FUR 1500 (H)": 211.0,
+        "FUR 1500 (L)": 211.0
+      },
+      "pct_change": {
+        "LP 95": 8.92,
+        "LP 92": 5.78,
+        "LAD": 8.81,
+        "LSD": 9.45,
+        "LK": -4.45,
+        "LIK": -12.85,
+        "FUR. 800": 1.93,
+        "FUR 1500 (H)": 1.93,
+        "FUR 1500 (L)": 1.93
+      }
+    },
+    {
+      "date": "2024-02-01",
+      "date_label": "01.02.2024",
+      "prices": {
+        "LP 95": 456.0,
+        "LP 92": 371.0,
+        "LAD": 363.0,
+        "LSD": 468.0,
+        "LK": 262.0,
+        "LIK": 266.0,
+        "FUR. 800": 201.0,
+        "FUR 1500 (H)": 201.0,
+        "FUR 1500 (L)": 201.0
+      },
+      "pct_change": {
+        "LP 95": -1.72,
+        "LP 92": 1.37,
+        "LAD": 1.4,
+        "LSD": -1.47,
+        "LK": 11.02,
+        "LIK": 5.98,
+        "FUR. 800": -4.74,
+        "FUR 1500 (H)": -4.74,
+        "FUR 1500 (L)": -4.74
+      }
+    },
+    {
+      "date": "2024-03-05",
+      "date_label": "05.03.2024",
+      "prices": {
+        "LP 95": 447.0,
+        "LP 92": 371.0,
+        "LAD": 363.0,
+        "LSD": 458.0,
+        "LK": 257.0,
+        "LIK": 260.0,
+        "FUR. 800": 201.0,
+        "FUR 1500 (H)": 201.0,
+        "FUR 1500 (L)": 201.0
+      },
+      "pct_change": {
+        "LP 95": -1.97,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": -2.14,
+        "LK": -1.91,
+        "LIK": -2.26,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-04-01",
+      "date_label": "01.04.2024",
+      "prices": {
+        "LP 95": 440.0,
+        "LP 92": 371.0,
+        "LAD": 363.0,
+        "LSD": 386.0,
+        "LK": 245.0,
+        "LIK": 260.0,
+        "FUR. 800": 201.0,
+        "FUR 1500 (H)": 201.0,
+        "FUR 1500 (L)": 201.0
+      },
+      "pct_change": {
+        "LP 95": -1.57,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": -15.72,
+        "LK": -4.67,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-04-06",
+      "date_label": "06.04.2024",
+      "prices": {
+        "LP 95": 440.0,
+        "LP 92": 371.0,
+        "LAD": 363.0,
+        "LSD": 386.0,
+        "LK": 245.0,
+        "LIK": 250.0,
+        "FUR. 800": 189.0,
+        "FUR 1500 (H)": 189.0,
+        "FUR 1500 (L)": 189.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -3.85,
+        "FUR. 800": -5.97,
+        "FUR 1500 (H)": -5.97,
+        "FUR 1500 (L)": -5.97
+      }
+    },
+    {
+      "date": "2024-05-01",
+      "date_label": "01.05.2024",
+      "prices": {
+        "LP 95": 420.0,
+        "LP 92": 368.0,
+        "LAD": 333.0,
+        "LSD": 377.0,
+        "LK": 215.0,
+        "LIK": 250.0,
+        "FUR. 800": 189.0,
+        "FUR 1500 (H)": 189.0,
+        "FUR 1500 (L)": 189.0
+      },
+      "pct_change": {
+        "LP 95": -4.55,
+        "LP 92": -0.81,
+        "LAD": -8.26,
+        "LSD": -2.33,
+        "LK": -12.24,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-05-06",
+      "date_label": "06.05.2024",
+      "prices": {
+        "LP 95": 420.0,
+        "LP 92": 368.0,
+        "LAD": 333.0,
+        "LSD": 377.0,
+        "LK": 215.0,
+        "LIK": 223.0,
+        "FUR. 800": 188.0,
+        "FUR 1500 (H)": 188.0,
+        "FUR 1500 (L)": 188.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -10.8,
+        "FUR. 800": -0.53,
+        "FUR 1500 (H)": -0.53,
+        "FUR 1500 (L)": -0.53
+      }
+    },
+    {
+      "date": "2024-06-01",
+      "date_label": "01.06.2024",
+      "prices": {
+        "LP 95": 420.0,
+        "LP 92": 355.0,
+        "LAD": 317.0,
+        "LSD": 377.0,
+        "LK": 202.0,
+        "LIK": 223.0,
+        "FUR. 800": 188.0,
+        "FUR 1500 (H)": 188.0,
+        "FUR 1500 (L)": 188.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -3.53,
+        "LAD": -4.8,
+        "LSD": 0.0,
+        "LK": -6.05,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-06-05",
+      "date_label": "05.06.2024",
+      "prices": {
+        "LP 95": 420.0,
+        "LP 92": 355.0,
+        "LAD": 317.0,
+        "LSD": 377.0,
+        "LK": 202.0,
+        "LIK": 210.0,
+        "FUR. 800": 196.0,
+        "FUR 1500 (H)": 196.0,
+        "FUR 1500 (L)": 196.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -5.83,
+        "FUR. 800": 4.26,
+        "FUR 1500 (H)": 4.26,
+        "FUR 1500 (L)": 4.26
+      }
+    },
+    {
+      "date": "2024-07-01",
+      "date_label": "01.07.2024",
+      "prices": {
+        "LP 95": 379.0,
+        "LP 92": 344.0,
+        "LAD": 317.0,
+        "LSD": 355.0,
+        "LK": 202.0,
+        "LIK": 210.0,
+        "FUR. 800": 196.0,
+        "FUR 1500 (H)": 196.0,
+        "FUR 1500 (L)": 196.0
+      },
+      "pct_change": {
+        "LP 95": -9.76,
+        "LP 92": -3.1,
+        "LAD": 0.0,
+        "LSD": -5.84,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-07-05",
+      "date_label": "05.07.2024",
+      "prices": {
+        "LP 95": 379.0,
+        "LP 92": 344.0,
+        "LAD": 317.0,
+        "LSD": 355.0,
+        "LK": 202.0,
+        "LIK": 219.0,
+        "FUR. 800": 196.0,
+        "FUR 1500 (H)": 196.0,
+        "FUR 1500 (L)": 196.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 4.29,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-07-15",
+      "date_label": "15.07.2024",
+      "prices": {
+        "LP 95": 379.0,
+        "LP 92": 344.0,
+        "LAD": 317.0,
+        "LSD": 355.0,
+        "LK": 202.0,
+        "LIK": 219.0,
+        "FUR. 800": 188.0,
+        "FUR 1500 (H)": 188.0,
+        "FUR 1500 (L)": 188.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": -4.08,
+        "FUR 1500 (H)": -4.08,
+        "FUR 1500 (L)": -4.08
+      }
+    },
+    {
+      "date": "2024-08-15",
+      "date_label": "15.08.2024",
+      "prices": {
+        "LP 95": 379.0,
+        "LP 92": 344.0,
+        "LAD": 317.0,
+        "LSD": 355.0,
+        "LK": 202.0,
+        "LIK": 219.0,
+        "FUR. 800": 199.0,
+        "FUR 1500 (H)": 199.0,
+        "FUR 1500 (L)": 199.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 5.85,
+        "FUR 1500 (H)": 5.85,
+        "FUR 1500 (L)": 5.85
+      }
+    },
+    {
+      "date": "2024-09-01",
+      "date_label": "01.09.2024",
+      "prices": {
+        "LP 95": 377.0,
+        "LP 92": 332.0,
+        "LAD": 307.0,
+        "LSD": 352.0,
+        "LK": 202.0,
+        "LIK": 219.0,
+        "FUR. 800": 199.0,
+        "FUR 1500 (H)": 199.0,
+        "FUR 1500 (L)": 199.0
+      },
+      "pct_change": {
+        "LP 95": -0.53,
+        "LP 92": -3.49,
+        "LAD": -3.15,
+        "LSD": -0.85,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-09-05",
+      "date_label": "05.09.2024",
+      "prices": {
+        "LP 95": 377.0,
+        "LP 92": 332.0,
+        "LAD": 307.0,
+        "LSD": 352.0,
+        "LK": 202.0,
+        "LIK": 210.0,
+        "FUR. 800": 199.0,
+        "FUR 1500 (H)": 199.0,
+        "FUR 1500 (L)": 199.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -4.11,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-10-01",
+      "date_label": "01.10.2024",
+      "prices": {
+        "LP 95": 377.0,
+        "LP 92": 311.0,
+        "LAD": 283.0,
+        "LSD": 319.0,
+        "LK": 183.0,
+        "LIK": 210.0,
+        "FUR. 800": 199.0,
+        "FUR 1500 (H)": 199.0,
+        "FUR 1500 (L)": 199.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -6.33,
+        "LAD": -7.82,
+        "LSD": -9.38,
+        "LK": -9.41,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-10-05",
+      "date_label": "05.10.2024",
+      "prices": {
+        "LP 95": 377.0,
+        "LP 92": 311.0,
+        "LAD": 283.0,
+        "LSD": 319.0,
+        "LK": 183.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -9.05,
+        "FUR. 800": 4.02,
+        "FUR 1500 (H)": 4.02,
+        "FUR 1500 (L)": 4.02
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "date_label": "01.11.2024",
+      "prices": {
+        "LP 95": 371.0,
+        "LP 92": 311.0,
+        "LAD": 283.0,
+        "LSD": 313.0,
+        "LK": 183.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": -1.59,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": -1.88,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-12-01",
+      "date_label": "01.12.2024",
+      "prices": {
+        "LP 95": 371.0,
+        "LP 92": 309.0,
+        "LAD": 286.0,
+        "LSD": 313.0,
+        "LK": 188.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -0.64,
+        "LAD": 1.06,
+        "LSD": 0.0,
+        "LK": 2.73,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2024-12-05",
+      "date_label": "05.12.2024",
+      "prices": {
+        "LP 95": 371.0,
+        "LP 92": 309.0,
+        "LAD": 286.0,
+        "LSD": 313.0,
+        "LK": 188.0,
+        "LIK": 196.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 2.62,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-01-01",
+      "date_label": "01.01.2025",
+      "prices": {
+        "LP 95": 371.0,
+        "LP 92": 309.0,
+        "LAD": 286.0,
+        "LSD": 313.0,
+        "LK": 183.0,
+        "LIK": 196.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": -2.66,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-01-05",
+      "date_label": "05.01.2025",
+      "prices": {
+        "LP 95": 371.0,
+        "LP 92": 309.0,
+        "LAD": 286.0,
+        "LSD": 313.0,
+        "LK": 183.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -2.55,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-02-01",
+      "date_label": "01.02.2025",
+      "prices": {
+        "LP 95": 371.0,
+        "LP 92": 309.0,
+        "LAD": 286.0,
+        "LSD": 331.0,
+        "LK": 183.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 5.75,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-04-01",
+      "date_label": "01.04.2025",
+      "prices": {
+        "LP 95": 361.0,
+        "LP 92": 299.0,
+        "LAD": 286.0,
+        "LSD": 331.0,
+        "LK": 183.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": -2.7,
+        "LP 92": -3.24,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "date_label": "30.04.2025",
+      "prices": {
+        "LP 95": 341.0,
+        "LP 92": 293.0,
+        "LAD": 274.0,
+        "LSD": 325.0,
+        "LK": 178.0,
+        "LIK": 191.0,
+        "FUR. 800": 207.0,
+        "FUR 1500 (H)": 207.0,
+        "FUR 1500 (L)": 207.0
+      },
+      "pct_change": {
+        "LP 95": -5.54,
+        "LP 92": -2.01,
+        "LAD": -4.2,
+        "LSD": -1.81,
+        "LK": -2.73,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-05-05",
+      "date_label": "05.05.2025",
+      "prices": {
+        "LP 95": 341.0,
+        "LP 92": 293.0,
+        "LAD": 274.0,
+        "LSD": 325.0,
+        "LK": 178.0,
+        "LIK": 186.0,
+        "FUR. 800": 184.0,
+        "FUR 1500 (H)": 184.0,
+        "FUR 1500 (L)": 184.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -2.62,
+        "FUR. 800": -11.11,
+        "FUR 1500 (H)": -11.11,
+        "FUR 1500 (L)": -11.11
+      }
+    },
+    {
+      "date": "2025-07-01",
+      "date_label": "01.07.2025",
+      "prices": {
+        "LP 95": 341.0,
+        "LP 92": 305.0,
+        "LAD": 289.0,
+        "LSD": 325.0,
+        "LK": 185.0,
+        "LIK": 186.0,
+        "FUR. 800": 184.0,
+        "FUR 1500 (H)": 184.0,
+        "FUR 1500 (L)": 184.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 4.1,
+        "LAD": 5.47,
+        "LSD": 0.0,
+        "LK": 3.93,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-07-05",
+      "date_label": "05.07.2025",
+      "prices": {
+        "LP 95": 341.0,
+        "LP 92": 305.0,
+        "LAD": 289.0,
+        "LSD": 325.0,
+        "LK": 185.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 3.76,
+        "FUR. 800": 5.43,
+        "FUR 1500 (H)": 5.43,
+        "FUR 1500 (L)": 5.43
+      }
+    },
+    {
+      "date": "2025-09-01",
+      "date_label": "01.09.2025",
+      "prices": {
+        "LP 95": 341.0,
+        "LP 92": 299.0,
+        "LAD": 283.0,
+        "LSD": 313.0,
+        "LK": 185.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -1.97,
+        "LAD": -2.08,
+        "LSD": -3.69,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-10-01",
+      "date_label": "01.10.2025",
+      "prices": {
+        "LP 95": 335.0,
+        "LP 92": 299.0,
+        "LAD": 277.0,
+        "LSD": 313.0,
+        "LK": 180.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": -1.76,
+        "LP 92": 0.0,
+        "LAD": -2.12,
+        "LSD": 0.0,
+        "LK": -2.7,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2025-11-01",
+      "date_label": "01.11.2025",
+      "prices": {
+        "LP 95": 335.0,
+        "LP 92": 294.0,
+        "LAD": 277.0,
+        "LSD": 318.0,
+        "LK": 180.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -1.67,
+        "LAD": 0.0,
+        "LSD": 1.6,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-01-06",
+      "date_label": "06.01.2026",
+      "prices": {
+        "LP 95": 340.0,
+        "LP 92": 294.0,
+        "LAD": 279.0,
+        "LSD": 323.0,
+        "LK": 182.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 1.49,
+        "LP 92": 0.0,
+        "LAD": 0.72,
+        "LSD": 1.57,
+        "LK": 1.11,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-02-01",
+      "date_label": "01.02.2026",
+      "prices": {
+        "LP 95": 340.0,
+        "LP 92": 292.0,
+        "LAD": 277.0,
+        "LSD": 323.0,
+        "LK": 182.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -0.68,
+        "LAD": -0.72,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-03-01",
+      "date_label": "01.03.2026",
+      "prices": {
+        "LP 95": 340.0,
+        "LP 92": 293.0,
+        "LAD": 281.0,
+        "LSD": 329.0,
+        "LK": 182.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.34,
+        "LAD": 1.44,
+        "LSD": 1.86,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-03-10",
+      "date_label": "10.03.2026",
+      "prices": {
+        "LP 95": 365.0,
+        "LP 92": 317.0,
+        "LAD": 303.0,
+        "LSD": 353.0,
+        "LK": 195.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 7.35,
+        "LP 92": 8.19,
+        "LAD": 7.83,
+        "LSD": 7.29,
+        "LK": 7.14,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-03-22",
+      "date_label": "22.03.2026",
+      "prices": {
+        "LP 95": 455.0,
+        "LP 92": 398.0,
+        "LAD": 382.0,
+        "LSD": 443.0,
+        "LK": 255.0,
+        "LIK": 193.0,
+        "FUR. 800": 194.0,
+        "FUR 1500 (H)": 194.0,
+        "FUR 1500 (L)": 194.0
+      },
+      "pct_change": {
+        "LP 95": 24.66,
+        "LP 92": 25.55,
+        "LAD": 26.07,
+        "LSD": 25.5,
+        "LK": 30.77,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-04-01",
+      "date_label": "01.04.2026",
+      "prices": {
+        "LP 95": 455.0,
+        "LP 92": 398.0,
+        "LAD": 382.0,
+        "LSD": 443.0,
+        "LK": 255.0,
+        "LIK": 434.0,
+        "FUR. 800": 332.0,
+        "FUR 1500 (H)": 332.0,
+        "FUR 1500 (L)": 332.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 124.87,
+        "FUR. 800": 71.13,
+        "FUR 1500 (H)": 71.13,
+        "FUR 1500 (L)": 71.13
+      }
+    },
+    {
+      "date": "2026-05-03",
+      "date_label": "03.05.2026",
+      "prices": {
+        "LP 95": 470.0,
+        "LP 92": 410.0,
+        "LAD": 392.0,
+        "LSD": 458.0,
+        "LK": 265.0,
+        "LIK": 434.0,
+        "FUR. 800": 332.0,
+        "FUR 1500 (H)": 332.0,
+        "FUR 1500 (L)": 332.0
+      },
+      "pct_change": {
+        "LP 95": 3.3,
+        "LP 92": 3.02,
+        "LAD": 2.62,
+        "LSD": 3.39,
+        "LK": 3.92,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-05-31",
+      "date_label": "31.05.2026",
+      "prices": {
+        "LP 95": 495.0,
+        "LP 92": 434.0,
+        "LAD": 407.0,
+        "LSD": 478.0,
+        "LK": 285.0,
+        "LIK": 434.0,
+        "FUR. 800": 332.0,
+        "FUR 1500 (H)": 332.0,
+        "FUR 1500 (L)": 332.0
+      },
+      "pct_change": {
+        "LP 95": 5.32,
+        "LP 92": 5.85,
+        "LAD": 3.83,
+        "LSD": 4.37,
+        "LK": 7.55,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "date_label": "30.06.2026",
+      "prices": {
+        "LP 95": 495.0,
+        "LP 92": 414.0,
+        "LAD": 382.0,
+        "LSD": 478.0,
+        "LK": 285.0,
+        "LIK": 434.0,
+        "FUR. 800": 332.0,
+        "FUR 1500 (H)": 332.0,
+        "FUR 1500 (L)": 332.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": -4.61,
+        "LAD": -6.14,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-08-05",
+      "date_label": "05.08.2026",
+      "prices": {
+        "LP 95": 495.0,
+        "LP 92": 414.0,
+        "LAD": 382.0,
+        "LSD": 478.0,
+        "LK": 285.0,
+        "LIK": 382.0,
+        "FUR. 800": 322.0,
+        "FUR 1500 (H)": 322.0,
+        "FUR 1500 (L)": 322.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 0.0,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": -11.98,
+        "FUR. 800": -3.01,
+        "FUR 1500 (H)": -3.01,
+        "FUR 1500 (L)": -3.01
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "date_label": "31.08.2026",
+      "prices": {
+        "LP 95": 475.0,
+        "LP 92": 399.0,
+        "LAD": 382.0,
+        "LSD": 478.0,
+        "LK": 285.0,
+        "LIK": 382.0,
+        "FUR. 800": 322.0,
+        "FUR 1500 (H)": 322.0,
+        "FUR 1500 (L)": 322.0
+      },
+      "pct_change": {
+        "LP 95": -4.04,
+        "LP 92": -3.62,
+        "LAD": 0.0,
+        "LSD": 0.0,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "date_label": "01.10.2026",
+      "prices": {
+        "LP 95": 475.0,
+        "LP 92": 414.0,
+        "LAD": 392.0,
+        "LSD": 528.0,
+        "LK": 285.0,
+        "LIK": 382.0,
+        "FUR. 800": 322.0,
+        "FUR 1500 (H)": 322.0,
+        "FUR 1500 (L)": 322.0
+      },
+      "pct_change": {
+        "LP 95": 0.0,
+        "LP 92": 3.76,
+        "LAD": 2.62,
+        "LSD": 10.46,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "date_label": "02.11.2026",
+      "prices": {
+        "LP 95": 490.0,
+        "LP 92": 424.0,
+        "LAD": 397.0,
+        "LSD": 543.0,
+        "LK": 285.0,
+        "LIK": 382.0,
+        "FUR. 800": 322.0,
+        "FUR 1500 (H)": 322.0,
+        "FUR 1500 (L)": 322.0
+      },
+      "pct_change": {
+        "LP 95": 3.16,
+        "LP 92": 2.42,
+        "LAD": 1.28,
+        "LSD": 2.84,
+        "LK": 0.0,
+        "LIK": 0.0,
+        "FUR. 800": 0.0,
+        "FUR 1500 (H)": 0.0,
+        "FUR 1500 (L)": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "last_run_sl": "2026-11-25T13:19:25.681725+05:30",
+  "last_run_utc": "2026-11-25T07:49:25.681725+00:00",
+  "mode": "update",
+  "sources": {
+    "fuel_prices_api": {
+      "url": "https://api.ceypetco.gov.lk/api/admin/fuel-prices/active?limit=100",
+      "status": "ok",
+      "http_status": 200,
+      "records_count": 9,
+      "error": null
+    },
+    "historical_prices_api": {
+      "url": "https://api.ceypetco.gov.lk/api/admin/historical-prices/active",
+      "status": "ok",
+      "http_status": 200,
+      "records_count": 226,
+      "fuel_records_count": 185,
+      "error": null
+    }
+  },
+  "update_applied": true,
+  "new_revisions_added": [
+    "02.11.2026"
+  ],
+  "total_csv_rows": 185,
+  "latest_revision_date": "2026-11-02",
+  "warnings": [
+    "FUR. 800: fuel-prices API shows 332.0 (effective 2026-04-01), ignored because historical/CSV has 322 (latest revision 2026-11-02)",
+    "FUR 1500 (H): fuel-prices API shows 332.0 (effective 2026-04-01), ignored because historical/CSV has 322 (latest revision 2026-11-02)",
+    "FUR 1500 (L): fuel-prices API shows 332.0 (effective 2026-04-01), ignored because historical/CSV has 322 (latest revision 2026-11-02)"
+  ]
+}
