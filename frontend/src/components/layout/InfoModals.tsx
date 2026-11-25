@@ -35,10 +35,10 @@ function ModalShell({ open, onClose, title, eyebrow, children }: ModalShellProps
         className="relative w-full max-w-lg overflow-hidden rounded-lg border border-gray-200 bg-white shadow-xl dark:border-slate-700 dark:bg-slate-900"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="h-1 w-full bg-brand-red" />
+        <div className="h-1 w-full bg-brand-primary" />
         <div className="flex items-start justify-between border-b border-gray-200 px-6 py-4 dark:border-slate-800">
           <div>
-            <p className="font-heading text-[11px] font-bold uppercase tracking-wider text-brand-red">
+            <p className="font-heading text-[11px] font-bold uppercase tracking-wider text-brand-primary dark:text-sky-400">
               {eyebrow}
             </p>
             <h2
@@ -52,7 +52,7 @@ function ModalShell({ open, onClose, title, eyebrow, children }: ModalShellProps
             type="button"
             onClick={onClose}
             aria-label="Close modal"
-            className="cursor-pointer rounded p-1.5 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red dark:hover:bg-slate-800 dark:hover:text-slate-200"
+            className="cursor-pointer rounded p-1.5 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary dark:hover:bg-slate-800 dark:hover:text-slate-200"
           >
             <X className="h-5 w-5" />
           </button>
@@ -85,7 +85,7 @@ export function AboutPortalModal({
 
         <div className="space-y-2.5 rounded-lg border border-gray-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/50">
           <div className="flex items-start gap-2.5">
-            <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-red" />
+            <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary dark:text-sky-400" />
             <div>
               <p className="text-xs font-bold uppercase tracking-wide text-slate-900 dark:text-white">
                 Automated Daily Sync
@@ -97,7 +97,7 @@ export function AboutPortalModal({
             </div>
           </div>
           <div className="flex items-start gap-2.5">
-            <Database className="mt-0.5 h-4 w-4 shrink-0 text-brand-red" />
+            <Database className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary dark:text-sky-400" />
             <div>
               <p className="text-xs font-bold uppercase tracking-wide text-slate-900 dark:text-white">
                 Historical Coverage
@@ -137,7 +137,7 @@ export function AboutPortalModal({
               href="https://www.tradingview.com/"
               target="_blank"
               rel="noreferrer"
-              className="font-semibold text-brand-red hover:underline dark:text-red-400"
+              className="font-semibold text-brand-primary hover:underline dark:text-sky-400"
             >
               TradingView Lightweight Charts™
             </a>{" "}

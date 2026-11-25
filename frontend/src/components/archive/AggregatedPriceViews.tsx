@@ -162,7 +162,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
       className="mt-8 space-y-4"
     >
       <div className="flex items-center gap-2.5 px-1">
-        <span className="h-2.5 w-2.5 rounded-sm bg-brand-red" />
+        <span className="h-2.5 w-2.5 rounded-sm bg-brand-primary dark:bg-sky-400" />
         <h2
           id="aggregated-views-heading"
           className="font-heading text-sm font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400"
@@ -182,7 +182,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
             className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-slate-50/80 sm:px-7 sm:py-5 dark:hover:bg-slate-800/50"
           >
             <div className="flex items-start gap-3.5">
-              <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-brand-red dark:bg-red-950/50 dark:text-red-400">
+              <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sky-50 text-brand-primary dark:bg-sky-950/50 dark:text-sky-400">
                 <CalendarRange className="h-4 w-4" aria-hidden="true" />
               </div>
               <div>
@@ -236,7 +236,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                       setMonthlyYearFilter(e.target.value);
                       setMonthlyPage(1);
                     }}
-                    className="tabular-nums cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+                    className="tabular-nums cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
                   >
                     <option value="all">All years</option>
                     {monthly.available_years.map((yr) => (
@@ -253,7 +253,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                       setMonthlyProductFilter(e.target.value);
                       setMonthlyShowAllCols(false);
                     }}
-                    className="cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+                    className="cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
                   >
                     <option value="all">All products</option>
                     {monthly.products.map((p) => (
@@ -293,7 +293,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                     className="inline-flex cursor-pointer items-center gap-1.5 rounded border border-gray-300 bg-white px-3 py-1.5 font-heading text-xs font-bold uppercase tracking-wider text-slate-700 whitespace-nowrap transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
                   >
                     <Download
-                      className="h-3.5 w-3.5 text-brand-red dark:text-red-400"
+                      className="h-3.5 w-3.5 text-brand-primary dark:text-sky-400"
                       aria-hidden="true"
                     />
                     <span>Export CSV</span>
@@ -305,8 +305,8 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                     onClick={() => setMonthlyChartOpen((prev) => !prev)}
                     className={`inline-flex cursor-pointer items-center gap-1.5 rounded px-3.5 py-1.5 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${
                       monthlyChartOpen
-                        ? "bg-slate-900 text-white dark:bg-brand-red"
-                        : "border border-brand-red/30 bg-red-50 text-brand-red hover:bg-brand-red hover:text-white dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-300 dark:hover:bg-brand-red dark:hover:text-white"
+                        ? "bg-slate-900 text-white dark:bg-brand-primary"
+                        : "border border-brand-primary/30 bg-sky-50 text-brand-primary hover:bg-brand-primary hover:text-white dark:border-sky-800/60 dark:bg-sky-950/40 dark:text-sky-300 dark:hover:bg-brand-primary dark:hover:text-white"
                     }`}
                   >
                     <LineChart className="h-3.5 w-3.5" aria-hidden="true" />
@@ -490,7 +490,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                       setAnnualRangeFilter(e.target.value);
                       setAnnualPage(1);
                     }}
-                    className="tabular-nums cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+                    className="tabular-nums cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
                   >
                     <option value="all">All years</option>
                     <option value="10y">Last 10 Years</option>
@@ -509,7 +509,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                       setAnnualProductFilter(e.target.value);
                       setAnnualShowAllCols(false);
                     }}
-                    className="cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+                    className="cursor-pointer rounded border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
                   >
                     <option value="all">All products</option>
                     {annual.products.map((p) => (
@@ -548,7 +548,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                     className="inline-flex cursor-pointer items-center gap-1.5 rounded border border-gray-300 bg-white px-3 py-1.5 font-heading text-xs font-bold uppercase tracking-wider text-slate-700 whitespace-nowrap transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
                   >
                     <Download
-                      className="h-3.5 w-3.5 text-brand-red dark:text-red-400"
+                      className="h-3.5 w-3.5 text-brand-primary dark:text-sky-400"
                       aria-hidden="true"
                     />
                     <span>Export CSV</span>
@@ -560,8 +560,8 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                     onClick={() => setAnnualChartOpen((prev) => !prev)}
                     className={`inline-flex cursor-pointer items-center gap-1.5 rounded px-3.5 py-1.5 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${
                       annualChartOpen
-                        ? "bg-slate-900 text-white dark:bg-brand-red"
-                        : "border border-brand-red/30 bg-red-50 text-brand-red hover:bg-brand-red hover:text-white dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-300 dark:hover:bg-brand-red dark:hover:text-white"
+                        ? "bg-slate-900 text-white dark:bg-brand-primary"
+                        : "border border-brand-primary/30 bg-sky-50 text-brand-primary hover:bg-brand-primary hover:text-white dark:border-sky-800/60 dark:bg-sky-950/40 dark:text-sky-300 dark:hover:bg-brand-primary dark:hover:text-white"
                     }`}
                   >
                     <LineChart className="h-3.5 w-3.5" aria-hidden="true" />
@@ -601,7 +601,7 @@ export function AggregatedPriceViews({ monthly, annual }: AggregatedPriceViewsPr
                             <div className="flex items-center gap-2">
                               <span className="tabular-nums">{row.year}</span>
                               {row.is_ytd && (
-                                <span className="rounded bg-brand-red px-1.5 py-0.5 text-[10px] font-bold uppercase text-white whitespace-nowrap">
+                                <span className="rounded bg-brand-primary px-1.5 py-0.5 text-[10px] font-bold uppercase text-white whitespace-nowrap">
                                   YTD
                                 </span>
                               )}

@@ -72,9 +72,9 @@ export function ArchiveTable({
                 >
                   <span>Date</span>
                   {sortDirection === "desc" ? (
-                    <ArrowDown className="h-3.5 w-3.5 text-brand-red" aria-hidden="true" />
+                    <ArrowDown className="h-3.5 w-3.5 text-sky-400" aria-hidden="true" />
                   ) : (
-                    <ArrowUp className="h-3.5 w-3.5 text-brand-red" aria-hidden="true" />
+                    <ArrowUp className="h-3.5 w-3.5 text-sky-400" aria-hidden="true" />
                   )}
                 </button>
               </th>
@@ -88,7 +88,7 @@ export function ArchiveTable({
                     title={`${prod.full_name} (${prod.category})`}
                     className={`py-3.5 px-4 text-right font-semibold whitespace-nowrap transition-colors ${
                       isFocused
-                        ? "bg-red-950/60 text-white"
+                        ? "bg-sky-950/70 text-white"
                         : "text-slate-200"
                     }`}
                   >
@@ -117,21 +117,21 @@ export function ArchiveTable({
                   key={row.id}
                   className={`group transition-colors duration-150 ${
                     row.isLatest
-                      ? "bg-red-50/35 hover:bg-red-50/60 dark:bg-red-950/20 dark:hover:bg-red-950/35"
+                      ? "bg-sky-50/45 hover:bg-sky-50/75 dark:bg-sky-950/25 dark:hover:bg-sky-950/40"
                       : "hover:bg-slate-50 dark:hover:bg-slate-800/60"
                   }`}
                 >
                   <td
                     className={`sticky left-0 z-10 py-3.5 px-5 font-heading font-bold whitespace-nowrap shadow-[2px_0_6px_-2px_rgba(15,23,42,0.06)] transition-colors ${
                       row.isLatest
-                        ? "bg-[#fdf7f8] text-slate-900 group-hover:bg-[#fbeff1] dark:bg-[#19121a] dark:text-white dark:group-hover:bg-[#231521]"
+                        ? "bg-[#f4f9fd] text-slate-900 group-hover:bg-[#eaf4fb] dark:bg-[#0e1b2b] dark:text-white dark:group-hover:bg-[#132438]"
                         : "bg-white text-slate-900 group-hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-100 dark:group-hover:bg-slate-800"
                     }`}
                   >
                     <div className="flex items-center gap-2">
                       <span className="tabular-nums">{row.dateLabel}</span>
                       {row.isLatest && (
-                        <span className="rounded bg-brand-red px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none tracking-wider text-white whitespace-nowrap">
+                        <span className="rounded bg-brand-primary px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none tracking-wider text-white whitespace-nowrap">
                           Latest
                         </span>
                       )}
@@ -151,7 +151,7 @@ export function ArchiveTable({
                           formatted === "—"
                             ? "text-slate-400 dark:text-slate-600"
                             : isFocused
-                            ? "bg-red-50/40 font-bold text-slate-900 dark:bg-red-950/20 dark:text-white"
+                            ? "bg-sky-50/45 font-bold text-slate-900 dark:bg-sky-950/25 dark:text-white"
                             : "text-slate-900 dark:text-slate-100"
                         }`}
                       >
@@ -181,7 +181,7 @@ export function ArchiveTable({
               aria-label="Rows per page"
               value={pageSize}
               onChange={(e) => onPageSizeChange(Number(e.target.value))}
-              className="tabular-nums cursor-pointer rounded border border-gray-300 bg-white px-2 py-1 text-xs font-semibold text-slate-700 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+              className="tabular-nums cursor-pointer rounded border border-gray-300 bg-white px-2 py-1 text-xs font-semibold text-slate-700 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
             >
               <option value={10}>10</option>
               <option value={25}>25</option>
@@ -213,7 +213,7 @@ export function ArchiveTable({
                 aria-current={item === safePage ? "page" : undefined}
                 className={`tabular-nums cursor-pointer rounded border px-3 py-1.5 text-xs font-bold transition-colors ${
                   item === safePage
-                    ? "border-brand-red bg-brand-red text-white"
+                    ? "border-brand-primary bg-brand-primary text-white"
                     : "border-gray-300 bg-white text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
                 }`}
               >

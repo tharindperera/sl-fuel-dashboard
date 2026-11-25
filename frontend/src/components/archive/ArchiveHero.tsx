@@ -10,12 +10,12 @@ interface ArchiveHeroProps {
 export function ArchiveHero({ meta, strings }: ArchiveHeroProps) {
   return (
     <section className="relative mb-8 overflow-hidden rounded-lg border border-gray-200/90 bg-white p-6 shadow-sm sm:p-9 dark:border-slate-800 dark:bg-slate-900">
-      <div className="absolute top-0 left-0 h-full w-1.5 bg-brand-red" aria-hidden="true" />
+      <div className="absolute top-0 left-0 h-full w-1.5 bg-brand-primary" aria-hidden="true" />
 
       <div className="flex flex-col justify-between gap-8 pl-2 lg:flex-row lg:items-center">
         <div>
-          <div className="mb-3.5 inline-flex items-center gap-2 rounded border border-red-100 bg-red-50 px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider text-brand-red whitespace-nowrap dark:border-red-900/60 dark:bg-red-950/50 dark:text-red-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-red dark:bg-red-400" />
+          <div className="mb-3.5 inline-flex items-center gap-2 rounded border border-sky-100 bg-sky-50 px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider text-brand-primary whitespace-nowrap dark:border-sky-900/60 dark:bg-sky-950/50 dark:text-sky-300">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-primary dark:bg-sky-400" />
             <span>{strings.archive.badge}</span>
           </div>
 
@@ -34,7 +34,7 @@ export function ArchiveHero({ meta, strings }: ArchiveHeroProps) {
               <History className="h-3.5 w-3.5 text-slate-400" aria-hidden="true" />
               <span>{strings.archive.firstRecord}</span>
             </div>
-            <div className="tabular-nums font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-red dark:text-red-400">
+            <div className="tabular-nums font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary dark:text-sky-400">
               {meta.first_record_year}
             </div>
             <div className="mt-1.5 text-xs font-medium text-slate-500 whitespace-nowrap dark:text-slate-400">
@@ -47,7 +47,7 @@ export function ArchiveHero({ meta, strings }: ArchiveHeroProps) {
               <Database className="h-3.5 w-3.5 text-slate-400" aria-hidden="true" />
               <span>{strings.archive.datasetSize}</span>
             </div>
-            <div className="tabular-nums font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-red dark:text-red-400">
+            <div className="tabular-nums font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary dark:text-sky-400">
               {meta.total_records}
             </div>
             <div className="mt-1.5 text-xs font-medium text-slate-500 whitespace-nowrap dark:text-slate-400">

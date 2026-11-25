@@ -21,7 +21,7 @@ export function HomePage({ data, loading, error, onRetry, strings }: HomePagePro
   if (error || !data) {
     return (
       <div className="rounded-lg border border-red-200 bg-white p-8 text-center shadow-xs dark:border-red-900/60 dark:bg-slate-900">
-        <AlertCircle className="mx-auto h-10 w-10 text-brand-red" />
+        <AlertCircle className="mx-auto h-10 w-10 text-red-600 dark:text-red-400" />
         <h2 className="mt-3 font-heading text-xl font-bold text-slate-900 dark:text-white">
           Unable to load current fuel rates
         </h2>
@@ -31,7 +31,7 @@ export function HomePage({ data, loading, error, onRetry, strings }: HomePagePro
         <button
           type="button"
           onClick={onRetry}
-          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-red-hover"
+          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-primary px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-primary-hover"
         >
           <RefreshCw className="h-3.5 w-3.5" />
           <span>Retry</span>
@@ -86,7 +86,7 @@ export function HomePage({ data, loading, error, onRetry, strings }: HomePagePro
             01
           </span>
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-brand-red dark:text-red-400">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-brand-primary dark:text-sky-400">
               {strings.home.productCategoryEyebrow}
             </p>
             <h2
@@ -116,7 +116,7 @@ export function HomePage({ data, loading, error, onRetry, strings }: HomePagePro
               02
             </span>
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-brand-red dark:text-red-400">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-brand-primary dark:text-sky-400">
                 INDUSTRIAL &amp; MARINE FUEL
               </p>
               <h2

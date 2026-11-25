@@ -53,7 +53,7 @@ export function ArchiveFilters({
               value={dateQuery}
               onChange={(e) => onDateQueryChange(e.target.value)}
               placeholder="e.g. 03.2026 or 2022-06-26"
-              className="tabular-nums w-full rounded border border-gray-300 bg-slate-50 py-2.5 pr-4 pl-9 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:border-brand-red focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500 dark:focus:bg-slate-800"
+              className="tabular-nums w-full rounded border border-gray-300 bg-slate-50 py-2.5 pr-4 pl-9 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:border-brand-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500 dark:focus:bg-slate-800"
             />
           </div>
         </div>
@@ -72,7 +72,7 @@ export function ArchiveFilters({
               id="filter-year"
               value={selectedYear}
               onChange={(e) => onYearChange(e.target.value)}
-              className="tabular-nums w-full cursor-pointer appearance-none rounded border border-gray-300 bg-slate-50 py-2.5 pr-10 pl-4 text-sm font-medium text-slate-800 transition-colors focus:border-brand-red focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+              className="tabular-nums w-full cursor-pointer appearance-none rounded border border-gray-300 bg-slate-50 py-2.5 pr-10 pl-4 text-sm font-medium text-slate-800 transition-colors focus:border-brand-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
             >
               <option value="all">All years</option>
               {availableYears.map((yr) => (
@@ -102,7 +102,7 @@ export function ArchiveFilters({
               id="filter-product"
               value={selectedProduct}
               onChange={(e) => onProductChange(e.target.value)}
-              className="w-full cursor-pointer appearance-none rounded border border-gray-300 bg-slate-50 py-2.5 pr-10 pl-4 text-sm font-medium text-slate-800 transition-colors focus:border-brand-red focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-red/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+              className="w-full cursor-pointer appearance-none rounded border border-gray-300 bg-slate-50 py-2.5 pr-10 pl-4 text-sm font-medium text-slate-800 transition-colors focus:border-brand-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
             >
               <option value="all">All products</option>
               {products.map((prod) => (
@@ -137,7 +137,7 @@ export function ArchiveFilters({
             <button
               type="button"
               onClick={onReset}
-              className="inline-flex cursor-pointer items-center gap-1.5 rounded border border-gray-300 bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-700 transition-colors hover:border-brand-red hover:text-brand-red dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-red-400 dark:hover:text-red-400"
+              className="inline-flex cursor-pointer items-center gap-1.5 rounded border border-gray-300 bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-700 transition-colors hover:border-brand-primary hover:text-brand-primary dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-400"
             >
               <RotateCcw className="h-3.5 w-3.5" aria-hidden="true" />
               <span>Reset filters</span>

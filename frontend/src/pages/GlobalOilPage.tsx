@@ -40,7 +40,7 @@ export function GlobalOilPage({
   if (error || !kpis || !history) {
     return (
       <div className="rounded-lg border border-red-200 bg-white p-8 text-center shadow-xs dark:border-red-900/60 dark:bg-slate-900">
-        <AlertCircle className="mx-auto h-10 w-10 text-brand-red" />
+        <AlertCircle className="mx-auto h-10 w-10 text-red-600 dark:text-red-400" />
         <h2 className="mt-3 font-heading text-xl font-bold text-slate-900 dark:text-white">
           Unable to load Global Crude Oil benchmarks
         </h2>
@@ -50,7 +50,7 @@ export function GlobalOilPage({
         <button
           type="button"
           onClick={onRetry}
-          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-red-hover"
+          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-primary px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-primary-hover"
         >
           <RefreshCw className="h-3.5 w-3.5" />
           <span>Retry</span>
@@ -70,7 +70,7 @@ export function GlobalOilPage({
       <section className="flex flex-col justify-between gap-6 border-b-2 border-slate-900 pb-6 lg:flex-row lg:items-end dark:border-slate-700">
         <div className="space-y-2.5">
           <div className="inline-flex items-center gap-2 rounded border border-gray-200 bg-slate-100 px-3 py-1 font-heading text-xs font-bold uppercase tracking-widest text-slate-800 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-200">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-brand-red" />
+            <span className="h-2 w-2 animate-pulse rounded-full bg-brand-primary dark:bg-sky-400" />
             <span>International Commodity Benchmark • Live Market Intelligence</span>
           </div>
 
@@ -89,8 +89,8 @@ export function GlobalOilPage({
             <span className="text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400">
               Market Status
             </span>
-            <span className="inline-flex items-center gap-1.5 font-bold text-brand-red whitespace-nowrap dark:text-red-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
+            <span className="inline-flex items-center gap-1.5 font-bold text-brand-primary whitespace-nowrap dark:text-sky-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-primary dark:bg-sky-400" />
               ACTIVE BENCHMARK
             </span>
           </div>
@@ -146,7 +146,7 @@ export function GlobalOilPage({
               className={`tabular-nums flex items-center gap-1 font-heading text-2xl lg:text-3xl font-extrabold tracking-tight ${
                 kpis.daily_change >= 0
                   ? "text-emerald-600 dark:text-emerald-400"
-                  : "text-brand-red dark:text-red-400"
+                  : "text-red-600 dark:text-red-400"
               }`}
             >
               {kpis.daily_change >= 0 ? (
@@ -163,7 +163,7 @@ export function GlobalOilPage({
               className={`tabular-nums font-heading text-xs font-bold ${
                 kpis.daily_change_pct >= 0
                   ? "text-emerald-600 dark:text-emerald-400"
-                  : "text-brand-red dark:text-red-400"
+                  : "text-red-600 dark:text-red-400"
               }`}
             >
               {kpis.daily_change_pct >= 0 ? "+" : ""}
@@ -181,7 +181,7 @@ export function GlobalOilPage({
               className={`tabular-nums flex items-center gap-1 font-heading text-2xl lg:text-3xl font-extrabold tracking-tight ${
                 kpis.monthly_change_pct >= 0
                   ? "text-[#0055ff] dark:text-blue-400"
-                  : "text-brand-red dark:text-red-400"
+                  : "text-red-600 dark:text-red-400"
               }`}
             >
               {kpis.monthly_change_pct >= 0 ? (
@@ -207,7 +207,7 @@ export function GlobalOilPage({
               className={`tabular-nums flex items-center gap-1 font-heading text-2xl lg:text-3xl font-extrabold tracking-tight ${
                 kpis.yearly_change_pct >= 0
                   ? "text-[#0055ff] dark:text-blue-400"
-                  : "text-brand-red dark:text-red-400"
+                  : "text-red-600 dark:text-red-400"
               }`}
             >
               {kpis.yearly_change_pct >= 0 ? (

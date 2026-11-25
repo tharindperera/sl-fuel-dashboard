@@ -32,7 +32,7 @@ export function BenchmarkSpecsSheet({ kpis }: BenchmarkSpecsSheetProps) {
             href="https://www.tradingview.com/"
             target="_blank"
             rel="noreferrer"
-            className="font-semibold text-brand-red hover:underline dark:text-red-400"
+            className="font-semibold text-brand-primary hover:underline dark:text-sky-400"
           >
             TradingView Lightweight Charts™
           </a>{" "}
@@ -64,7 +64,7 @@ export function BenchmarkSpecsSheet({ kpis }: BenchmarkSpecsSheetProps) {
             Highest (ATH)
           </span>
           <div className="mt-1.5">
-            <span className="tabular-nums block text-lg font-extrabold text-brand-red dark:text-red-400">
+            <span className="tabular-nums block text-lg font-extrabold text-brand-primary dark:text-sky-400">
               {kpis.all_time_high.value.toFixed(2)}
             </span>
             <span className="tabular-nums block font-mono text-[10px] text-slate-400">

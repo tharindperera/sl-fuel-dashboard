@@ -19,10 +19,10 @@ export function RateCard({ product }: RateCardProps) {
       : "bg-slate-100 text-slate-600 border-slate-200/80 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700";
 
   return (
-    <article className="red-top-border flex flex-col justify-between border border-gray-200 bg-white p-6 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700">
+    <article className="brand-top-border flex flex-col justify-between border border-gray-200 bg-white p-6 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700">
       <div>
         <div className="flex items-center justify-between text-xs font-bold">
-          <span className="uppercase tracking-wider text-brand-red dark:text-red-400">
+          <span className="uppercase tracking-wider text-brand-primary dark:text-sky-400">
             {product.category}
           </span>
           <span className="tabular-nums font-mono text-slate-400 dark:text-slate-500">
@@ -60,7 +60,7 @@ export function RateCard({ product }: RateCardProps) {
 
         <div className="mt-3 flex items-center text-xs text-slate-600 dark:text-slate-400">
           <Clock
-            className="mr-1.5 h-3.5 w-3.5 shrink-0 text-brand-red dark:text-red-400"
+            className="mr-1.5 h-3.5 w-3.5 shrink-0 text-brand-primary dark:text-sky-400"
             aria-hidden="true"
           />
           <span className="tabular-nums">

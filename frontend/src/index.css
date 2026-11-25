@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-red: #C8102E;
-  --color-brand-red-hover: #a50d25;
+  --color-brand-primary: #0369A1;
+  --color-brand-primary-hover: #075985;
   --color-brand-dark: #0e1e28;
   --color-brand-slate: #13222e;
   --color-brand-muted: #64748b;
@@ -39,6 +39,6 @@
   font-feature-settings: "tnum" 1;
 }
 
-.red-top-border {
-  border-top: 3px solid #C8102E;
+.brand-top-border {
+  border-top: 3px solid #0369A1;
 }

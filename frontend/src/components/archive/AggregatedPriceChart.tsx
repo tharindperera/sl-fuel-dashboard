@@ -273,7 +273,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               onClick={() => setMetric("val")}
               className={`inline-flex cursor-pointer items-center gap-1.5 rounded px-2.5 py-1 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                 metric === "val"
-                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-red"
+                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-primary"
                   : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
               }`}
             >
@@ -286,7 +286,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               onClick={() => setMetric("pct")}
               className={`inline-flex cursor-pointer items-center gap-1.5 rounded px-2.5 py-1 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                 metric === "pct"
-                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-red"
+                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-primary"
                   : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
               }`}
             >
@@ -307,7 +307,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               onClick={() => setView("line")}
               className={`inline-flex cursor-pointer items-center gap-1.5 rounded px-2.5 py-1 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                 view === "line"
-                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-red"
+                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-primary"
                   : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
               }`}
             >
@@ -320,7 +320,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               onClick={() => setView("area")}
               className={`inline-flex cursor-pointer items-center gap-1.5 rounded px-2.5 py-1 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                 view === "area"
-                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-red"
+                  ? "bg-slate-900 text-white shadow-xs dark:bg-brand-primary"
                   : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
               }`}
             >
@@ -335,7 +335,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
             onClick={handleExportChartData}
             className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 font-heading text-xs font-bold uppercase tracking-wider text-slate-700 shadow-xs whitespace-nowrap transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
           >
-            <Download className="h-3.5 w-3.5 text-brand-red dark:text-red-400" aria-hidden="true" />
+            <Download className="h-3.5 w-3.5 text-brand-primary dark:text-sky-400" aria-hidden="true" />
             <span>Export Chart Data</span>
           </button>
         </div>
@@ -357,7 +357,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               setFuelTypeFilter(e.target.value);
               setHiddenCodes({});
             }}
-            className="w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+            className="w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
           >
             <option value="all">All fuel types</option>
             {ALL_GRADE_CODES.map((code) => (
@@ -379,7 +379,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
             id={`${uid}-period-preset`}
             value={preset}
             onChange={(e) => handlePresetChange(e.target.value)}
-            className="w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+            className="w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
           >
             {isMonthly ? (
               <>
@@ -416,14 +416,14 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               max={latestKey}
               value={draftStart}
               onChange={(e) => setDraftStart(e.target.value)}
-              className="tabular-nums w-full rounded-lg border border-gray-300 bg-slate-50 px-2.5 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+              className="tabular-nums w-full rounded-lg border border-gray-300 bg-slate-50 px-2.5 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
             />
           ) : (
             <select
               id={`${uid}-start`}
               value={draftStart}
               onChange={(e) => setDraftStart(e.target.value)}
-              className="tabular-nums w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+              className="tabular-nums w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
             >
               {pointsChronological.map((pt) => (
                 <option key={pt.key} value={pt.key}>
@@ -449,14 +449,14 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
               max={latestKey}
               value={draftEnd}
               onChange={(e) => setDraftEnd(e.target.value)}
-              className="tabular-nums w-full rounded-lg border border-gray-300 bg-slate-50 px-2.5 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+              className="tabular-nums w-full rounded-lg border border-gray-300 bg-slate-50 px-2.5 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
             />
           ) : (
             <select
               id={`${uid}-end`}
               value={draftEnd}
               onChange={(e) => setDraftEnd(e.target.value)}
-              className="tabular-nums w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-red focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+              className="tabular-nums w-full cursor-pointer rounded-lg border border-gray-300 bg-slate-50 px-3 py-2 font-heading text-xs font-semibold text-slate-800 focus:border-brand-primary focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
             >
               {pointsChronological.map((pt) => (
                 <option key={pt.key} value={pt.key}>
@@ -471,7 +471,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
           <button
             type="button"
             onClick={handleApply}
-            className="flex-1 cursor-pointer rounded-lg bg-brand-red px-3 py-2 font-heading text-xs font-bold uppercase tracking-wider text-white shadow-xs transition-colors hover:bg-brand-red-hover"
+            className="flex-1 cursor-pointer rounded-lg bg-brand-primary px-3 py-2 font-heading text-xs font-bold uppercase tracking-wider text-white shadow-xs transition-colors hover:bg-brand-primary-hover"
           >
             Apply
           </button>
@@ -662,7 +662,7 @@ export function AggregatedPriceChart({ mode, pointsChronological }: AggregatedPr
                     }
                     className={`font-mono text-[10px] ${
                       hoverIdx === idx
-                        ? "fill-brand-red font-bold dark:fill-red-400"
+                        ? "fill-brand-primary font-bold dark:fill-sky-400"
                         : "fill-slate-500 dark:fill-slate-400"
                     }`}
                   >

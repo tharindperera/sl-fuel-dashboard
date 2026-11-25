@@ -94,7 +94,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
   if (error || !data || !analytics) {
     return (
       <div className="rounded-lg border border-red-200 bg-white p-8 text-center shadow-xs dark:border-red-900/60 dark:bg-slate-900">
-        <AlertCircle className="mx-auto h-10 w-10 text-brand-red" />
+        <AlertCircle className="mx-auto h-10 w-10 text-red-600 dark:text-red-400" />
         <h2 className="mt-3 font-heading text-xl font-bold text-slate-900 dark:text-white">
           Unable to load tariff analysis
         </h2>
@@ -104,7 +104,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
         <button
           type="button"
           onClick={onRetry}
-          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-red-hover"
+          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-primary px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-primary-hover"
         >
           <RefreshCw className="h-3.5 w-3.5" />
           <span>Retry</span>
@@ -122,8 +122,8 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
       {/* Header */}
       <section className="flex flex-col justify-between gap-6 border-b border-gray-200 pb-7 md:flex-row md:items-end dark:border-slate-800">
         <div className="max-w-3xl space-y-2">
-          <div className="flex flex-wrap items-center gap-2 font-heading text-xs font-bold uppercase tracking-wider text-brand-red dark:text-red-400">
-            <span className="inline-block h-2 w-2 rounded-full bg-brand-red dark:bg-red-400" />
+          <div className="flex flex-wrap items-center gap-2 font-heading text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-sky-400">
+            <span className="inline-block h-2 w-2 rounded-full bg-brand-primary dark:bg-sky-400" />
             <span>Tariff Intelligence</span>
             <span className="text-slate-400">•</span>
             <span className="font-medium text-slate-600 dark:text-slate-400">
@@ -153,7 +153,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
             <p className="font-heading text-[10px] font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">
               Coverage
             </p>
-            <p className="tabular-nums mt-0.5 font-heading text-sm font-bold text-brand-red whitespace-nowrap dark:text-red-400">
+            <p className="tabular-nums mt-0.5 font-heading text-sm font-bold text-brand-primary whitespace-nowrap dark:text-sky-400">
               {data.chart_series.length} Revisions
             </p>
           </div>
@@ -162,16 +162,16 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
 
       {/* 4 Executive Insight Cards */}
       <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <article className="red-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
+        <article className="brand-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
           <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             <span>Top YTD Mover</span>
-            <TrendingUp className="h-4 w-4 text-brand-red dark:text-red-400" aria-hidden="true" />
+            <TrendingUp className="h-4 w-4 text-brand-primary dark:text-sky-400" aria-hidden="true" />
           </div>
           <p className="mt-3 font-heading text-lg font-bold text-slate-900 dark:text-white">
             {analytics.topYtdMover.code} · {analytics.topYtdMover.vis.shortLabel}
           </p>
           <div className="tabular-nums mt-2 flex items-baseline gap-2">
-            <span className="font-heading text-2xl font-extrabold text-brand-red dark:text-red-400">
+            <span className="font-heading text-2xl font-extrabold text-brand-primary dark:text-sky-400">
               {analytics.topYtdMover.stats.ytd_change_pct > 0 ? "+" : ""}
               {analytics.topYtdMover.stats.ytd_change_pct}%
             </span>
@@ -186,7 +186,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
           </p>
         </article>
 
-        <article className="red-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
+        <article className="brand-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
           <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             <span>Most Active (12M)</span>
             <Activity className="h-4 w-4 text-[#0055ff] dark:text-blue-400" aria-hidden="true" />
@@ -207,7 +207,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
           </p>
         </article>
 
-        <article className="red-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
+        <article className="brand-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
           <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             <span>Octane Spread</span>
             <Layers className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
@@ -221,7 +221,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
             </span>
             <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-slate-500 dark:text-slate-400">
               {analytics.petrolSpreadDelta >= 0 ? (
-                <ArrowUpRight className="h-3.5 w-3.5 text-brand-red" />
+                <ArrowUpRight className="h-3.5 w-3.5 text-red-600 dark:text-red-400" />
               ) : (
                 <ArrowDownRight className="h-3.5 w-3.5 text-emerald-600" />
               )}
@@ -235,7 +235,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
           </p>
         </article>
 
-        <article className="red-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
+        <article className="brand-top-border rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
           <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             <span>Diesel Spread</span>
             <BarChart3 className="h-4 w-4 text-purple-600 dark:text-purple-400" aria-hidden="true" />
@@ -249,7 +249,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
             </span>
             <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-slate-500 dark:text-slate-400">
               {analytics.dieselSpreadDelta >= 0 ? (
-                <ArrowUpRight className="h-3.5 w-3.5 text-brand-red" />
+                <ArrowUpRight className="h-3.5 w-3.5 text-red-600 dark:text-red-400" />
               ) : (
                 <ArrowDownRight className="h-3.5 w-3.5 text-emerald-600" />
               )}
@@ -282,7 +282,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
                 <span className="h-2.5 w-0.5 bg-slate-500" /> Avg
               </span>
               <span className="inline-flex items-center gap-1">
-                <span className="h-2.5 w-2.5 rounded-full bg-brand-red" /> Current
+                <span className="h-2.5 w-2.5 rounded-full bg-brand-primary dark:bg-sky-400" /> Current
               </span>
             </div>
           </div>
@@ -387,8 +387,8 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
                         style={{ height: `${heightPct}%` }}
                         className={`w-full rounded-t transition-all duration-150 ${
                           isPeak
-                            ? "bg-brand-red group-hover:bg-brand-red-hover"
-                            : "bg-slate-800 group-hover:bg-brand-red dark:bg-slate-600 dark:group-hover:bg-red-400"
+                            ? "bg-brand-primary group-hover:bg-brand-primary-hover"
+                            : "bg-slate-800 group-hover:bg-brand-primary dark:bg-slate-600 dark:group-hover:bg-sky-400"
                         }`}
                       />
                     </div>
@@ -433,7 +433,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
                 onClick={() => setCategoryFilter(cat)}
                 className={`cursor-pointer rounded px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${
                   categoryFilter === cat
-                    ? "bg-slate-900 text-white dark:bg-brand-red"
+                    ? "bg-slate-900 text-white dark:bg-brand-primary"
                     : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
                 }`}
               >
@@ -546,7 +546,7 @@ export function AnalysisPage({ data, loading, error, onRetry }: AnalysisPageProp
                   </td>
 
                   <td className="tabular-nums py-3.5 px-4 text-right whitespace-nowrap">
-                    <p className="font-semibold text-brand-red dark:text-red-400">
+                    <p className="font-semibold text-brand-primary dark:text-sky-400">
                       Rs. {ath.price_lkr}
                     </p>
                     <p className="font-mono text-[11px] text-slate-400">{ath.latest_date}</p>

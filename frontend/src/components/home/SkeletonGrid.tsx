@@ -13,7 +13,7 @@ export function HomeSkeletonGrid() {
         {Array.from({ length: 6 }).map((_, idx) => (
           <div
             key={idx}
-            className="red-top-border h-52 animate-pulse border border-gray-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"
+            className="brand-top-border h-52 animate-pulse border border-gray-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"
           >
             <div className="flex justify-between">
               <div className="h-3 w-20 rounded bg-slate-200 dark:bg-slate-800" />

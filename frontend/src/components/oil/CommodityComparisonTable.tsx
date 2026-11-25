@@ -9,7 +9,7 @@ interface CommodityComparisonTableProps {
 }
 
 const DOT_COLORS: Record<string, string> = {
-  wti: "bg-brand-red",
+  wti: "bg-[#C8102E]",
   brent: "bg-[#0055ff]",
   natgas: "bg-amber-500",
   gasoline: "bg-slate-500",
@@ -19,7 +19,7 @@ const DOT_COLORS: Record<string, string> = {
 function heatmapClass(pct: number): string {
   if (pct >= 15) return "bg-slate-900 text-white dark:bg-blue-600 dark:text-white";
   if (pct > 0) return "bg-emerald-50 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300";
-  if (pct <= -15) return "bg-brand-red text-white";
+  if (pct <= -15) return "bg-red-600 text-white";
   if (pct < 0) return "bg-red-50 text-red-800 dark:bg-red-950/50 dark:text-red-300";
   return "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300";
 }
@@ -102,7 +102,7 @@ export function CommodityComparisonTable({
                     className={`tabular-nums py-3.5 px-4 text-right font-bold whitespace-nowrap ${
                       isUp
                         ? "text-emerald-600 dark:text-emerald-400"
-                        : "text-brand-red dark:text-red-400"
+                        : "text-red-600 dark:text-red-400"
                     }`}
                   >
                     <span className="inline-flex items-center justify-end gap-0.5">

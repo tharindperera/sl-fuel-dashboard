@@ -51,7 +51,7 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
   if (error || !data) {
     return (
       <div className="rounded-lg border border-red-200 bg-white p-8 text-center shadow-xs dark:border-red-900/60 dark:bg-slate-900">
-        <AlertCircle className="mx-auto h-10 w-10 text-brand-red" />
+        <AlertCircle className="mx-auto h-10 w-10 text-red-600 dark:text-red-400" />
         <h2 className="mt-3 font-heading text-xl font-bold text-slate-900 dark:text-white">
           Unable to load fuel price trends
         </h2>
@@ -61,7 +61,7 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
         <button
           type="button"
           onClick={onRetry}
-          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-red-hover"
+          className="mt-5 inline-flex cursor-pointer items-center gap-2 rounded bg-brand-primary px-4 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-primary-hover"
         >
           <RefreshCw className="h-3.5 w-3.5" />
           <span>Retry</span>
@@ -77,8 +77,8 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
       {/* Header & Metadata Strip */}
       <section className="flex flex-col justify-between gap-6 border-b border-gray-200 pb-7 md:flex-row md:items-end dark:border-slate-800">
         <div className="max-w-3xl space-y-2">
-          <div className="flex flex-wrap items-center gap-2 font-heading text-xs font-bold uppercase tracking-wider text-brand-red dark:text-red-400">
-            <span className="inline-block h-2 w-2 rounded-full bg-brand-red dark:bg-red-400" />
+          <div className="flex flex-wrap items-center gap-2 font-heading text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-sky-400">
+            <span className="inline-block h-2 w-2 rounded-full bg-brand-primary dark:bg-sky-400" />
             <span>National Pricing Intelligence</span>
             <span className="text-slate-400">•</span>
             <span className="font-medium text-slate-600 dark:text-slate-400">
@@ -115,7 +115,7 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
             <span className="font-heading text-[10px] font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">
               12M Revisions
             </span>
-            <span className="tabular-nums mt-1 inline-block rounded-full border border-red-100 bg-red-50 px-2.5 py-0.5 font-heading text-xs font-bold uppercase text-brand-red whitespace-nowrap dark:border-red-900/60 dark:bg-red-950/50 dark:text-red-300">
+            <span className="tabular-nums mt-1 inline-block rounded-full border border-sky-100 bg-sky-50 px-2.5 py-0.5 font-heading text-xs font-bold uppercase text-brand-primary whitespace-nowrap dark:border-sky-900/60 dark:bg-sky-950/50 dark:text-sky-300">
               {data.summary_stats.revisions_last_12_months} Official Updates
             </span>
           </div>
@@ -223,7 +223,7 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
       <section className="rounded-2xl border border-gray-200 bg-slate-50/70 p-6 shadow-xs dark:border-slate-800 dark:bg-slate-900/70">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-gray-200/80 pb-4 dark:border-slate-800">
           <div className="flex items-center gap-2.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-brand-red" />
+            <span className="h-2.5 w-2.5 rounded-full bg-brand-primary dark:bg-sky-400" />
             <h2 className="font-heading text-base font-bold uppercase tracking-wide text-slate-900 dark:text-white">
               Highest Prices (All Time High)
             </h2>
@@ -284,7 +284,7 @@ export function TrendsPage({ data, loading, error, onRetry }: TrendsPageProps) {
       <section className="grid grid-cols-1 gap-6 pb-2 md:grid-cols-3">
         <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-slate-900">
           <div className="mb-3 flex items-center gap-2.5 font-heading text-xs font-bold uppercase">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-50 text-brand-red dark:bg-red-950/50 dark:text-red-400">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-50 text-brand-primary dark:bg-sky-950/50 dark:text-sky-400">
               <TrendingUp className="h-4 w-4" aria-hidden="true" />
             </div>
             <span className="tracking-wide text-slate-900 dark:text-white">Pricing Dynamics</span>
