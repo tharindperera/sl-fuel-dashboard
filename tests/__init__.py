@@ -1,1 +1,1 @@
-"""Unit tests for CPC Fuel Trends data pipeline."""
+"""Unit tests for CeylonOctane Analytics data pipeline."""

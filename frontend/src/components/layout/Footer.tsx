@@ -18,7 +18,7 @@ export function Footer({ onOpenAbout, strings }: FooterProps) {
               </svg>
             </div>
             <span className="font-heading text-xl font-bold tracking-tight text-white">
-              CPC Fuel Trends
+              CeylonOctane Analytics
             </span>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-red-100">{strings.footer.tagline}</p>

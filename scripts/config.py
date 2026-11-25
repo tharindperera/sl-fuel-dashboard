@@ -1,4 +1,4 @@
-"""Configuration, product mappings, and constants for the CPC Fuel Trends pipeline."""
+"""Configuration, product mappings, and constants for the CeylonOctane Analytics pipeline."""
 
 from __future__ import annotations
 

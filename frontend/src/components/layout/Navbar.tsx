@@ -55,8 +55,8 @@ export function Navbar({
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="font-heading text-lg sm:text-xl font-bold leading-none tracking-tight text-slate-900 dark:text-white whitespace-nowrap">
-              CPC Fuel Trends
+            <span className="font-heading text-base sm:text-xl font-bold leading-none tracking-tight text-slate-900 dark:text-white whitespace-nowrap">
+              CeylonOctane Analytics
             </span>
             <span className="mt-1 text-[10px] sm:text-[11px] font-semibold tracking-wider text-slate-400 dark:text-slate-400 uppercase whitespace-nowrap">
               {strings.nav.portalSubtitle}

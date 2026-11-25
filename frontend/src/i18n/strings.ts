@@ -56,7 +56,7 @@ const EN_STRINGS: UiStrings = {
     badge: "PRICE HISTORY",
     title: "Explore the historical price archive",
     subtitle:
-      "Browse CPC Fuel Trends' published fuel prices from 1990 onward. Use the filters to find a date or focus on one fuel product.",
+      "Browse CeylonOctane Analytics' published fuel prices from 1990 onward. Use the filters to find a date or focus on one fuel product.",
     firstRecord: "FIRST RECORD",
     firstRecordNote: "Earliest fuel record",
     datasetSize: "DATASET SIZE",
@@ -70,7 +70,7 @@ const EN_STRINGS: UiStrings = {
     tagline:
       "Delivering dependable fuel analytics, market rate tracking, and historical price intelligence.",
     aboutPortal: "ABOUT THE PORTAL",
-    copyright: "© 2026 CPC Fuel Trends. All rights reserved.",
+    copyright: "© 2026 CeylonOctane Analytics. All rights reserved.",
   },
 };
 

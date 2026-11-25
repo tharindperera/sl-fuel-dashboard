@@ -75,10 +75,10 @@ export function AboutPortalModal({
   pipelineStatus: PipelineStatusData | null;
 }) {
   return (
-    <ModalShell open={open} onClose={onClose} eyebrow="DATA GOVERNANCE" title="About CPC Fuel Trends">
+    <ModalShell open={open} onClose={onClose} eyebrow="DATA GOVERNANCE" title="About CeylonOctane Analytics">
       <div className="space-y-4">
         <p>
-          <strong>CPC Fuel Trends</strong> is an automated public pricing monitor tracking Sri
+          <strong>CeylonOctane Analytics</strong> is an automated public pricing monitor tracking Sri
           Lankan retail and industrial fuel tariffs published by the{" "}
           <strong>Ceylon Petroleum Corporation (CEYPETCO)</strong>.
         </p>

@@ -1,4 +1,4 @@
-name: Deploy CPC Fuel Trends Dashboard
+name: Deploy CeylonOctane Analytics Dashboard
 
 on:
   push:

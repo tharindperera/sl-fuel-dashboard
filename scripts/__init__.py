@@ -1,1 +1,1 @@
-"""CPC Fuel Trends automated data pipeline package."""
+"""CeylonOctane Analytics automated data pipeline package."""

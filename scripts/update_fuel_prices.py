@@ -1,4 +1,4 @@
-"""CLI entrypoint for the daily CPC Fuel Trends scraper, CSV reconciler, and KPI generator."""
+"""CLI entrypoint for the daily CeylonOctane Analytics scraper, CSV reconciler, and KPI generator."""
 
 from __future__ import annotations
 
@@ -233,7 +233,7 @@ def run_pipeline(
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="CPC Fuel Trends automated scraper, CSV reconciler, and KPI generator."
+        description="CeylonOctane Analytics automated scraper, CSV reconciler, and KPI generator."
     )
     parser.add_argument(
         "--dry-run",

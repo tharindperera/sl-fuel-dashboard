@@ -1,4 +1,4 @@
-# CPC Fuel Trends — Analytics & Pricing Portal
+# CeylonOctane Analytics — Analytics & Pricing Portal
 
 A fully automated, zero-maintenance dashboard that tracks **Sri Lankan fuel prices** published by [CEYPETCO](https://ceypetco.gov.lk) and **global crude oil benchmarks** sourced from the U.S. Energy Information Administration (EIA) via FRED. A daily GitHub Actions pipeline scrapes, reconciles, and commits the data; a Vite + React frontend reads the static JSON files and renders five production-grade pages — no backend server required.
 
