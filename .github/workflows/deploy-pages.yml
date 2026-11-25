@@ -9,7 +9,7 @@ on:
       - "cpc_petroleum_prices_original.csv"
       - ".github/workflows/deploy-pages.yml"
   workflow_run:
-    workflows: ["Update CEYPETCO Fuel Prices"]
+    workflows: ["Update CEYPETCO Fuel Prices", "Update Global Crude Oil Data"]
     types: [completed]
     branches: ["main"]
   workflow_dispatch:

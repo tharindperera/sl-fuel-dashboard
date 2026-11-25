@@ -1,0 +1,173 @@
+{
+  "actual_price": 92.94,
+  "previous_close": 92.9,
+  "daily_change": 0.04,
+  "daily_change_pct": 0.04,
+  "monthly_change_pct": -22.12,
+  "yearly_change_pct": 47.15,
+  "all_time_high": {
+    "value": 143.95,
+    "date": "2008-07-03"
+  },
+  "all_time_low": {
+    "value": 9.1,
+    "date": "1998-12-10"
+  },
+  "historical_range": "1987 - 2026",
+  "latest_observation_date": "2026-11-17",
+  "unit": "USD / BBL",
+  "frequency": "DAILY",
+  "benchmark_label": "ICE BRENT / EIA SPOT",
+  "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
+  "last_updated_utc": "2026-11-25T09:23:14.192713+00:00",
+  "last_updated_sl": "2026-11-25T14:53:14.192713+05:30",
+  "index_sync_label": "INDEX SYNC: 09:23 UTC",
+  "trend_outlook": {
+    "projected_price": 101.46,
+    "ema_20": 102.94,
+    "ema_50": 107.95,
+    "signal": "bearish",
+    "label": "TREND OUTLOOK",
+    "badge": "MODEL ESTIMATE",
+    "subtitle": "EMA(20/50) Statistical Estimate",
+    "methodology": "Quantitative estimate derived from 20-day vs 50-day Exponential Moving Averages and 5-day price slope over U.S. EIA/FRED historical spot series.",
+    "reference_current": 92.94
+  },
+  "comparison_table": [
+    {
+      "id": "wti",
+      "name": "Crude Oil (WTI)",
+      "symbol": "WTI",
+      "fred_series_id": "DCOILWTICO",
+      "unit": "USD / BBL",
+      "decimals": 2,
+      "is_primary": false,
+      "price": 89.53,
+      "previous_close": 89.24,
+      "change": 0.29,
+      "day_pct": 0.32,
+      "month_pct": -17.26,
+      "year_pct": 47.59,
+      "all_time_high": {
+        "value": 145.31,
+        "date": "2008-07-03"
+      },
+      "all_time_low": {
+        "value": 8.91,
+        "date": "2020-04-21"
+      },
+      "first_date": "1986-01-02",
+      "latest_date": "2026-11-17",
+      "historical_range": "1986 - 2026",
+      "updated_label": "09:23"
+    },
+    {
+      "id": "brent",
+      "name": "Brent Crude",
+      "symbol": "BRENT",
+      "fred_series_id": "DCOILBRENTEU",
+      "unit": "USD / BBL",
+      "decimals": 2,
+      "is_primary": true,
+      "price": 92.94,
+      "previous_close": 92.9,
+      "change": 0.04,
+      "day_pct": 0.04,
+      "month_pct": -22.12,
+      "year_pct": 47.15,
+      "all_time_high": {
+        "value": 143.95,
+        "date": "2008-07-03"
+      },
+      "all_time_low": {
+        "value": 9.1,
+        "date": "1998-12-10"
+      },
+      "first_date": "1987-05-20",
+      "latest_date": "2026-11-17",
+      "historical_range": "1987 - 2026",
+      "updated_label": "09:23"
+    },
+    {
+      "id": "natgas",
+      "name": "Natural Gas",
+      "symbol": "NG",
+      "fred_series_id": "DHHNGSP",
+      "unit": "USD / MMBtu",
+      "decimals": 2,
+      "is_primary": false,
+      "price": 3.1,
+      "previous_close": 3.2,
+      "change": -0.1,
+      "day_pct": -3.13,
+      "month_pct": -3.73,
+      "year_pct": -16.44,
+      "all_time_high": {
+        "value": 30.72,
+        "date": "2026-01-23"
+      },
+      "all_time_low": {
+        "value": 1.21,
+        "date": "2024-11-08"
+      },
+      "first_date": "1997-01-07",
+      "latest_date": "2026-11-17",
+      "historical_range": "1997 - 2026",
+      "updated_label": "09:23"
+    },
+    {
+      "id": "gasoline",
+      "name": "Gasoline (RBOB)",
+      "symbol": "RBOB",
+      "fred_series_id": "DGASUSGULF",
+      "unit": "USD / GAL",
+      "decimals": 3,
+      "is_primary": false,
+      "price": 2.462,
+      "previous_close": 2.463,
+      "change": -0.001,
+      "day_pct": -0.04,
+      "month_pct": -26.13,
+      "year_pct": 23.47,
+      "all_time_high": {
+        "value": 4.873,
+        "date": "2008-09-12"
+      },
+      "all_time_low": {
+        "value": 0.276,
+        "date": "1998-12-23"
+      },
+      "first_date": "1986-06-02",
+      "latest_date": "2026-11-17",
+      "historical_range": "1986 - 2026",
+      "updated_label": "09:23"
+    },
+    {
+      "id": "heating_oil",
+      "name": "Heating Oil",
+      "symbol": "HO",
+      "fred_series_id": "DHOILNYH",
+      "unit": "USD / GAL",
+      "decimals": 3,
+      "is_primary": false,
+      "price": 3.96,
+      "previous_close": 3.975,
+      "change": -0.015,
+      "day_pct": -0.38,
+      "month_pct": -17.57,
+      "year_pct": 62.1,
+      "all_time_high": {
+        "value": 5.163,
+        "date": "2026-09-15"
+      },
+      "all_time_low": {
+        "value": 0.284,
+        "date": "1999-02-16"
+      },
+      "first_date": "1986-06-02",
+      "latest_date": "2026-11-17",
+      "historical_range": "1986 - 2026",
+      "updated_label": "09:23"
+    }
+  ]
+}

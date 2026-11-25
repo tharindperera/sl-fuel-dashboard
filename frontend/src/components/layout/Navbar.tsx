@@ -32,6 +32,7 @@ export function Navbar({
     { id: "archive", label: strings.nav.archive },
     { id: "trends", label: strings.nav.trends },
     { id: "analysis", label: strings.nav.analysis },
+    { id: "global-oil", label: strings.nav.globalOil },
   ];
 
   const handleSelectPage = (page: RoutePage) => {
@@ -64,7 +65,7 @@ export function Navbar({
         </button>
 
         {/* Center Navigation Links (Desktop) */}
-        <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-7">
+        <nav aria-label="Primary navigation" className="hidden xl:flex items-center gap-5">
           {navItems.map((item) => {
             const isActive = activePage === item.id;
             return (
@@ -73,7 +74,7 @@ export function Navbar({
                 type="button"
                 onClick={() => handleSelectPage(item.id)}
                 aria-current={isActive ? "page" : undefined}
-                className={`relative cursor-pointer py-2 text-xs xl:text-sm font-semibold tracking-wide whitespace-nowrap transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-sm ${
+                className={`relative cursor-pointer py-2 text-xs font-semibold tracking-wide whitespace-nowrap transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-sm ${
                   isActive
                     ? "text-brand-red font-bold dark:text-red-400"
                     : "text-slate-700 hover:text-brand-red dark:text-slate-300 dark:hover:text-red-400"
@@ -138,7 +139,7 @@ export function Navbar({
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileMenuOpen}
-            className="inline-flex lg:hidden h-8 w-8 cursor-pointer items-center justify-center rounded border border-gray-300 bg-white text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+            className="inline-flex xl:hidden h-8 w-8 cursor-pointer items-center justify-center rounded border border-gray-300 bg-white text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
           >
             {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
@@ -147,7 +148,7 @@ export function Navbar({
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray-200 bg-white px-4 py-4 lg:hidden dark:border-slate-800 dark:bg-slate-900">
+        <div className="border-t border-gray-200 bg-white px-4 py-4 xl:hidden dark:border-slate-800 dark:bg-slate-900">
           <nav aria-label="Mobile navigation" className="flex flex-col space-y-1">
             {navItems.map((item) => {
               const isActive = activePage === item.id;

@@ -1,0 +1,45 @@
+{
+  "alert_level": "normal",
+  "daily_change_pct": 0.04,
+  "change_5d_pct": 3.08,
+  "z_score_30d": 0.21,
+  "latest_price": 92.94,
+  "latest_date": "2026-11-17",
+  "headline": "Brent Crude Holds Near $92.94/bbl in Orderly Trading",
+  "paragraphs": [
+    "Brent crude edged higher to $92.94/bbl in the latest verified EIA/FRED session (2026-11-17), representing a +0.04% daily change and +3.08% five-session trajectory.",
+    "Across broader horizons, Brent stands -22.12% over the past 30 days and +47.15% over the past 52 weeks. U.S. WTI crude settled at $89.53/bbl, keeping the Brent-WTI spread at $3.41/bbl. Recent market headlines point to ongoing trader focus on OPEC+ production discipline, inventory balances, and maritime supply routes.",
+    "For Sri Lanka's domestic fuel pricing formula, sustained movements in seaborne crude benchmarks directly influence Singapore Platts refined product assessments, landed CIF import costs, and subsequent monthly CEYPETCO retail tariff reviews."
+  ],
+  "driver_tags": [
+    "BRENT BENCHMARK",
+    "EIA / FRED SPOT",
+    "WTI SPREAD",
+    "SL IMPORT PARITY"
+  ],
+  "sources": [
+    {
+      "title": "How does EIA compare different types of energy?",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68504"
+    },
+    {
+      "title": "U.S. natural gas inventories end injection season above normal levels",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    },
+    {
+      "title": "How does EIA account for small differences between energy supply and demand data?",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68464"
+    },
+    {
+      "title": "EIA forecasts Alaskan crude oil production to grow 13% in 2027",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68444"
+    },
+    {
+      "title": "U.S. crude oil imports from Venezuela in July were highest since 2017",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68425"
+    }
+  ],
+  "generation_mode": "deterministic",
+  "generated_at_utc": "2026-11-25T09:27:53.495640+00:00",
+  "generated_at_sl": "2026-11-25T14:57:53.495640+05:30"
+}

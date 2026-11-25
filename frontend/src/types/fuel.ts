@@ -1,6 +1,6 @@
 export type FuelCategory = "White Oil" | "Black Oil";
 export type ChangeDirection = "up" | "down" | "unchanged";
-export type RoutePage = "home" | "archive" | "trends" | "analysis";
+export type RoutePage = "home" | "archive" | "trends" | "analysis" | "global-oil";
 export type LanguageCode = "en" | "si" | "ta";
 
 export interface CurrentRateProduct {

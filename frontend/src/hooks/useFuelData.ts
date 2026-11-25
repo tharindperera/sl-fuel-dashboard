@@ -6,9 +6,16 @@ import type {
   PipelineStatusData,
   TrendsKpisData,
 } from "../types/fuel";
+import type {
+  BrentIntradayData,
+  CommodityHistoryData,
+  GlobalOilKpisData,
+  OilAiSummaryData,
+} from "../types/oil";
 import {
   fetchArchiveBundle,
   fetchCurrentRates,
+  fetchGlobalOilBundle,
   fetchPipelineStatus,
   fetchTrendsKpis,
 } from "../utils/dataLoader";
@@ -93,4 +100,35 @@ export function useTrendsKpis() {
   }, [load]);
 
   return { data, loading, error, reload: load };
+}
+
+export function useGlobalOilData() {
+  const [kpis, setKpis] = useState<GlobalOilKpisData | null>(null);
+  const [history, setHistory] = useState<CommodityHistoryData | null>(null);
+  const [aiSummary, setAiSummary] = useState<OilAiSummaryData | null>(null);
+  const [intraday, setIntraday] = useState<BrentIntradayData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const bundle = await fetchGlobalOilBundle();
+      setKpis(bundle.kpis);
+      setHistory(bundle.history);
+      setAiSummary(bundle.aiSummary);
+      setIntraday(bundle.intraday);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unable to load global crude oil benchmarks.");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void load();
+  }, [load]);
+
+  return { kpis, history, aiSummary, intraday, loading, error, reload: load };
 }

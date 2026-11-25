@@ -2,11 +2,17 @@ import { useEffect, useState } from "react";
 import { Footer } from "./components/layout/Footer";
 import { AboutPortalModal } from "./components/layout/InfoModals";
 import { Navbar } from "./components/layout/Navbar";
-import { useArchiveData, useCurrentRates, useTrendsKpis } from "./hooks/useFuelData";
+import {
+  useArchiveData,
+  useCurrentRates,
+  useGlobalOilData,
+  useTrendsKpis,
+} from "./hooks/useFuelData";
 import { useTheme } from "./hooks/useTheme";
 import { getStrings } from "./i18n/strings";
 import { AnalysisPage } from "./pages/AnalysisPage";
 import { ArchivePage } from "./pages/ArchivePage";
+import { GlobalOilPage } from "./pages/GlobalOilPage";
 import { HomePage } from "./pages/HomePage";
 import { TrendsPage } from "./pages/TrendsPage";
 import type { LanguageCode, RoutePage } from "./types/fuel";
@@ -17,6 +23,13 @@ function parseHashRoute(): RoutePage {
   if (clean === "archive" || clean === "historical-archive") return "archive";
   if (clean === "trends") return "trends";
   if (clean === "analysis") return "analysis";
+  if (
+    clean === "global-oil" ||
+    clean === "global-crude-oil" ||
+    clean === "global-crude-oil-price"
+  ) {
+    return "global-oil";
+  }
   return "home";
 }
 
@@ -31,6 +44,7 @@ export function App() {
   const currentRatesState = useCurrentRates();
   const archiveState = useArchiveData();
   const trendsState = useTrendsKpis();
+  const globalOilState = useGlobalOilData();
 
   useEffect(() => {
     const onHashChange = () => setActivePage(parseHashRoute());
@@ -97,6 +111,19 @@ export function App() {
             loading={trendsState.loading}
             error={trendsState.error}
             onRetry={trendsState.reload}
+          />
+        )}
+
+        {activePage === "global-oil" && (
+          <GlobalOilPage
+            kpis={globalOilState.kpis}
+            history={globalOilState.history}
+            aiSummary={globalOilState.aiSummary}
+            intraday={globalOilState.intraday}
+            loading={globalOilState.loading}
+            error={globalOilState.error}
+            onRetry={globalOilState.reload}
+            theme={theme}
           />
         )}
       </main>

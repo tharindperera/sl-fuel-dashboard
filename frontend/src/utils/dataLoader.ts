@@ -6,6 +6,13 @@ import type {
   PipelineStatusData,
   TrendsKpisData,
 } from "../types/fuel";
+import type {
+  BrentIntradayData,
+  CommodityHistoryData,
+  GlobalOilKpisData,
+  OilAiSummaryData,
+  OilHistoryPoint,
+} from "../types/oil";
 import { parseCsvDateInfo, parseHistoricalCell } from "./formatters";
 
 function assetUrl(relativePath: string): string {
@@ -88,6 +95,43 @@ export async function fetchPipelineStatus(): Promise<PipelineStatusData> {
 
 export async function fetchTrendsKpis(): Promise<TrendsKpisData> {
   return fetchJson<TrendsKpisData>("data/trends_kpis.json");
+}
+
+export async function fetchGlobalOilBundle(): Promise<{
+  kpis: GlobalOilKpisData;
+  history: CommodityHistoryData;
+  aiSummary: OilAiSummaryData;
+  intraday: BrentIntradayData | null;
+}> {
+  const [kpis, history, aiSummary, intraday] = await Promise.all([
+    fetchJson<GlobalOilKpisData>("data/global_oil_kpis.json"),
+    fetchJson<CommodityHistoryData>("data/brent_history.json"),
+    fetchJson<OilAiSummaryData>("data/oil_ai_summary.json"),
+    fetchJson<BrentIntradayData>("data/brent_intraday.json").catch(() => null),
+  ]);
+  return { kpis, history, aiSummary, intraday };
+}
+
+export function exportOilSeriesToCsv(
+  points: OilHistoryPoint[],
+  commodityName: string,
+  unit: string,
+  filename: string
+): void {
+  const escapeCell = (val: string) => `"${val.replace(/"/g, '""')}"`;
+  const header = [escapeCell("Date"), escapeCell(`${commodityName} (${unit})`)].join(",");
+  const lines = points.map((pt) => [escapeCell(pt.time), escapeCell(String(pt.value))].join(","));
+  const content = [header, ...lines].join("\r\n") + "\r\n";
+
+  const blob = new Blob([content], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+  URL.revokeObjectURL(url);
 }
 
 export function exportChartSeriesToCsv(

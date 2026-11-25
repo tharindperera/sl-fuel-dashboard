@@ -1,0 +1,73 @@
+name: Update Global Crude Oil Data
+
+on:
+  schedule:
+    # Every 6 hours UTC + daily at 11:30 PM Sri Lanka Time (18:00 UTC)
+    - cron: "0 */6 * * *"
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-global-oil
+  cancel-in-progress: false
+
+jobs:
+  update-oil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m pytest -v
+
+      - name: Fetch global crude oil & energy benchmarks
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+        run: python -m scripts.update_global_oil --verbose
+
+      - name: Generate steep-move anomaly & AI intelligence summary
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m scripts.generate_oil_ai_summary --verbose
+
+      - name: Check for global oil data changes
+        id: changes
+        run: |
+          if git diff --quiet -- data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json data/oil_ai_summary.json && [ -z "$(git ls-files --others --exclude-standard -- data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json data/oil_ai_summary.json)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No global oil data changes detected; skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push global oil data
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          UPDATE_DATE=$(TZ="Asia/Colombo" date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json data/oil_ai_summary.json
+          if git diff --cached --quiet; then
+            echo "Nothing staged to commit."
+            exit 0
+          fi
+          git commit -m "chore(data): update global crude oil metrics for ${UPDATE_DATE}"
+          git push

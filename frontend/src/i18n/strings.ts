@@ -6,6 +6,7 @@ export interface UiStrings {
     archive: string;
     trends: string;
     analysis: string;
+    globalOil: string;
     aboutPortal: string;
     portalSubtitle: string;
   };
@@ -41,6 +42,7 @@ const EN_STRINGS: UiStrings = {
     archive: "HISTORICAL PRICE ARCHIVE",
     trends: "TRENDS",
     analysis: "ANALYSIS",
+    globalOil: "GLOBAL CRUDE OIL PRICE",
     aboutPortal: "ABOUT THE PORTAL",
     portalSubtitle: "Analytics & Pricing Portal",
   },
@@ -83,6 +85,7 @@ const DICTIONARY: Record<LanguageCode, UiStrings> = {
       archive: "ඓතිහාසික මිල ලේඛනය",
       trends: "ප්‍රවණතා",
       analysis: "විශ්ලේෂණය",
+      globalOil: "ගෝලීය බොරතෙල් මිල",
       aboutPortal: "පෝටලය ගැන",
     },
     home: {
@@ -99,6 +102,7 @@ const DICTIONARY: Record<LanguageCode, UiStrings> = {
       archive: "வரலாற்று விலை ஆவணம்",
       trends: "போக்குகள்",
       analysis: "பகுப்பாய்வு",
+      globalOil: "உலகளாவிய கச்சா எண்ணெய் விலை",
       aboutPortal: "போர்டல் பற்றி",
     },
     home: {

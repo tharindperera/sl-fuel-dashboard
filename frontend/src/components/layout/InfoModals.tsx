@@ -122,6 +122,28 @@ export function AboutPortalModal({
             </div>
           )}
         </div>
+
+        <div className="rounded-lg border border-gray-200 bg-white p-3.5 text-xs text-slate-500 space-y-1.5 dark:border-slate-800 dark:bg-slate-950/60 dark:text-slate-400">
+          <p className="font-bold uppercase tracking-wide text-slate-700 dark:text-slate-200">
+            Data &amp; Open-Source Attributions
+          </p>
+          <p>
+            • Global energy series: U.S. Energy Information Administration (EIA) via FRED, Federal
+            Reserve Bank of St. Louis (public domain).
+          </p>
+          <p>
+            • Interactive financial charts powered by{" "}
+            <a
+              href="https://www.tradingview.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-brand-red hover:underline dark:text-red-400"
+            >
+              TradingView Lightweight Charts™
+            </a>{" "}
+            (Apache License 2.0).
+          </p>
+        </div>
       </div>
     </ModalShell>
   );
