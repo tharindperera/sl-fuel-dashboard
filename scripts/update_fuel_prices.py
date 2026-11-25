@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import sys
 from datetime import datetime
@@ -29,6 +30,7 @@ from scripts.fetcher import FetchError, fetch_ceypetco_sources, parse_csv_date_l
 from scripts.kpis import (
     build_pipeline_status_payload,
     generate_all_kpis,
+    write_json_atomic,
     write_pipeline_status,
 )
 from scripts.reconciler import (
@@ -87,6 +89,21 @@ def _kpis_missing(data_dir: Path) -> bool:
             ANNUAL_AGGREGATED_JSON,
         )
     )
+
+
+def _month_rollover_needed(data_dir: Path, now_sl: datetime) -> bool:
+    """Return True if the latest aggregated month is older than the current SL calendar month."""
+    monthly_path = data_dir / MONTHLY_AGGREGATED_JSON.name
+    if not monthly_path.exists():
+        return True
+    try:
+        payload = json.loads(monthly_path.read_text(encoding="utf-8"))
+        months = payload.get("months") or []
+        if not months:
+            return True
+        return str(months[0].get("month") or "") < now_sl.strftime("%Y-%m")
+    except (OSError, ValueError, TypeError):
+        return True
 
 
 def run_pipeline(
@@ -175,7 +192,11 @@ def run_pipeline(
         logger.info("[DRY RUN] Validation succeeded (%d total rows). No files modified.", len(reconciliation.updated_rows))
         return 0
 
-    need_kpi_write = reconciliation.update_detected or _kpis_missing(data_dir)
+    need_kpi_write = (
+        reconciliation.update_detected
+        or _kpis_missing(data_dir)
+        or _month_rollover_needed(data_dir, now_sl)
+    )
     if reconciliation.update_detected:
         write_csv_atomic(csv_path, reconciliation.updated_rows)
         logger.info("Updated %s with %d new row(s); total rows: %d", csv_path, len(reconciliation.added_rows), len(reconciliation.updated_rows))
@@ -191,7 +212,8 @@ def run_pipeline(
         )
         logger.info("Wrote KPI JSON files to %s", data_dir)
     else:
-        logger.info("No CSV update detected and KPI JSONs already exist; skipping CSV/KPI file writes.")
+        write_json_atomic(data_dir / CURRENT_RATES_JSON.name, kpis["current_rates"])
+        logger.info("No CSV update detected; refreshed sync timestamps in current_rates.json and pipeline_status.json.")
 
     status_payload = build_pipeline_status_payload(
         now_sl=now_sl,

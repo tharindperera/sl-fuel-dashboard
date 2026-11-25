@@ -36,7 +36,7 @@ A fully automated, zero-maintenance dashboard that tracks **Sri Lankan fuel pric
 - **Tabular Numerals** — `font-variant-numeric: tabular-nums` on every price, date, counter, and table column for vertical digit alignment.
 - **Interactive Charts** — Custom SVG charts for domestic trends and [TradingView Lightweight Charts™](https://www.tradingview.com/lightweight-charts/) for global commodity series.
 - **CSV Export** — One-click export from every table and chart view.
-- **17 Unit Tests** — Covering CSV parsing, KPI math, aggregator logic, anomaly detection, and global oil pipeline.
+- **18 Unit Tests** — Covering CSV parsing, KPI math, aggregator logic, anomaly detection, and global oil pipeline.
 
 ---
 
@@ -106,7 +106,7 @@ sl-fuel-dashboard/
 │   └── generate_oil_ai_summary.py  # Anomaly detection + optional Gemini AI steep-move summary
 │
 ├── tests/                          # Python unit tests
-│   ├── test_pipeline.py            # CSV parsing, KPI math, reconciliation, idempotency (10 tests)
+│   ├── test_pipeline.py            # CSV parsing, KPI math, reconciliation, idempotency (11 tests)
 │   ├── test_aggregators.py         # Monthly/annual aggregation with rollover rules (3 tests)
 │   └── test_global_oil.py          # FRED parsing, anomaly detection, build outputs (4 tests)
 │
@@ -350,7 +350,7 @@ npm run preview   # Preview the production build locally
 ## Testing
 
 ```bash
-# Run all 17 unit tests
+# Run all 18 unit tests
 python -m unittest discover -s tests -v
 
 # Or with pytest
@@ -361,7 +361,7 @@ python -m pytest -v
 
 | Test File | Tests | Covers |
 |-----------|-------|--------|
-| `test_pipeline.py` | 10 | CSV parsing, HTML fallback scraper, price validation, KPI math, reconciliation dedup, carry-forward logic, atomic CSV writes, dry-run safety. |
+| `test_pipeline.py` | 11 | CSV parsing, HTML fallback scraper, price validation, KPI math, reconciliation dedup, carry-forward logic, atomic CSV writes, dry-run safety. |
 | `test_aggregators.py` | 3 | End-of-month cutoff rules, multi-revision time-weighted averaging, carry-forward for zero-change months, real 2026 CSV rollover verification, annual aggregation math. |
 | `test_global_oil.py` | 4 | FRED CSV parsing (dots, sort, insufficient points), anomaly detection (surge/drop/normal), full KPI build output validation, RSS headline parsing. |
 

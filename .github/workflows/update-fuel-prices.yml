@@ -39,12 +39,12 @@ jobs:
       - name: Fetch, reconcile, and validate fuel prices
         run: python -m scripts.update_fuel_prices --verbose
 
-      - name: Check for CSV or KPI changes
+      - name: Check for CSV, KPI, or sync status changes
         id: changes
         run: |
-          if git diff --quiet -- cpc_petroleum_prices_original.csv data/current_rates.json data/archive_meta.json data/trends_kpis.json data/monthly_aggregated.json data/annual_aggregated.json && [ -z "$(git ls-files --others --exclude-standard -- data/current_rates.json data/archive_meta.json data/trends_kpis.json data/monthly_aggregated.json data/annual_aggregated.json)" ]; then
+          if git diff --quiet -- cpc_petroleum_prices_original.csv data/current_rates.json data/archive_meta.json data/trends_kpis.json data/monthly_aggregated.json data/annual_aggregated.json data/pipeline_status.json && [ -z "$(git ls-files --others --exclude-standard -- data/current_rates.json data/archive_meta.json data/trends_kpis.json data/monthly_aggregated.json data/annual_aggregated.json data/pipeline_status.json)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No CSV or KPI changes detected; skipping commit."
+            echo "No CSV, KPI, or sync changes detected; skipping commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

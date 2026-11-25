@@ -6,6 +6,7 @@ import copy
 import json
 import shutil
 import tempfile
+import time
 import unittest
 from datetime import date, datetime
 from pathlib import Path
@@ -271,6 +272,42 @@ class TestKpiMathAndPipelineModes(unittest.TestCase):
             self.assertEqual(archive_meta["first_record_year"], 1990)
             self.assertEqual(archive_meta["available_years"][-1], 1990)
             self.assertEqual(len(archive_meta["products"]), 9)
+
+    def test_unchanged_csv_run_refreshes_sync_timestamps(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp_path = Path(tmpdir)
+            tmp_csv = tmp_path / "cpc.csv"
+            tmp_data = tmp_path / "data"
+            shutil.copy2(CSV_PATH, tmp_csv)
+
+            # Seed initial KPIs & status
+            self.assertEqual(run_pipeline(rebuild_kpis=True, csv_path=tmp_csv, data_dir=tmp_data), 0)
+            first_status = json.loads((tmp_data / "pipeline_status.json").read_text(encoding="utf-8"))
+            first_rates = json.loads((tmp_data / "current_rates.json").read_text(encoding="utf-8"))
+            time.sleep(0.01)
+
+            quotes, warnings = parse_fuel_prices_payload(_load_fixture_json("fuel_prices_active.json"))
+            hist_rows = parse_historical_prices_payload(_load_fixture_json("historical_prices_active.json"))
+            from scripts.fetcher import SourceFetchResult
+
+            mock_result = SourceFetchResult(
+                current_quotes=quotes,
+                historical_rows=hist_rows,
+                fuel_api_status={"url": "mock", "status": "ok", "http_status": 200, "records_count": 9, "error": None},
+                historical_api_status={"url": "mock", "status": "ok", "http_status": 200, "records_count": 226, "fuel_records_count": 185, "error": None},
+                warnings=warnings,
+            )
+
+            with patch("scripts.update_fuel_prices.fetch_ceypetco_sources", return_value=mock_result):
+                code = run_pipeline(dry_run=False, csv_path=tmp_csv, data_dir=tmp_data)
+
+            self.assertEqual(code, 0)
+            second_status = json.loads((tmp_data / "pipeline_status.json").read_text(encoding="utf-8"))
+            second_rates = json.loads((tmp_data / "current_rates.json").read_text(encoding="utf-8"))
+            self.assertEqual(second_status["mode"], "update")
+            self.assertFalse(second_status["update_applied"])
+            self.assertGreater(second_status["last_run_utc"], first_status["last_run_utc"])
+            self.assertGreater(second_rates["last_checked_utc"], first_rates["last_checked_utc"])
 
 
 if __name__ == "__main__":
