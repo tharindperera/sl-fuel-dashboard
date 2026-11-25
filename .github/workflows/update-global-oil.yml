@@ -43,15 +43,10 @@ jobs:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
         run: python -m scripts.update_global_oil --verbose
 
-      - name: Generate steep-move anomaly & AI intelligence summary
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m scripts.generate_oil_ai_summary --verbose
-
       - name: Check for global oil data changes
         id: changes
         run: |
-          if git diff --quiet -- data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json data/oil_ai_summary.json && [ -z "$(git ls-files --others --exclude-standard -- data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json data/oil_ai_summary.json)" ]; then
+          if git diff --quiet -- data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json && [ -z "$(git ls-files --others --exclude-standard -- data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No global oil data changes detected; skipping commit."
           else
@@ -64,7 +59,7 @@ jobs:
           UPDATE_DATE=$(TZ="Asia/Colombo" date +%Y-%m-%d)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json data/oil_ai_summary.json
+          git add data/global_oil_kpis.json data/brent_history.json data/brent_intraday.json
           if git diff --cached --quiet; then
             echo "Nothing staged to commit."
             exit 0

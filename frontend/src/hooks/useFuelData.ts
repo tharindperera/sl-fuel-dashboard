@@ -12,7 +12,6 @@ import type {
   BrentIntradayData,
   CommodityHistoryData,
   GlobalOilKpisData,
-  OilAiSummaryData,
 } from "../types/oil";
 import {
   fetchAggregatedArchives,
@@ -117,7 +116,6 @@ export function useTrendsKpis() {
 export function useGlobalOilData() {
   const [kpis, setKpis] = useState<GlobalOilKpisData | null>(null);
   const [history, setHistory] = useState<CommodityHistoryData | null>(null);
-  const [aiSummary, setAiSummary] = useState<OilAiSummaryData | null>(null);
   const [intraday, setIntraday] = useState<BrentIntradayData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -129,7 +127,6 @@ export function useGlobalOilData() {
       const bundle = await fetchGlobalOilBundle();
       setKpis(bundle.kpis);
       setHistory(bundle.history);
-      setAiSummary(bundle.aiSummary);
       setIntraday(bundle.intraday);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unable to load global crude oil benchmarks.");
@@ -142,5 +139,5 @@ export function useGlobalOilData() {
     void load();
   }, [load]);
 
-  return { kpis, history, aiSummary, intraday, loading, error, reload: load };
+  return { kpis, history, intraday, loading, error, reload: load };
 }

@@ -120,7 +120,6 @@ export function App() {
           <GlobalOilPage
             kpis={globalOilState.kpis}
             history={globalOilState.history}
-            aiSummary={globalOilState.aiSummary}
             intraday={globalOilState.intraday}
             loading={globalOilState.loading}
             error={globalOilState.error}

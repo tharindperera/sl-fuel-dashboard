@@ -12,7 +12,6 @@ import type {
   BrentIntradayData,
   CommodityHistoryData,
   GlobalOilKpisData,
-  OilAiSummaryData,
   OilHistoryPoint,
 } from "../types/oil";
 import { parseCsvDateInfo, parseHistoricalCell } from "./formatters";
@@ -135,16 +134,14 @@ export function exportTabularCsv(
 export async function fetchGlobalOilBundle(): Promise<{
   kpis: GlobalOilKpisData;
   history: CommodityHistoryData;
-  aiSummary: OilAiSummaryData;
   intraday: BrentIntradayData | null;
 }> {
-  const [kpis, history, aiSummary, intraday] = await Promise.all([
+  const [kpis, history, intraday] = await Promise.all([
     fetchJson<GlobalOilKpisData>("data/global_oil_kpis.json"),
     fetchJson<CommodityHistoryData>("data/brent_history.json"),
-    fetchJson<OilAiSummaryData>("data/oil_ai_summary.json"),
     fetchJson<BrentIntradayData>("data/brent_intraday.json").catch(() => null),
   ]);
-  return { kpis, history, aiSummary, intraday };
+  return { kpis, history, intraday };
 }
 
 export function exportOilSeriesToCsv(

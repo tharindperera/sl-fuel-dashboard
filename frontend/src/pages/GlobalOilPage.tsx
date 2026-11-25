@@ -5,18 +5,16 @@ import type {
   BrentIntradayData,
   CommodityHistoryData,
   GlobalOilKpisData,
-  OilAiSummaryData,
 } from "../types/oil";
 import { ArchiveSkeleton } from "../components/home/SkeletonGrid";
 import { BenchmarkSpecsSheet } from "../components/oil/BenchmarkSpecsSheet";
 import { CommodityComparisonTable } from "../components/oil/CommodityComparisonTable";
 import { OilChartCard } from "../components/oil/OilChartCard";
-import { OilIntelligenceRow } from "../components/oil/OilIntelligenceRow";
+import { formatColomboTimestamp } from "../utils/formatters";
 
 interface GlobalOilPageProps {
   kpis: GlobalOilKpisData | null;
   history: CommodityHistoryData | null;
-  aiSummary: OilAiSummaryData | null;
   intraday: BrentIntradayData | null;
   loading: boolean;
   error: string | null;
@@ -27,7 +25,6 @@ interface GlobalOilPageProps {
 export function GlobalOilPage({
   kpis,
   history,
-  aiSummary,
   intraday,
   loading,
   error,
@@ -40,7 +37,7 @@ export function GlobalOilPage({
     return <ArchiveSkeleton />;
   }
 
-  if (error || !kpis || !history || !aiSummary) {
+  if (error || !kpis || !history) {
     return (
       <div className="rounded-lg border border-red-200 bg-white p-8 text-center shadow-xs dark:border-red-900/60 dark:bg-slate-900">
         <AlertCircle className="mx-auto h-10 w-10 text-brand-red" />
@@ -82,8 +79,8 @@ export function GlobalOilPage({
           </h1>
 
           <p className="max-w-3xl text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            Global benchmark tracking, interactive historical trajectory, steep-move intelligence,
-            and cross-commodity pricing benchmarks.
+            Global benchmark tracking, interactive historical trajectory, benchmark specifications,
+            and cross-commodity pricing comparison.
           </p>
         </div>
 
@@ -111,6 +108,14 @@ export function GlobalOilPage({
             </span>
             <span className="font-bold text-slate-900 whitespace-nowrap dark:text-white">
               {kpis.unit}
+            </span>
+          </div>
+          <div className="flex items-center justify-between gap-3 rounded border border-gray-200 bg-slate-100 px-3 py-2 dark:border-slate-800 dark:bg-slate-800/80">
+            <span className="text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              Pipeline Sync
+            </span>
+            <span className="tabular-nums font-bold text-slate-900 whitespace-nowrap dark:text-white">
+              {formatColomboTimestamp(kpis.last_updated_sl)}
             </span>
           </div>
         </div>
@@ -252,8 +257,8 @@ export function GlobalOilPage({
         theme={theme}
       />
 
-      {/* 2-Column Intelligence & Sentiment Row */}
-      <OilIntelligenceRow summary={aiSummary} />
+      {/* Technical Data Sheet & Attribution */}
+      <BenchmarkSpecsSheet kpis={kpis} />
 
       {/* Global Energy Commodities Comparison Table */}
       <CommodityComparisonTable
@@ -262,9 +267,6 @@ export function GlobalOilPage({
         onSelectCommodity={handleSelectCommodity}
         indexSyncLabel={kpis.index_sync_label}
       />
-
-      {/* Technical Data Sheet & Attribution */}
-      <BenchmarkSpecsSheet kpis={kpis} />
     </div>
   );
 }

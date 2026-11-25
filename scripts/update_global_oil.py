@@ -360,7 +360,7 @@ def build_global_oil_outputs(
         "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
         "last_updated_utc": utc_now.isoformat(),
         "last_updated_sl": sl_now.isoformat(),
-        "index_sync_label": f"INDEX SYNC: {utc_now.strftime('%H:%M')} UTC",
+        "index_sync_label": f"INDEX SYNC: {utc_now.strftime('%d %b %Y %H:%M').upper()} UTC",
         "trend_outlook": trend_outlook,
         "comparison_table": comparison_table,
     }
