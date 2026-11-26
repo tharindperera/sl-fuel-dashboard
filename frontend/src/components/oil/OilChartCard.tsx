@@ -239,6 +239,11 @@ export function OilChartCard({
       timeScale: {
         borderColor: isDark ? "#1e293b" : "#cbd5e1",
       },
+      crosshair: {
+        vertLine: {
+          labelBackgroundColor: isDark ? "#1e293b" : "#0f172a",
+        },
+      },
     });
   }, [theme]);
 
@@ -408,8 +413,9 @@ export function OilChartCard({
             </span>
           </div>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-            Interactive U.S. EIA / FRED spot series • Scroll to zoom, drag to pan across{" "}
-            {fullPoints.length.toLocaleString()} sessions
+            Interactive U.S. EIA / FRED spot series (1–2 business-day EIA release lag) • Scroll to
+            zoom, drag to pan across {fullPoints.length.toLocaleString()} sessions (latest:{" "}
+            {activeMeta.latest_date})
           </p>
         </div>
 

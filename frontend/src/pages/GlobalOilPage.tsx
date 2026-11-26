@@ -167,7 +167,7 @@ export function GlobalOilPage({
               }`}
             >
               {kpis.daily_change_pct >= 0 ? "+" : ""}
-              {kpis.daily_change_pct.toFixed(2)}% Today
+              {kpis.daily_change_pct.toFixed(2)}% Latest Session
             </span>
           </div>
         </div>
