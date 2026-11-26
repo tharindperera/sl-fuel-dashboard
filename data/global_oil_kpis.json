@@ -1,10 +1,10 @@
 {
-  "actual_price": 92.94,
-  "previous_close": 92.9,
-  "daily_change": 0.04,
-  "daily_change_pct": 0.04,
-  "monthly_change_pct": -22.12,
-  "yearly_change_pct": 47.15,
+  "actual_price": 91.8,
+  "previous_close": 91.2,
+  "daily_change": 0.6,
+  "daily_change_pct": 0.66,
+  "monthly_change_pct": -28.45,
+  "yearly_change_pct": 41.6,
   "all_time_high": {
     "value": 143.95,
     "date": "2008-07-03"
@@ -14,24 +14,24 @@
     "date": "1998-12-10"
   },
   "historical_range": "1987 - 2026",
-  "latest_observation_date": "2026-11-17",
+  "latest_observation_date": "2026-11-24",
   "unit": "USD / BBL",
   "frequency": "DAILY",
   "benchmark_label": "ICE BRENT / EIA SPOT",
   "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
-  "last_updated_utc": "2026-11-25T17:23:41.877299+00:00",
-  "last_updated_sl": "2026-11-25T22:53:41.877299+05:30",
-  "index_sync_label": "INDEX SYNC: 25 NOV 2026 17:23 UTC",
+  "last_updated_utc": "2026-11-26T01:51:40.989438+00:00",
+  "last_updated_sl": "2026-11-26T07:21:40.989438+05:30",
+  "index_sync_label": "INDEX SYNC: 26 NOV 2026 01:51 UTC",
   "trend_outlook": {
-    "projected_price": 101.46,
-    "ema_20": 102.94,
-    "ema_50": 107.95,
+    "projected_price": 96.57,
+    "ema_20": 98.88,
+    "ema_50": 105.15,
     "signal": "bearish",
     "label": "TREND OUTLOOK",
     "badge": "MODEL ESTIMATE",
     "subtitle": "EMA(20/50) Statistical Estimate",
     "methodology": "Quantitative estimate derived from 20-day vs 50-day Exponential Moving Averages and 5-day price slope over U.S. EIA/FRED historical spot series.",
-    "reference_current": 92.94
+    "reference_current": 91.8
   },
   "comparison_table": [
     {
@@ -42,12 +42,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": false,
-      "price": 89.53,
-      "previous_close": 89.24,
-      "change": 0.29,
-      "day_pct": 0.32,
-      "month_pct": -17.26,
-      "year_pct": 47.59,
+      "price": 82.24,
+      "previous_close": 81.42,
+      "change": 0.82,
+      "day_pct": 1.01,
+      "month_pct": -25.05,
+      "year_pct": 39.13,
       "all_time_high": {
         "value": 145.31,
         "date": "2008-07-03"
@@ -57,9 +57,9 @@
         "date": "2020-04-21"
       },
       "first_date": "1986-01-02",
-      "latest_date": "2026-11-17",
+      "latest_date": "2026-11-24",
       "historical_range": "1986 - 2026",
-      "updated_label": "17:23"
+      "updated_label": "01:51"
     },
     {
       "id": "brent",
@@ -69,12 +69,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": true,
-      "price": 92.94,
-      "previous_close": 92.9,
-      "change": 0.04,
-      "day_pct": 0.04,
-      "month_pct": -22.12,
-      "year_pct": 47.15,
+      "price": 91.8,
+      "previous_close": 91.2,
+      "change": 0.6,
+      "day_pct": 0.66,
+      "month_pct": -28.45,
+      "year_pct": 41.6,
       "all_time_high": {
         "value": 143.95,
         "date": "2008-07-03"
@@ -84,9 +84,9 @@
         "date": "1998-12-10"
       },
       "first_date": "1987-05-20",
-      "latest_date": "2026-11-17",
+      "latest_date": "2026-11-24",
       "historical_range": "1987 - 2026",
-      "updated_label": "17:23"
+      "updated_label": "01:51"
     },
     {
       "id": "natgas",
@@ -96,12 +96,12 @@
       "unit": "USD / MMBtu",
       "decimals": 2,
       "is_primary": false,
-      "price": 3.1,
-      "previous_close": 3.2,
-      "change": -0.1,
-      "day_pct": -3.13,
-      "month_pct": -3.73,
-      "year_pct": -16.44,
+      "price": 3.3,
+      "previous_close": 3.28,
+      "change": 0.02,
+      "day_pct": 0.61,
+      "month_pct": 18.71,
+      "year_pct": -20.48,
       "all_time_high": {
         "value": 30.72,
         "date": "2026-01-23"
@@ -111,9 +111,9 @@
         "date": "2024-11-08"
       },
       "first_date": "1997-01-07",
-      "latest_date": "2026-11-17",
+      "latest_date": "2026-11-24",
       "historical_range": "1997 - 2026",
-      "updated_label": "17:23"
+      "updated_label": "01:51"
     },
     {
       "id": "gasoline",
@@ -123,12 +123,12 @@
       "unit": "USD / GAL",
       "decimals": 3,
       "is_primary": false,
-      "price": 2.462,
-      "previous_close": 2.463,
-      "change": -0.001,
-      "day_pct": -0.04,
-      "month_pct": -26.13,
-      "year_pct": 23.47,
+      "price": 2.409,
+      "previous_close": 2.373,
+      "change": 0.036,
+      "day_pct": 1.52,
+      "month_pct": -24.72,
+      "year_pct": 27.39,
       "all_time_high": {
         "value": 4.873,
         "date": "2008-09-12"
@@ -138,9 +138,9 @@
         "date": "1998-12-23"
       },
       "first_date": "1986-06-02",
-      "latest_date": "2026-11-17",
+      "latest_date": "2026-11-24",
       "historical_range": "1986 - 2026",
-      "updated_label": "17:23"
+      "updated_label": "01:51"
     },
     {
       "id": "heating_oil",
@@ -150,12 +150,12 @@
       "unit": "USD / GAL",
       "decimals": 3,
       "is_primary": false,
-      "price": 3.96,
-      "previous_close": 3.975,
-      "change": -0.015,
-      "day_pct": -0.38,
-      "month_pct": -17.57,
-      "year_pct": 62.1,
+      "price": 3.603,
+      "previous_close": 3.616,
+      "change": -0.013,
+      "day_pct": -0.36,
+      "month_pct": -26.65,
+      "year_pct": 55.23,
       "all_time_high": {
         "value": 5.163,
         "date": "2026-09-15"
@@ -165,9 +165,9 @@
         "date": "1999-02-16"
       },
       "first_date": "1986-06-02",
-      "latest_date": "2026-11-17",
+      "latest_date": "2026-11-24",
       "historical_range": "1986 - 2026",
-      "updated_label": "17:23"
+      "updated_label": "01:51"
     }
   ]
 }
