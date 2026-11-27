@@ -15,6 +15,7 @@ from scripts.update_global_oil import (
     OilFetchError,
     PricePoint,
     build_global_oil_outputs,
+    load_existing_series_points,
     merge_provisional_points,
     parse_fred_csv,
     parse_oilprice_payload,
@@ -195,6 +196,45 @@ class TestGlobalOilPipeline(unittest.TestCase):
         ]
         reconciled = merge_provisional_points(official_caught_up, market_pts[:-1], decimals=2)
         self.assertEqual(reconciled, official_caught_up)
+
+    def test_load_existing_series_points_carries_forward_prior_provisional(self) -> None:
+        import json
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmp:
+            hist_path = Path(tmp) / "brent_history.json"
+            hist_path.write_text(
+                json.dumps(
+                    {
+                        "series": {
+                            "brent": [
+                                {"time": "2026-11-24", "value": 91.80},
+                                {"time": "2026-11-27", "value": 96.55},
+                            ]
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+            loaded = load_existing_series_points(hist_path)
+            self.assertEqual(len(loaded["brent"]), 2)
+
+            official = [PricePoint(time="2026-11-24", value=91.80)]
+            prior = [p for p in loaded["brent"] if p.time > official[-1].time]
+            today_single_quote = [
+                PricePoint(time="2026-11-27", value=96.61),
+                PricePoint(time="2026-11-28", value=97.10),
+            ]
+            merged = merge_provisional_points(official, prior + today_single_quote, decimals=2)
+            self.assertEqual(
+                [(p.time, p.value) for p in merged],
+                [
+                    ("2026-11-24", 91.80),
+                    ("2026-11-27", 96.61),
+                    ("2026-11-28", 97.10),
+                ],
+            )
 
     def test_build_outputs_with_provisional_metadata(self) -> None:
         from datetime import date, timedelta

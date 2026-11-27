@@ -336,6 +336,7 @@ def _fetch_yahoo_market_points(session: requests.Session, spec: CommoditySpec) -
                 headers={
                     "User-Agent": MARKET_USER_AGENT,
                     "Accept": "application/json",
+                    "Accept-Language": "en-US,en;q=0.9",
                 },
             )
             resp.raise_for_status()
@@ -344,7 +345,43 @@ def _fetch_yahoo_market_points(session: requests.Session, spec: CommoditySpec) -
                 return pts
         except Exception as exc:
             logger.warning("Yahoo chart host %s skipped for %s: %s", host, spec.id, exc)
+            time.sleep(0.35)
     return []
+
+
+def load_existing_series_points(history_path: Path) -> dict[str, list[PricePoint]]:
+    """Load previously synced series points from disk so prior interim days persist across runs."""
+    if not history_path.exists():
+        return {}
+    try:
+        raw = json.loads(history_path.read_text(encoding="utf-8"))
+        raw_series = raw.get("series") or {}
+        if not isinstance(raw_series, dict):
+            return {}
+        loaded: dict[str, list[PricePoint]] = {}
+        for cid, items in raw_series.items():
+            if not isinstance(items, list):
+                continue
+            pts: list[PricePoint] = []
+            for item in items:
+                if not isinstance(item, dict):
+                    continue
+                t = str(item.get("time") or "").strip()
+                v = item.get("value")
+                if not t or v is None:
+                    continue
+                try:
+                    val = float(v)
+                except (TypeError, ValueError):
+                    continue
+                if math.isfinite(val) and val > 0:
+                    pts.append(PricePoint(time=t, value=val))
+            if pts:
+                loaded[cid] = pts
+        return loaded
+    except Exception as exc:
+        logger.warning("Unable to read existing %s for interim carry-forward: %s", history_path.name, exc)
+        return {}
 
 
 def _fetch_oilprice_fallback(
@@ -646,6 +683,7 @@ def build_global_oil_outputs(
 def run_update(*, dry_run: bool = False, data_dir: Path = DATA_DIR) -> int:
     now_utc = datetime.now(UTC_TZ)
     eia_api_key = os.environ.get("EIA_API_KEY", "").strip() or None
+    existing_series = load_existing_series_points(data_dir / BRENT_HISTORY_JSON.name)
     series_map: dict[str, list[PricePoint]] = {}
     official_latest_dates: dict[str, str] = {}
     provisional_sources: dict[str, str] = {}
@@ -661,22 +699,32 @@ def run_update(*, dry_run: bool = False, data_dir: Path = DATA_DIR) -> int:
             official_latest = official_points[-1].time
             official_latest_dates[spec.id] = official_latest
 
+            # Preserve previously-synced interim dates (> official_latest) so single-day
+            # fallback feeds retain multi-day continuity until official FRED/EIA catches up.
+            prior_provisional = [
+                pt for pt in existing_series.get(spec.id, []) if pt.time > official_latest
+            ]
+
             yahoo_points = _fetch_yahoo_market_points(session, spec)
-            merged_points = merge_provisional_points(
-                official_points, yahoo_points, decimals=spec.decimals
+            has_fresh_yahoo = any(pt.time > official_latest for pt in yahoo_points)
+            candidate_points = prior_provisional + yahoo_points
+            source_label: str | None = (
+                "Market Futures (ICE/NYMEX via Yahoo Finance)" if has_fresh_yahoo else None
             )
-            if merged_points[-1].time > official_latest:
-                provisional_sources[spec.id] = "Market Futures (ICE/NYMEX via Yahoo Finance)"
-            elif spec.oilprice_code:
+
+            if not has_fresh_yahoo and spec.oilprice_code:
                 fallback_pt, oilprice_demo_cache = _fetch_oilprice_fallback(
                     session, spec, oilprice_demo_cache
                 )
-                if fallback_pt:
-                    merged_points = merge_provisional_points(
-                        official_points, [fallback_pt], decimals=spec.decimals
-                    )
-                    if merged_points[-1].time > official_latest:
-                        provisional_sources[spec.id] = "OilPriceAPI Spot Feed"
+                if fallback_pt and fallback_pt.time > official_latest:
+                    candidate_points.append(fallback_pt)
+                    source_label = "OilPriceAPI Spot Feed"
+
+            merged_points = merge_provisional_points(
+                official_points, candidate_points, decimals=spec.decimals
+            )
+            if merged_points[-1].time > official_latest:
+                provisional_sources[spec.id] = source_label or "Cached Interim Market Feed"
 
             series_map[spec.id] = merged_points
             logger.info(
