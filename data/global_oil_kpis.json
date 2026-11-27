@@ -1,10 +1,10 @@
 {
-  "actual_price": 96.68,
+  "actual_price": 94.01,
   "previous_close": 96.57,
-  "daily_change": 0.11,
-  "daily_change_pct": 0.11,
-  "monthly_change_pct": -18.89,
-  "yearly_change_pct": 50.64,
+  "daily_change": -2.56,
+  "daily_change_pct": -2.65,
+  "monthly_change_pct": -21.13,
+  "yearly_change_pct": 46.48,
   "all_time_high": {
     "value": 143.95,
     "date": "2008-07-03"
@@ -22,19 +22,19 @@
   "frequency": "DAILY",
   "benchmark_label": "ICE BRENT / EIA SPOT",
   "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
-  "last_updated_utc": "2026-11-27T05:21:06.111827+00:00",
-  "last_updated_sl": "2026-11-27T10:51:06.111827+05:30",
-  "index_sync_label": "INDEX SYNC: 27 NOV 2026 05:21 UTC",
+  "last_updated_utc": "2026-11-27T16:50:44.082909+00:00",
+  "last_updated_sl": "2026-11-27T22:20:44.082909+05:30",
+  "index_sync_label": "INDEX SYNC: 27 NOV 2026 16:50 UTC",
   "trend_outlook": {
-    "projected_price": 96.46,
-    "ema_20": 98.14,
-    "ema_50": 104.07,
+    "projected_price": 95.88,
+    "ema_20": 97.89,
+    "ema_50": 103.97,
     "signal": "bearish",
     "label": "TREND OUTLOOK",
     "badge": "MODEL ESTIMATE",
     "subtitle": "EMA(20/50) Statistical Estimate",
     "methodology": "Quantitative estimate derived from 20-day vs 50-day Exponential Moving Averages and 5-day price slope over U.S. EIA/FRED historical spot series.",
-    "reference_current": 96.68
+    "reference_current": 94.01
   },
   "comparison_table": [
     {
@@ -45,12 +45,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": false,
-      "price": 85.81,
+      "price": 82.92,
       "previous_close": 85.66,
-      "change": 0.15,
-      "day_pct": 0.18,
-      "month_pct": -19.24,
-      "year_pct": 45.91,
+      "change": -2.74,
+      "day_pct": -3.2,
+      "month_pct": -21.96,
+      "year_pct": 41.0,
       "all_time_high": {
         "value": 145.31,
         "date": "2008-07-03"
@@ -65,7 +65,7 @@
       "is_provisional": true,
       "provisional_source": "OilPriceAPI Spot Feed",
       "historical_range": "1986 - 2026",
-      "updated_label": "05:21"
+      "updated_label": "16:50"
     },
     {
       "id": "brent",
@@ -75,12 +75,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": true,
-      "price": 96.68,
+      "price": 94.01,
       "previous_close": 96.57,
-      "change": 0.11,
-      "day_pct": 0.11,
-      "month_pct": -18.89,
-      "year_pct": 50.64,
+      "change": -2.56,
+      "day_pct": -2.65,
+      "month_pct": -21.13,
+      "year_pct": 46.48,
       "all_time_high": {
         "value": 143.95,
         "date": "2008-07-03"
@@ -95,7 +95,7 @@
       "is_provisional": true,
       "provisional_source": "OilPriceAPI Spot Feed",
       "historical_range": "1987 - 2026",
-      "updated_label": "05:21"
+      "updated_label": "16:50"
     },
     {
       "id": "natgas",
@@ -125,7 +125,7 @@
       "is_provisional": false,
       "provisional_source": null,
       "historical_range": "1997 - 2026",
-      "updated_label": "05:21"
+      "updated_label": "16:50"
     },
     {
       "id": "gasoline",
@@ -155,7 +155,7 @@
       "is_provisional": false,
       "provisional_source": null,
       "historical_range": "1986 - 2026",
-      "updated_label": "05:21"
+      "updated_label": "16:50"
     },
     {
       "id": "heating_oil",
@@ -185,7 +185,7 @@
       "is_provisional": false,
       "provisional_source": null,
       "historical_range": "1986 - 2026",
-      "updated_label": "05:21"
+      "updated_label": "16:50"
     }
   ]
 }
