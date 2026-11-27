@@ -1,10 +1,10 @@
 {
-  "actual_price": 91.8,
-  "previous_close": 91.2,
-  "daily_change": 0.6,
-  "daily_change_pct": 0.66,
-  "monthly_change_pct": -28.45,
-  "yearly_change_pct": 41.6,
+  "actual_price": 96.61,
+  "previous_close": 91.8,
+  "daily_change": 4.81,
+  "daily_change_pct": 5.24,
+  "monthly_change_pct": -18.95,
+  "yearly_change_pct": 50.53,
   "all_time_high": {
     "value": 143.95,
     "date": "2008-07-03"
@@ -14,24 +14,27 @@
     "date": "1998-12-10"
   },
   "historical_range": "1987 - 2026",
-  "latest_observation_date": "2026-11-24",
+  "latest_observation_date": "2026-11-27",
+  "official_latest_date": "2026-11-24",
+  "has_provisional_data": true,
+  "provisional_source": "OilPriceAPI Spot Feed",
   "unit": "USD / BBL",
   "frequency": "DAILY",
   "benchmark_label": "ICE BRENT / EIA SPOT",
   "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
-  "last_updated_utc": "2026-11-27T01:48:58.306019+00:00",
-  "last_updated_sl": "2026-11-27T07:18:58.306019+05:30",
-  "index_sync_label": "INDEX SYNC: 27 NOV 2026 01:48 UTC",
+  "last_updated_utc": "2026-11-27T04:47:22.421224+00:00",
+  "last_updated_sl": "2026-11-27T10:17:22.421224+05:30",
+  "index_sync_label": "INDEX SYNC: 27 NOV 2026 04:47 UTC",
   "trend_outlook": {
-    "projected_price": 96.57,
-    "ema_20": 98.88,
-    "ema_50": 105.15,
+    "projected_price": 96.88,
+    "ema_20": 98.67,
+    "ema_50": 104.83,
     "signal": "bearish",
     "label": "TREND OUTLOOK",
     "badge": "MODEL ESTIMATE",
     "subtitle": "EMA(20/50) Statistical Estimate",
     "methodology": "Quantitative estimate derived from 20-day vs 50-day Exponential Moving Averages and 5-day price slope over U.S. EIA/FRED historical spot series.",
-    "reference_current": 91.8
+    "reference_current": 96.61
   },
   "comparison_table": [
     {
@@ -42,12 +45,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": false,
-      "price": 82.24,
-      "previous_close": 81.42,
-      "change": 0.82,
-      "day_pct": 1.01,
-      "month_pct": -25.05,
-      "year_pct": 39.13,
+      "price": 85.81,
+      "previous_close": 82.24,
+      "change": 3.57,
+      "day_pct": 4.34,
+      "month_pct": -19.24,
+      "year_pct": 45.91,
       "all_time_high": {
         "value": 145.31,
         "date": "2008-07-03"
@@ -57,9 +60,12 @@
         "date": "2020-04-21"
       },
       "first_date": "1986-01-02",
-      "latest_date": "2026-11-24",
+      "latest_date": "2026-11-27",
+      "official_latest_date": "2026-11-24",
+      "is_provisional": true,
+      "provisional_source": "OilPriceAPI Spot Feed",
       "historical_range": "1986 - 2026",
-      "updated_label": "01:48"
+      "updated_label": "04:47"
     },
     {
       "id": "brent",
@@ -69,12 +75,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": true,
-      "price": 91.8,
-      "previous_close": 91.2,
-      "change": 0.6,
-      "day_pct": 0.66,
-      "month_pct": -28.45,
-      "year_pct": 41.6,
+      "price": 96.61,
+      "previous_close": 91.8,
+      "change": 4.81,
+      "day_pct": 5.24,
+      "month_pct": -18.95,
+      "year_pct": 50.53,
       "all_time_high": {
         "value": 143.95,
         "date": "2008-07-03"
@@ -84,9 +90,12 @@
         "date": "1998-12-10"
       },
       "first_date": "1987-05-20",
-      "latest_date": "2026-11-24",
+      "latest_date": "2026-11-27",
+      "official_latest_date": "2026-11-24",
+      "is_provisional": true,
+      "provisional_source": "OilPriceAPI Spot Feed",
       "historical_range": "1987 - 2026",
-      "updated_label": "01:48"
+      "updated_label": "04:47"
     },
     {
       "id": "natgas",
@@ -112,8 +121,11 @@
       },
       "first_date": "1997-01-07",
       "latest_date": "2026-11-24",
+      "official_latest_date": "2026-11-24",
+      "is_provisional": false,
+      "provisional_source": null,
       "historical_range": "1997 - 2026",
-      "updated_label": "01:48"
+      "updated_label": "04:47"
     },
     {
       "id": "gasoline",
@@ -139,8 +151,11 @@
       },
       "first_date": "1986-06-02",
       "latest_date": "2026-11-24",
+      "official_latest_date": "2026-11-24",
+      "is_provisional": false,
+      "provisional_source": null,
       "historical_range": "1986 - 2026",
-      "updated_label": "01:48"
+      "updated_label": "04:47"
     },
     {
       "id": "heating_oil",
@@ -166,8 +181,11 @@
       },
       "first_date": "1986-06-02",
       "latest_date": "2026-11-24",
+      "official_latest_date": "2026-11-24",
+      "is_provisional": false,
+      "provisional_source": null,
       "historical_range": "1986 - 2026",
-      "updated_label": "01:48"
+      "updated_label": "04:47"
     }
   ]
 }
