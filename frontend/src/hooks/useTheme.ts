@@ -3,12 +3,12 @@ import { useCallback, useEffect, useState } from "react";
 export type ThemeMode = "light" | "dark";
 
 function readInitialTheme(): ThemeMode {
-  if (typeof window === "undefined") return "light";
+  if (typeof window === "undefined") return "dark";
   try {
     const stored = window.localStorage.getItem("cpc-theme");
-    return stored === "dark" ? "dark" : "light";
+    return stored === "light" ? "light" : "dark";
   } catch {
-    return "light";
+    return "dark";
   }
 }
 

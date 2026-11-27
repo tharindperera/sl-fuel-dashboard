@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,13 +18,17 @@
     <script>
       (function () {
         try {
-          if (localStorage.getItem("cpc-theme") === "dark") {
+          if (localStorage.getItem("cpc-theme") === "light") {
+            document.documentElement.classList.remove("dark");
+            document.documentElement.style.colorScheme = "light";
+          } else {
             document.documentElement.classList.add("dark");
             document.documentElement.style.colorScheme = "dark";
-          } else {
-            document.documentElement.style.colorScheme = "light";
           }
-        } catch (_) {}
+        } catch (_) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.colorScheme = "dark";
+        }
       })();
     </script>
   </head>
