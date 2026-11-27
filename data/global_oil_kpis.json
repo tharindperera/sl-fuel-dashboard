@@ -1,10 +1,10 @@
 {
-  "actual_price": 96.61,
+  "actual_price": 96.64,
   "previous_close": 96.57,
-  "daily_change": 0.04,
-  "daily_change_pct": 0.04,
-  "monthly_change_pct": -18.95,
-  "yearly_change_pct": 50.53,
+  "daily_change": 0.07,
+  "daily_change_pct": 0.07,
+  "monthly_change_pct": -18.93,
+  "yearly_change_pct": 50.58,
   "all_time_high": {
     "value": 143.95,
     "date": "2008-07-03"
@@ -22,19 +22,19 @@
   "frequency": "DAILY",
   "benchmark_label": "ICE BRENT / EIA SPOT",
   "source_attribution": "U.S. Energy Information Administration (EIA) via FRED, Federal Reserve Bank of St. Louis",
-  "last_updated_utc": "2026-11-27T04:47:22.421224+00:00",
-  "last_updated_sl": "2026-11-27T10:17:22.421224+05:30",
-  "index_sync_label": "INDEX SYNC: 27 NOV 2026 04:47 UTC",
+  "last_updated_utc": "2026-11-27T05:12:57.660567+00:00",
+  "last_updated_sl": "2026-11-27T10:42:57.660567+05:30",
+  "index_sync_label": "INDEX SYNC: 27 NOV 2026 05:12 UTC",
   "trend_outlook": {
-    "projected_price": 96.44,
-    "ema_20": 98.13,
+    "projected_price": 96.45,
+    "ema_20": 98.14,
     "ema_50": 104.07,
     "signal": "bearish",
     "label": "TREND OUTLOOK",
     "badge": "MODEL ESTIMATE",
     "subtitle": "EMA(20/50) Statistical Estimate",
     "methodology": "Quantitative estimate derived from 20-day vs 50-day Exponential Moving Averages and 5-day price slope over U.S. EIA/FRED historical spot series.",
-    "reference_current": 96.61
+    "reference_current": 96.64
   },
   "comparison_table": [
     {
@@ -65,7 +65,7 @@
       "is_provisional": true,
       "provisional_source": "OilPriceAPI Spot Feed",
       "historical_range": "1986 - 2026",
-      "updated_label": "04:47"
+      "updated_label": "05:12"
     },
     {
       "id": "brent",
@@ -75,12 +75,12 @@
       "unit": "USD / BBL",
       "decimals": 2,
       "is_primary": true,
-      "price": 96.61,
+      "price": 96.64,
       "previous_close": 96.57,
-      "change": 0.04,
-      "day_pct": 0.04,
-      "month_pct": -18.95,
-      "year_pct": 50.53,
+      "change": 0.07,
+      "day_pct": 0.07,
+      "month_pct": -18.93,
+      "year_pct": 50.58,
       "all_time_high": {
         "value": 143.95,
         "date": "2008-07-03"
@@ -95,7 +95,7 @@
       "is_provisional": true,
       "provisional_source": "OilPriceAPI Spot Feed",
       "historical_range": "1987 - 2026",
-      "updated_label": "04:47"
+      "updated_label": "05:12"
     },
     {
       "id": "natgas",
@@ -125,7 +125,7 @@
       "is_provisional": false,
       "provisional_source": null,
       "historical_range": "1997 - 2026",
-      "updated_label": "04:47"
+      "updated_label": "05:12"
     },
     {
       "id": "gasoline",
@@ -155,7 +155,7 @@
       "is_provisional": false,
       "provisional_source": null,
       "historical_range": "1986 - 2026",
-      "updated_label": "04:47"
+      "updated_label": "05:12"
     },
     {
       "id": "heating_oil",
@@ -185,7 +185,7 @@
       "is_provisional": false,
       "provisional_source": null,
       "historical_range": "1986 - 2026",
-      "updated_label": "04:47"
+      "updated_label": "05:12"
     }
   ]
 }
