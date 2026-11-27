@@ -413,9 +413,21 @@ export function OilChartCard({
             </span>
           </div>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-            Interactive U.S. EIA / FRED spot series (1–2 business-day EIA release lag) • Scroll to
-            zoom, drag to pan across {fullPoints.length.toLocaleString()} sessions (latest:{" "}
-            {activeMeta.latest_date})
+            {activeMeta.is_provisional && activeMeta.official_latest_date ? (
+              <>
+                Official U.S. EIA / FRED spot through {activeMeta.official_latest_date} +{" "}
+                <span className="font-semibold text-amber-700 dark:text-amber-400">
+                  interim market sync to {activeMeta.latest_date}
+                </span>{" "}
+                • Scroll to zoom, drag to pan across {fullPoints.length.toLocaleString()} sessions
+              </>
+            ) : (
+              <>
+                Interactive U.S. EIA / FRED spot series (1–2 business-day EIA release lag) • Scroll
+                to zoom, drag to pan across {fullPoints.length.toLocaleString()} sessions (latest:{" "}
+                {activeMeta.latest_date})
+              </>
+            )}
           </p>
         </div>
 

@@ -131,9 +131,18 @@ export function GlobalOilPage({
             <div className="tabular-nums font-heading text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               ${kpis.actual_price.toFixed(2)}
             </div>
-            <span className="text-[11px] text-slate-500 dark:text-slate-400">
+            <span className="block text-[11px] text-slate-500 dark:text-slate-400">
               USD per barrel ({kpis.latest_observation_date})
             </span>
+            {kpis.official_latest_date &&
+              kpis.latest_observation_date > kpis.official_latest_date && (
+                <span
+                  title={`Interim quote via ${kpis.provisional_source ?? "market feed"}; official EIA/FRED series settled through ${kpis.official_latest_date}.`}
+                  className="mt-1 inline-flex items-center rounded bg-amber-100 px-1.5 py-0.5 font-heading text-[10px] font-bold text-amber-800 dark:bg-amber-950/60 dark:text-amber-300"
+                >
+                  Market Est. • Official EIA: {kpis.official_latest_date}
+                </span>
+              )}
           </div>
         </div>
 

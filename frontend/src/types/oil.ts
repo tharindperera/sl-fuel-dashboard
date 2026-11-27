@@ -33,6 +33,9 @@ export interface CommodityComparisonRow {
   all_time_low: OilExtremum;
   first_date: string;
   latest_date: string;
+  official_latest_date?: string;
+  is_provisional?: boolean;
+  provisional_source?: string | null;
   historical_range: string;
   updated_label: string;
 }
@@ -48,6 +51,9 @@ export interface GlobalOilKpisData {
   all_time_low: OilExtremum;
   historical_range: string;
   latest_observation_date: string;
+  official_latest_date?: string;
+  has_provisional_data?: boolean;
+  provisional_source?: string | null;
   unit: string;
   frequency: string;
   benchmark_label: string;
@@ -68,6 +74,7 @@ export interface CommodityHistoryData {
   primary_id: string;
   last_updated_utc: string;
   source_attribution: string;
+  official_latest_dates?: Record<string, string>;
   series: Record<string, OilHistoryPoint[]>;
 }
 

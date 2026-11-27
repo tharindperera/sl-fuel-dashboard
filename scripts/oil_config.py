@@ -28,6 +28,16 @@ EIA_SPOT_API_URL = (
     "?api_key={api_key}&frequency=daily&data[0]=value"
     "&facets[series][]={eia_series}&sort[0][column]=period&sort[0][direction]=desc&length=30"
 )
+YAHOO_CHART_HOSTS: tuple[str, ...] = ("query1.finance.yahoo.com", "query2.finance.yahoo.com")
+YAHOO_CHART_URL_TEMPLATE = "https://{host}/v8/finance/chart/{symbol}?range=1mo&interval=1d"
+OILPRICE_DEMO_URL = "https://api.oilpriceapi.com/v1/demo/prices"
+OILPRICE_LATEST_URL = "https://api.oilpriceapi.com/v1/prices/latest?by_code={code}"
+MARKET_USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
+PROVISIONAL_RATIO_MIN = 0.6
+PROVISIONAL_RATIO_MAX = 1.6
 
 # Steep move anomaly detection thresholds for Brent Crude
 SURGE_DAILY_PCT_THRESHOLD = 2.5
@@ -57,6 +67,8 @@ class CommoditySpec:
     decimals: int
     is_primary: bool = False
     description: str = ""
+    yahoo_symbol: str | None = None
+    oilprice_code: str | None = None
 
 
 COMMODITIES: tuple[CommoditySpec, ...] = (
@@ -70,6 +82,8 @@ COMMODITIES: tuple[CommoditySpec, ...] = (
         decimals=2,
         is_primary=False,
         description="West Texas Intermediate light sweet crude (Cushing, Oklahoma).",
+        yahoo_symbol="CL=F",
+        oilprice_code="WTI_USD",
     ),
     CommoditySpec(
         id="brent",
@@ -81,6 +95,8 @@ COMMODITIES: tuple[CommoditySpec, ...] = (
         decimals=2,
         is_primary=True,
         description="North Sea Brent physical/spot benchmark (Europe & global seaborne reference).",
+        yahoo_symbol="BZ=F",
+        oilprice_code="BRENT_CRUDE_USD",
     ),
     CommoditySpec(
         id="natgas",
@@ -92,6 +108,7 @@ COMMODITIES: tuple[CommoditySpec, ...] = (
         decimals=2,
         is_primary=False,
         description="Henry Hub Natural Gas Spot Price.",
+        yahoo_symbol="NG=F",
     ),
     CommoditySpec(
         id="gasoline",
@@ -103,6 +120,7 @@ COMMODITIES: tuple[CommoditySpec, ...] = (
         decimals=3,
         is_primary=False,
         description="U.S. Gulf Coast Conventional Gasoline Regular Spot Price.",
+        yahoo_symbol="RB=F",
     ),
     CommoditySpec(
         id="heating_oil",
@@ -114,6 +132,7 @@ COMMODITIES: tuple[CommoditySpec, ...] = (
         decimals=3,
         is_primary=False,
         description="New York Harbor No. 2 Heating Oil Spot Price.",
+        yahoo_symbol="HO=F",
     ),
 )
 

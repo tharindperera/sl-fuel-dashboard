@@ -15,7 +15,10 @@ from scripts.update_global_oil import (
     OilFetchError,
     PricePoint,
     build_global_oil_outputs,
+    merge_provisional_points,
     parse_fred_csv,
+    parse_oilprice_payload,
+    parse_yahoo_chart_payload,
 )
 
 
@@ -106,6 +109,122 @@ class TestGlobalOilPipeline(unittest.TestCase):
         items = parse_rss_items(rss, limit=5)
         self.assertEqual(len(items), 2)
         self.assertEqual(items[0]["title"], "EIA Crude Stock Report")
+
+    def test_parse_yahoo_chart_payload_extracts_bars_and_live_quote(self) -> None:
+        # 2026-11-25 05:00 UTC (= 00:00 EST) and 2026-11-26 05:00 UTC, plus live quote on 2026-11-27 04:20 UTC
+        ts_nov25 = int(datetime(2026, 11, 25, 5, 0, tzinfo=UTC_TZ).timestamp())
+        ts_nov26 = int(datetime(2026, 11, 26, 5, 0, tzinfo=UTC_TZ).timestamp())
+        ts_live27 = int(datetime(2026, 11, 27, 4, 20, tzinfo=UTC_TZ).timestamp())
+        payload = {
+            "chart": {
+                "result": [
+                    {
+                        "meta": {
+                            "currency": "USD",
+                            "exchangeTimezoneName": "America/New_York",
+                            "regularMarketPrice": 96.52,
+                            "regularMarketTime": ts_live27,
+                        },
+                        "timestamp": [ts_nov25, ts_nov26],
+                        "indicators": {"quote": [{"close": [94.61, 96.57]}]},
+                    }
+                ]
+            }
+        }
+        pts = parse_yahoo_chart_payload(payload, decimals=2)
+        self.assertEqual([(p.time, p.value) for p in pts], [
+            ("2026-11-25", 94.61),
+            ("2026-11-26", 96.57),
+            ("2026-11-27", 96.52),
+        ])
+
+        non_usd = {
+            "chart": {"result": [{"meta": {"currency": "EUR"}, "timestamp": [ts_nov25], "indicators": {"quote": [{"close": [90.0]}]}}]}
+        }
+        self.assertEqual(parse_yahoo_chart_payload(non_usd), [])
+
+    def test_parse_oilprice_payload_demo_and_single(self) -> None:
+        demo_payload = {
+            "status": "success",
+            "data": {
+                "prices": [
+                    {"code": "WTI_USD", "price": 84.10, "currency": "USD", "updated_at": "2026-11-26T18:00:00Z"},
+                    {"code": "BRENT_CRUDE_USD", "price": 96.57, "currency": "USD", "updated_at": "2026-11-26T18:00:00Z"},
+                ]
+            },
+        }
+        brent = parse_oilprice_payload(demo_payload, "BRENT_CRUDE_USD", decimals=2)
+        self.assertEqual(brent, PricePoint(time="2026-11-26", value=96.57))
+
+        single_payload = {
+            "status": "success",
+            "data": {"code": "WTI_USD", "price": 84.55, "currency": "USD", "updated_at": "2026-11-27T03:00:00Z"},
+        }
+        wti = parse_oilprice_payload(single_payload, "WTI_USD", decimals=2)
+        self.assertEqual(wti, PricePoint(time="2026-11-27", value=84.55))
+
+    def test_merge_provisional_points_and_official_reconciliation(self) -> None:
+        official_lagging = [
+            PricePoint(time="2026-11-23", value=91.20),
+            PricePoint(time="2026-11-24", value=91.80),
+        ]
+        market_pts = [
+            PricePoint(time="2026-11-24", value=93.00),  # Must NOT overwrite official Nov 24
+            PricePoint(time="2026-11-25", value=94.61),  # Appended interim
+            PricePoint(time="2026-11-26", value=96.57),  # Appended interim
+            PricePoint(time="2026-11-27", value=999.0),  # Rejected outlier (> 1.6x)
+        ]
+        merged = merge_provisional_points(official_lagging, market_pts, decimals=2)
+        self.assertEqual(
+            [(p.time, p.value) for p in merged],
+            [
+                ("2026-11-23", 91.20),
+                ("2026-11-24", 91.80),
+                ("2026-11-25", 94.61),
+                ("2026-11-26", 96.57),
+            ],
+        )
+
+        # Simulate FRED/EIA catching up later through Nov 27 (skipping Nov 26 Thanksgiving):
+        # All dates <= 2026-11-27 automatically reconcile to official values with zero duplicate/stale interim rows.
+        official_caught_up = [
+            PricePoint(time="2026-11-23", value=91.20),
+            PricePoint(time="2026-11-24", value=91.80),
+            PricePoint(time="2026-11-25", value=94.15),
+            PricePoint(time="2026-11-27", value=95.88),
+        ]
+        reconciled = merge_provisional_points(official_caught_up, market_pts[:-1], decimals=2)
+        self.assertEqual(reconciled, official_caught_up)
+
+    def test_build_outputs_with_provisional_metadata(self) -> None:
+        from datetime import date, timedelta
+
+        start = date(2025, 10, 1)
+        base = [PricePoint(time=(start + timedelta(days=i)).isoformat(), value=80.0 + (i % 5)) for i in range(420)]
+        series_map = {
+            "brent": base,
+            "wti": [PricePoint(time=p.time, value=p.value - 4.0) for p in base],
+            "natgas": [PricePoint(time=p.time, value=3.2) for p in base],
+            "gasoline": [PricePoint(time=p.time, value=2.4) for p in base],
+            "heating_oil": [PricePoint(time=p.time, value=3.5) for p in base],
+        }
+        official_latest = base[-3].time
+        kpis, history = build_global_oil_outputs(
+            series_map,
+            now_utc=datetime(2026, 11, 27, 4, 0, tzinfo=UTC_TZ),
+            official_latest_dates={cid: official_latest for cid in series_map},
+            provisional_sources={"brent": "Market Futures (ICE/NYMEX via Yahoo Finance)"},
+        )
+        self.assertTrue(kpis["has_provisional_data"])
+        self.assertEqual(kpis["official_latest_date"], official_latest)
+        self.assertEqual(kpis["latest_observation_date"], base[-1].time)
+        self.assertEqual(kpis["provisional_source"], "Market Futures (ICE/NYMEX via Yahoo Finance)")
+        brent_row = next(r for r in kpis["comparison_table"] if r["id"] == "brent")
+        self.assertTrue(brent_row["is_provisional"])
+        wti_row = next(r for r in kpis["comparison_table"] if r["id"] == "wti")
+        self.assertTrue(wti_row["is_provisional"])
+        self.assertIsNone(wti_row["provisional_source"])
+        self.assertEqual(history["official_latest_dates"]["brent"], official_latest)
 
 
 if __name__ == "__main__":

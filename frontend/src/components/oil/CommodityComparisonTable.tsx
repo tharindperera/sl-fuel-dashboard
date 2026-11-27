@@ -149,7 +149,15 @@ export function CommodityComparisonTable({
                   </td>
 
                   <td className="tabular-nums py-3.5 px-4 text-center font-mono text-xs text-slate-500 whitespace-nowrap dark:text-slate-400">
-                    {row.latest_date}
+                    <span>{row.latest_date}</span>
+                    {row.is_provisional && (
+                      <span
+                        title={`Interim market quote via ${row.provisional_source ?? "market feed"}; official EIA settled through ${row.official_latest_date ?? row.latest_date}.`}
+                        className="ml-1.5 inline-block rounded bg-amber-100 px-1 py-0.5 font-heading text-[9px] font-bold uppercase text-amber-800 dark:bg-amber-950/60 dark:text-amber-300"
+                      >
+                        Est
+                      </span>
+                    )}
                   </td>
                 </tr>
               );

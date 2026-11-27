@@ -27,6 +27,15 @@ export function BenchmarkSpecsSheet({ kpis }: BenchmarkSpecsSheetProps) {
         </p>
         <p className="text-xs text-slate-500 dark:text-slate-400">
           <strong>Public Data Attribution:</strong> {kpis.source_attribution} (public domain).
+          {kpis.has_provisional_data && kpis.official_latest_date && (
+            <>
+              {" "}
+              Dates after{" "}
+              <span className="font-mono font-semibold">{kpis.official_latest_date}</span> use
+              interim market quotes ({kpis.provisional_source ?? "market futures supplement"}) and
+              automatically reconcile once official EIA/FRED data publishes.
+            </>
+          )}{" "}
           Interactive chart powered by{" "}
           <a
             href="https://www.tradingview.com/"

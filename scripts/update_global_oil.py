@@ -7,6 +7,7 @@ import csv
 import io
 import json
 import logging
+import math
 import os
 import sys
 import tempfile
@@ -15,6 +16,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Sequence
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import requests
 
@@ -28,11 +30,18 @@ from scripts.oil_config import (
     EIA_SPOT_API_URL,
     FRED_CSV_BASE_URL,
     GLOBAL_OIL_KPIS_JSON,
+    MARKET_USER_AGENT,
     MAX_RETRIES,
+    OILPRICE_DEMO_URL,
+    OILPRICE_LATEST_URL,
+    PROVISIONAL_RATIO_MAX,
+    PROVISIONAL_RATIO_MIN,
     REQUEST_TIMEOUT_SECONDS,
     SL_TZ,
     USER_AGENT,
     UTC_TZ,
+    YAHOO_CHART_HOSTS,
+    YAHOO_CHART_URL_TEMPLATE,
     CommoditySpec,
 )
 
@@ -167,6 +176,223 @@ def _merge_eia_supplement(
         return points
 
 
+def _safe_zoneinfo(name: str | None) -> Any:
+    """Resolve an IANA timezone name with UTC fallback."""
+    if not name:
+        return UTC_TZ
+    try:
+        return ZoneInfo(name)
+    except ZoneInfoNotFoundError:
+        return UTC_TZ
+
+
+def parse_yahoo_chart_payload(
+    payload: dict[str, Any],
+    *,
+    decimals: int = 3,
+) -> list[PricePoint]:
+    """
+    Parse daily closing bars and the active session quote from a Yahoo Finance
+    v8 chart payload, mapping timestamps cleanly to YYYY-MM-DD trading dates.
+    """
+    results = (payload.get("chart") or {}).get("result") or []
+    if not isinstance(results, list) or not results:
+        return []
+
+    node = results[0] or {}
+    meta = node.get("meta") or {}
+    currency = meta.get("currency")
+    if currency and str(currency).strip().upper() != "USD":
+        return []
+
+    bar_tz = _safe_zoneinfo(meta.get("exchangeTimezoneName"))
+    timestamps = node.get("timestamp") or []
+    quotes = ((node.get("indicators") or {}).get("quote") or [{}])[0] or {}
+    closes = quotes.get("close") or []
+
+    by_date: dict[str, float] = {}
+    for ts, raw_close in zip(timestamps, closes):
+        if ts is None or raw_close is None:
+            continue
+        try:
+            ts_int = int(ts)
+            val = float(raw_close)
+        except (TypeError, ValueError):
+            continue
+        if not math.isfinite(val) or val <= 0:
+            continue
+        obs_date = datetime.fromtimestamp(ts_int, tz=bar_tz).date().isoformat()
+        by_date[obs_date] = round(val, decimals)
+
+    # Also capture latest live quote in UTC so Asian/London daytime trading updates
+    # reflect the current date ahead of New York market close without bleeding into Sat.
+    live_price = meta.get("regularMarketPrice")
+    live_ts = meta.get("regularMarketTime")
+    if live_price is not None and live_ts is not None:
+        try:
+            val = float(live_price)
+            ts_int = int(live_ts)
+            if math.isfinite(val) and val > 0:
+                live_date = datetime.fromtimestamp(ts_int, tz=UTC_TZ).date().isoformat()
+                if not by_date or live_date >= max(by_date.keys()):
+                    by_date[live_date] = round(val, decimals)
+        except (TypeError, ValueError):
+            pass
+
+    return [PricePoint(time=t, value=by_date[t]) for t in sorted(by_date.keys())]
+
+
+def parse_oilprice_payload(
+    payload: dict[str, Any],
+    target_code: str,
+    *,
+    decimals: int = 3,
+) -> PricePoint | None:
+    """Parse a matching USD commodity quote from OilPriceAPI demo or latest JSON."""
+    data = payload.get("data")
+    if isinstance(data, dict) and isinstance(data.get("prices"), list):
+        candidates = data["prices"]
+    elif isinstance(data, dict):
+        candidates = [data]
+    else:
+        return None
+
+    target_upper = target_code.strip().upper()
+    for item in candidates:
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("code") or "").strip().upper() != target_upper:
+            continue
+        currency = item.get("currency")
+        if currency and str(currency).strip().upper() != "USD":
+            continue
+        raw_price = item.get("price")
+        raw_dt = str(item.get("updated_at") or item.get("created_at") or "").strip()
+        if raw_price is None or len(raw_dt) < 10:
+            continue
+        date_str = raw_dt[:10]
+        try:
+            datetime.strptime(date_str, "%Y-%m-%d")
+            val = float(raw_price)
+        except ValueError:
+            continue
+        if math.isfinite(val) and val > 0:
+            return PricePoint(time=date_str, value=round(val, decimals))
+    return None
+
+
+def merge_provisional_points(
+    official_points: list[PricePoint],
+    market_points: list[PricePoint],
+    *,
+    decimals: int,
+) -> list[PricePoint]:
+    """
+    Append interim market quotes ONLY for dates strictly newer than the latest
+    authoritative FRED/EIA date. Whenever FRED/EIA catches up, any date <=
+    official_latest_date is automatically superseded by the official series.
+    """
+    if not official_points:
+        raise ValueError("official_points must contain at least one observation")
+
+    official_latest = official_points[-1].time
+    ref_price = official_points[-1].value
+    min_ok = ref_price * PROVISIONAL_RATIO_MIN
+    max_ok = ref_price * PROVISIONAL_RATIO_MAX
+
+    supplements: dict[str, float] = {}
+    for pt in market_points:
+        if pt.time <= official_latest:
+            continue
+        if not math.isfinite(pt.value) or not (min_ok <= pt.value <= max_ok):
+            logger.warning(
+                "Skipping out-of-range interim quote %s=%.4f vs official %.4f",
+                pt.time,
+                pt.value,
+                ref_price,
+            )
+            continue
+        supplements[pt.time] = round(pt.value, decimals)
+
+    if not supplements:
+        return list(official_points)
+
+    merged = list(official_points)
+    for dt_str in sorted(supplements.keys()):
+        merged.append(PricePoint(time=dt_str, value=supplements[dt_str]))
+    return merged
+
+
+def _fetch_yahoo_market_points(session: requests.Session, spec: CommoditySpec) -> list[PricePoint]:
+    """Fetch 1M daily + live market quotes from Yahoo Chart v8 with host fallback."""
+    if not spec.yahoo_symbol:
+        return []
+    for host in YAHOO_CHART_HOSTS:
+        url = YAHOO_CHART_URL_TEMPLATE.format(host=host, symbol=spec.yahoo_symbol)
+        try:
+            resp = session.get(
+                url,
+                timeout=12,
+                headers={
+                    "User-Agent": MARKET_USER_AGENT,
+                    "Accept": "application/json",
+                },
+            )
+            resp.raise_for_status()
+            pts = parse_yahoo_chart_payload(resp.json(), decimals=spec.decimals)
+            if pts:
+                return pts
+        except Exception as exc:
+            logger.warning("Yahoo chart host %s skipped for %s: %s", host, spec.id, exc)
+    return []
+
+
+def _fetch_oilprice_fallback(
+    session: requests.Session,
+    spec: CommoditySpec,
+    demo_payload_cache: dict[str, Any] | None,
+) -> tuple[PricePoint | None, dict[str, Any] | None]:
+    """Fetch fallback quote from OilPriceAPI (keyed if set, else 1-call cached demo)."""
+    if not spec.oilprice_code:
+        return None, demo_payload_cache
+
+    api_key = os.environ.get("OILPRICEAPI_KEY", "").strip()
+    if api_key:
+        try:
+            url = OILPRICE_LATEST_URL.format(code=spec.oilprice_code)
+            resp = session.get(
+                url,
+                timeout=12,
+                headers={
+                    "User-Agent": USER_AGENT,
+                    "Authorization": f"Token {api_key}",
+                },
+            )
+            resp.raise_for_status()
+            return parse_oilprice_payload(
+                resp.json(), spec.oilprice_code, decimals=spec.decimals
+            ), demo_payload_cache
+        except Exception as exc:
+            logger.warning("OilPriceAPI keyed fetch skipped for %s: %s", spec.id, exc)
+            return None, demo_payload_cache
+
+    if demo_payload_cache is None:
+        try:
+            resp = session.get(OILPRICE_DEMO_URL, timeout=12, headers={"User-Agent": USER_AGENT})
+            resp.raise_for_status()
+            demo_payload_cache = resp.json()
+        except Exception as exc:
+            logger.warning("OilPriceAPI demo fallback skipped: %s", exc)
+            return None, {}
+
+    if not demo_payload_cache:
+        return None, demo_payload_cache
+
+    return parse_oilprice_payload(
+        demo_payload_cache, spec.oilprice_code, decimals=spec.decimals
+    ), demo_payload_cache
+
+
 def _compute_ema(values: list[float], span: int) -> float:
     """Compute exponential moving average for the tail of a chronological series."""
     alpha = 2.0 / (span + 1.0)
@@ -226,6 +452,9 @@ def compute_commodity_metrics(
     spec: CommoditySpec,
     points: list[PricePoint],
     updated_label: str,
+    *,
+    official_latest_date: str | None = None,
+    provisional_source: str | None = None,
 ) -> dict[str, Any]:
     """Compute KPI metrics and comparison row fields for a single commodity."""
     latest = points[-1]
@@ -242,6 +471,9 @@ def compute_commodity_metrics(
     daily_pct = _pct_change(latest.value, previous.value)
     month_pct = _pct_change(latest.value, month_base.value)
     year_pct = _pct_change(latest.value, year_base.value)
+
+    resolved_official = official_latest_date or latest.time
+    is_provisional = latest.time > resolved_official
 
     return {
         "id": spec.id,
@@ -267,6 +499,9 @@ def compute_commodity_metrics(
         },
         "first_date": points[0].time,
         "latest_date": latest.time,
+        "official_latest_date": resolved_official,
+        "is_provisional": is_provisional,
+        "provisional_source": provisional_source if is_provisional else None,
         "historical_range": f"{points[0].time[:4]} - {latest.time[:4]}",
         "updated_label": updated_label,
     }
@@ -327,6 +562,8 @@ def build_global_oil_outputs(
     series_map: dict[str, list[PricePoint]],
     *,
     now_utc: datetime | None = None,
+    official_latest_dates: dict[str, str] | None = None,
+    provisional_sources: dict[str, str] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Build `global_oil_kpis.json` and `brent_history.json` payloads from parsed series."""
     utc_now = now_utc or datetime.now(UTC_TZ)
@@ -335,13 +572,37 @@ def build_global_oil_outputs(
 
     brent_spec = COMMODITIES_BY_ID["brent"]
     brent_points = series_map["brent"]
-    brent_metrics = compute_commodity_metrics(brent_spec, brent_points, updated_hhmm)
+    brent_official_date = (official_latest_dates or {}).get("brent")
+    brent_prov_source = (provisional_sources or {}).get("brent")
+    brent_metrics = compute_commodity_metrics(
+        brent_spec,
+        brent_points,
+        updated_hhmm,
+        official_latest_date=brent_official_date,
+        provisional_source=brent_prov_source,
+    )
     trend_outlook = compute_trend_outlook(brent_points, decimals=brent_spec.decimals)
 
     comparison_table = [
-        compute_commodity_metrics(spec, series_map[spec.id], updated_hhmm)
+        compute_commodity_metrics(
+            spec,
+            series_map[spec.id],
+            updated_hhmm,
+            official_latest_date=(official_latest_dates or {}).get(spec.id),
+            provisional_source=(provisional_sources or {}).get(spec.id),
+        )
         for spec in COMMODITIES
     ]
+
+    active_sources = [
+        row["provisional_source"]
+        for row in comparison_table
+        if row.get("is_provisional") and row.get("provisional_source")
+    ]
+    resolved_official_dates = {
+        spec.id: (official_latest_dates or {}).get(spec.id, series_map[spec.id][-1].time)
+        for spec in COMMODITIES
+    }
 
     kpis_payload = {
         "actual_price": brent_metrics["price"],
@@ -354,6 +615,9 @@ def build_global_oil_outputs(
         "all_time_low": brent_metrics["all_time_low"],
         "historical_range": brent_metrics["historical_range"],
         "latest_observation_date": brent_metrics["latest_date"],
+        "official_latest_date": brent_metrics["official_latest_date"],
+        "has_provisional_data": bool(active_sources),
+        "provisional_source": active_sources[0] if active_sources else None,
         "unit": brent_spec.unit,
         "frequency": "DAILY",
         "benchmark_label": "ICE BRENT / EIA SPOT",
@@ -369,6 +633,7 @@ def build_global_oil_outputs(
         "primary_id": "brent",
         "last_updated_utc": utc_now.isoformat(),
         "source_attribution": kpis_payload["source_attribution"],
+        "official_latest_dates": resolved_official_dates,
         "series": {
             spec.id: [{"time": pt.time, "value": pt.value} for pt in series_map[spec.id]]
             for spec in COMMODITIES
@@ -382,27 +647,58 @@ def run_update(*, dry_run: bool = False, data_dir: Path = DATA_DIR) -> int:
     now_utc = datetime.now(UTC_TZ)
     eia_api_key = os.environ.get("EIA_API_KEY", "").strip() or None
     series_map: dict[str, list[PricePoint]] = {}
+    official_latest_dates: dict[str, str] = {}
+    provisional_sources: dict[str, str] = {}
+    oilprice_demo_cache: dict[str, Any] | None = None
 
     with requests.Session() as session:
         for spec in COMMODITIES:
             url = FRED_CSV_BASE_URL.format(series_id=spec.fred_series_id)
             logger.info("Fetching %s (%s)...", spec.name, spec.fred_series_id)
             resp = _request_with_retries(session, url)
-            points = parse_fred_csv(resp.text, spec.fred_series_id)
-            points = _merge_eia_supplement(points, spec, session, eia_api_key)
-            series_map[spec.id] = points
+            official_points = parse_fred_csv(resp.text, spec.fred_series_id)
+            official_points = _merge_eia_supplement(official_points, spec, session, eia_api_key)
+            official_latest = official_points[-1].time
+            official_latest_dates[spec.id] = official_latest
+
+            yahoo_points = _fetch_yahoo_market_points(session, spec)
+            merged_points = merge_provisional_points(
+                official_points, yahoo_points, decimals=spec.decimals
+            )
+            if merged_points[-1].time > official_latest:
+                provisional_sources[spec.id] = "Market Futures (ICE/NYMEX via Yahoo Finance)"
+            elif spec.oilprice_code:
+                fallback_pt, oilprice_demo_cache = _fetch_oilprice_fallback(
+                    session, spec, oilprice_demo_cache
+                )
+                if fallback_pt:
+                    merged_points = merge_provisional_points(
+                        official_points, [fallback_pt], decimals=spec.decimals
+                    )
+                    if merged_points[-1].time > official_latest:
+                        provisional_sources[spec.id] = "OilPriceAPI Spot Feed"
+
+            series_map[spec.id] = merged_points
             logger.info(
-                "Loaded %d observations for %s (%s .. %s, latest=%.3f)",
-                len(points),
+                "Loaded %d observations for %s (official=%s, latest=%s, val=%.3f%s)",
+                len(merged_points),
                 spec.id,
-                points[0].time,
-                points[-1].time,
-                points[-1].value,
+                official_latest,
+                merged_points[-1].time,
+                merged_points[-1].value,
+                f", provisional via {provisional_sources[spec.id]}"
+                if spec.id in provisional_sources
+                else "",
             )
 
         intraday_payload = fetch_optional_intraday(session, now_utc)
 
-    kpis_payload, history_payload = build_global_oil_outputs(series_map, now_utc=now_utc)
+    kpis_payload, history_payload = build_global_oil_outputs(
+        series_map,
+        now_utc=now_utc,
+        official_latest_dates=official_latest_dates,
+        provisional_sources=provisional_sources,
+    )
 
     if dry_run:
         logger.info(
